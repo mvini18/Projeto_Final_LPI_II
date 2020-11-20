@@ -13,8 +13,7 @@
     <!-- Icon -->
     <div class="fadeIn first"><br>
       <img src="assets/img/paciente.png" />
-      <h1>Bem-vindo(a)</h1>
-    </div>
+    </div><br>
 
     <!-- Login Form -->
     <form>
