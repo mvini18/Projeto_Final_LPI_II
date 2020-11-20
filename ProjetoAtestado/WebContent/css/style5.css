@@ -28,7 +28,7 @@ a, a:hover, a:focus {
 
 .navbar {
     padding: 15px 10px;
-    background: #fff;
+    background: #5c8cb4;
     border: none;
     border-radius: 0;
     margin-bottom: 40px;
@@ -36,7 +36,7 @@ a, a:hover, a:focus {
 }
 
 .navbar-btn {
-    box-shadow: none;
+    border-radius: 10px 10px 10px 10px;
     outline: none !important;
     border: none;
 }
@@ -58,27 +58,29 @@ a, a:hover, a:focus {
 }
 
 #sidebar {
+	border-radius: 0px 20px 20px 0px;
     min-width: 250px;
     max-width: 250px;
-    background: #7386D5;
+    background: rgb(92, 140, 180);
     color: #fff;
-    transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
+    transition: all 0.6s;
     transform-origin: bottom left;
+    margin-left: -250px;
 }
 
 #sidebar.active {
-    margin-left: -250px;
-    transform: rotateY(100deg);
+    margin-left: 0px;
 }
 
 #sidebar .sidebar-header {
+	border-radius: 0px 20px 0px 0px;
     padding: 20px;
-    background: #6d7fcc;
+     background: rgb(64, 88, 135);
 }
 
 #sidebar ul.components {
     padding: 20px 0;
-    border-bottom: 1px solid #47748b;
+    border-bottom: 1px solid rgb(92, 140, 180);
 }
 
 #sidebar ul p {
@@ -92,13 +94,13 @@ a, a:hover, a:focus {
     display: block;
 }
 #sidebar ul li a:hover {
-    color: #7386D5;
+    color: rgb(92, 140, 180);
     background: #fff;
 }
 
 #sidebar ul li.active > a, a[aria-expanded="true"] {
     color: #fff;
-    background: #6d7fcc;
+    background: rgb(92, 140, 180);
 }
 
 
@@ -122,7 +124,7 @@ a[aria-expanded="true"]::before {
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
-    background: #6d7fcc;
+    background: rgb(92, 140, 180);
 }
 
 ul.CTAs {
@@ -139,11 +141,11 @@ ul.CTAs a {
 
 a.download {
     background: #fff;
-    color: #7386D5;
+    color: rgb(92, 140, 180);
 }
 
 a.article, a.article:hover {
-    background: #6d7fcc !important;
+    background: rgb(92, 140, 180) !important;
     color: #fff !important;
 }
 
@@ -161,7 +163,7 @@ a.article, a.article:hover {
 #sidebarCollapse {
     width: 40px;
     height: 40px;
-    background: #f5f5f5;
+    background: #fafafa;
 }
 
 #sidebarCollapse span {
@@ -170,7 +172,7 @@ a.article, a.article:hover {
     margin: 0 auto;
     display: block;
     background: #555;
-    transition: all 0.8s cubic-bezier(0.810, -0.330, 0.345, 1.375);
+    transition: all 0.8s;
     transition-delay: 0.2s;
 }
 
