@@ -2,7 +2,7 @@
 /* BASIC */
 
 html {
-  background-color: #56baed;
+  background-color: rgb(92, 140, 180);
 }
 
 body {
@@ -44,7 +44,7 @@ h2 {
 
 #formContent {
   -webkit-border-radius: 10px 10px 10px 10px;
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 12px 12px 12px 12px;
   background: #fff;
   padding: 30px;
   width: 90%;

@@ -20,7 +20,7 @@
       <input type="text" id="cpf" class="fadeIn fourth" name="cpf" placeholder="cpf">
       <input type="password" id="senha" class="fadeIn five" name="senha" placeholder="senha">     
       <input type="password" id="confirmarsenha" class="fadeIn five" name="confirmarsenha" placeholder="confirmar">
-      <input type="submit" class="btn btn-primary js-scroll-trigger" value="Confirmar">
+      <input type="submit" class="btn btn-primary js-scroll-trigger" onclick="./login.jsp" value="Confirmar">
     </form>
 
     <!-- Remind Passowrd -->
