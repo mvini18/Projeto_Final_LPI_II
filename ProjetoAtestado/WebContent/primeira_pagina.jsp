@@ -12,7 +12,7 @@
 <!-- Bootstrap CSS CDN -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
 <!-- Our Custom CSS -->
-<link href="./css/style5.css" type="text/css" rel="stylesheet" />
+<link href="./css/primeira_pagina.css" type="text/css" rel="stylesheet" />
 
 <!-- Font Awesome JS -->
 <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"></script>

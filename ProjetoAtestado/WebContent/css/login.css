@@ -45,7 +45,7 @@ h2 {
 #formContent {
   -webkit-border-radius: 10px 10px 10px 10px;
   border-radius: 12px 12px 12px 12px;
-  background: #fff;
+  background: #272b43;
   padding: 30px;
   width: 90%;
   max-width: 450px;
@@ -58,7 +58,7 @@ h2 {
 
 #formFooter {
   background-color: rgb(100, 101, 112);
-  border-top: 2px solid #dce8f1;
+  border-top: 2px solid #272b43;
   padding: 5px;
   text-align: center;
   -webkit-border-radius: 0 0 10px 10px;
@@ -83,7 +83,7 @@ h2.active {
 /* FORM TYPOGRAPHY*/
 
 input[type=button], input[type=submit], input[type=reset]  {
-  background-color: rgb(100, 161, 157);
+  background-color: rgb(64, 88, 135);
   border: none;
   color: white;
   padding: 15px 40px;
@@ -92,8 +92,8 @@ input[type=button], input[type=submit], input[type=reset]  {
   display: inline-block;
   text-transform: uppercase;
   font-size: 13px;
-  -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
-  box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  -webkit-box-shadow: 0 10px 30px 0 rgba(100,149,237,0.4);
+  box-shadow: 0 10px 30px 0 rgba(100,149,237,0.4);
   -webkit-border-radius: 5px 5px 5px 5px;
   border-radius: 5px 5px 5px 5px;
   margin: 5px 20px 40px 20px;
@@ -105,7 +105,7 @@ input[type=button], input[type=submit], input[type=reset]  {
 }
 
 input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
-  background-color: rgb(84, 139, 135);
+  background-color: rgb(176,196,222);
 }
 
 input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
@@ -117,7 +117,7 @@ input[type=button]:active, input[type=submit]:active, input[type=reset]:active  
 }
 
 input[type=text],input[type=password],input[type=email] {
-  background-color: #e7d9ff;
+  background-color: rgb(198,195,189);
   border: none;
   color: #0d0d0d;
   padding: 15px 32px;
@@ -127,7 +127,7 @@ input[type=text],input[type=password],input[type=email] {
   font-size: 16px;
   margin: 5px;
   width: 85%;
-  border: 2px solid #f6f6f6;
+  border: 2px solid #272b43;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -ms-transition: all 0.5s ease-in-out;
@@ -139,7 +139,7 @@ input[type=text],input[type=password],input[type=email] {
 
 input[type=text]:focus,[type=email]:focus,[type=password]:focus {
   background-color: #fff;
-  border-bottom: 2px solid #5fbae9;
+  border-bottom: 2px solid rgb(81, 206, 118);
 }
 
 input[type=text]:placeholder {
