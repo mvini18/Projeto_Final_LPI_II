@@ -68,7 +68,7 @@
 			<h2>Bem vindo(a)</h2>
 			<br> <br>
 			<div align="center">
-				<div class="conteiner1">
+				<div class="conteiner">
 					<h5>titulo 1</h5>
 					<div>
 						<p>aaaaaaa aaaaaaaaa aaaaaaa aaaa aaaaaaaaa aaaaaaaaaaaa aaaaaa aaaaaaaaa aaaa
@@ -76,7 +76,7 @@
 						aaaaaa aaaa aaaaaaaaaa aaaa aaaaa aaa aaaaaaa aa aa aaaa aaaaaaa aaa aaa aaa</p>
 					</div>
 				</div>
-				<div class="conteiner2">
+				<div class="conteiner">
 					<h5>titulo 2</h5>
 					<div>
 						<p>bbbbbbb bbbbbb bbbb bbbbbbb bbbbb bbbbbb bbbbb bbbb bbbb bbbb bbb bbbbb
