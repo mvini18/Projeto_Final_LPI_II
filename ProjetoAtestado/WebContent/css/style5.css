@@ -5,7 +5,32 @@
 	"https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 
 .img {
-	text-align: center
+	text-align: center;
+}
+
+h2 {
+	text-align: center;
+}
+
+h5 {
+	text-align: center;
+	color: #5c8cb4;
+}
+
+#div1 {
+	position:relative;
+    border-width:2px;
+    width:500px;
+    height: 20px;
+    float: left;
+}
+
+#div2 {
+	position:relative;
+    border-width:2px;
+    width:500px;
+    height: 20px;
+    float: right;
 }
 
 body {
@@ -14,6 +39,7 @@ body {
 }
 
 p {
+	text-align: center;
 	font-family: 'Poppins', sans-serif;
 	font-size: 1.1em;
 	font-weight: 300;
