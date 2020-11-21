@@ -35,9 +35,9 @@
 				<br>
 				<br>
 				<li><a href="#">Atestado</a></li>
-				<li><a href="#">Ajuda</a></li>
+				<li><a href="ajuda.jsp">Ajuda</a></li>
 				<li><a href="#">Informações do usuário</a></li>  
-				<li><a href="#">Objetivo</a></li>
+				<li><a href="objetivo.jsp">Objetivo</a></li>
 				<li><a href="#">Senha</a></li> 
 				<br><br><br><br>
 				<li><a href="login.jsp"><img title="Sair" src="assets/img/opcao-de-sair.png"></a></li>
