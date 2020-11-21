@@ -149,12 +149,12 @@ sup {
 }
 
 a {
-  color: #64a19d;
+  color: #627eb5;
   text-decoration: none;
   background-color: transparent;
 }
 a:hover {
-  color: #467370;
+  color: #4b669e;
   text-decoration: underline;
 }
 
@@ -10157,26 +10157,26 @@ body {
     color: #fff;
   }
   #mainNav.navbar-shrink {
-    background-color: #fff;
+    background-color: #272b43;
   }
   #mainNav.navbar-shrink .navbar-brand {
-    color: #000000;
+    color: #fff;
   }
   #mainNav.navbar-shrink .nav-link {
-    color: #000000;
+    color: #fff;
     padding: 1.5rem 1.5rem 1.25rem;
     border-bottom: 0.25rem solid transparent;
   }
   #mainNav.navbar-shrink .nav-link:hover {
-    color: #64a19d;
+    color: #627eb5;
   }
   #mainNav.navbar-shrink .nav-link:active {
-    color: #467370;
+    color: #627eb5;
   }
   #mainNav.navbar-shrink .nav-link.active {
-    color: #64a19d;
+    color: #627eb5;
     outline: none;
-    border-bottom: 0.25rem solid #64a19d;
+    border-bottom: 0.25rem solid #627eb5;
   }
 }
 
@@ -10267,7 +10267,7 @@ body {
     padding: 5rem;
   }
   .projects-section .project-text hr {
-    border-color: #64a19d;
+    border-color: #4b669e;
     border-width: 0.25rem;
     width: 30%;
   }

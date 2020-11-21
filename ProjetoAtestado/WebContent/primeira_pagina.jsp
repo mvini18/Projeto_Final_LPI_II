@@ -2,12 +2,10 @@
 <html>
 
 <head>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<link rel="icon" href="assets/img/lupus_icone.png" />
-    <title>Lupus</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="icon" href="assets/img/lupus_icone.png" />
+<title>Lupus</title>
 
 <!-- Bootstrap CSS CDN -->
 <link rel="stylesheet"
@@ -36,7 +34,7 @@
 			<ul class="list-unstyled components">
 				<br>
 				<br>
-				<li><a href="#">Objetivo</a></li>
+				<li><a href="#">Atestado</a></li>
 				<li><a href="#">Ajuda</a></li>
 				<li><a href="#">Informações do usuário</a></li>  
 				<li><a href="#">Objetivo</a></li>
@@ -49,23 +47,17 @@
 
 		<!-- Page Content Holder -->
 		<div id="content">
-			<br> <br>  <br>  <br>
+			<br> <br>
 			<p>
 				<img src="assets/img/user.png">
 			</p>
 			<h2>Bem vindo(a)</h2>
+			<br> <br>
 			<div align="center">
 				<div class="conteiner">
 					<h5>titulo 1</h5>
 					<div>
-						<p>aaaaaaa aaaaaaaaa aaaaaaa aaaa aaaaaaaaa aaaaaaaaaaaa aaaaaa aaaaaaaaa aaaa
-
-					</div>
-				</div>
-				<div class="conteiner">
-					<h5>titulo 2</h5>
-					<div>
-						<p>bbbbbbb bbbbbb bbbb bbbbbbb bbbbb bbbbbb bbbbb bbbb bbbb bbbb bbb bbbbb
+						<p>aaaaaaa aaaaaaaaa aaaaaaa aaaa aaaaaaaaa aaaaaaaaaaaa aaaaaa aaaaaaaaa aaaa</p>
 					</div>
 				</div>
 			</div>
