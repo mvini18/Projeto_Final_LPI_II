@@ -29,56 +29,45 @@
 				<a href="index.html"><h3><img title="menu" src="assets/img/lupus_icone.png">Lupus</h3></a>
 			</div>
 
-			<ul class="list-unstyled components"><br><br>
-				<li><a href="#">Ajuda</a> <a href="#pageSubmenu"
-					data-toggle="collapse" aria-expanded="false"
-					class="dropdown-toggle">Conta</a>
-					<ul class="collapse list-unstyled" id="pageSubmenu">
-						<li><a href="#">Mudar senha</a></li>
-						<li><a href="#">Dados</a></li>
-					</ul></li>
-				<li><a href="#">Atestados</a></li>
+			<ul class="list-unstyled components"> <br> <br>
 				<li><a href="#">Objetivo</a></li>
+				<li><a href="#">Atestado</a></li>
+				<li><a href="#">Informações do usuário</a></li>  
+				<li><a href="#">Objetivo</a></li>
+				<li><a href="#">Senha</a></li> 
+				<br><br><br><br>
+				<li><a href="login.jsp"><img title="Sair" src="assets/img/opcao-de-sair.png"></a></li>
 			</ul>
 
 		</nav>
 
 		<!-- Page Content Holder -->
 		<div id="content">
-			<div class="container-fluid">
-				<button type="button" id="sidebarCollapse" class="navbar-btn">
-					<span></span> <span></span> <span></span>
-				</button>
-				<button class="btn btn-dark d-inline-block d-lg-none ml-auto"
-					type="button" data-toggle="collapse"
-					data-target="#navbarSupportedContent"
-					aria-controls="navbarSupportedContent" aria-expanded="false"
-					aria-label="Toggle navigation">
-					<i class="fas fa-align-justify"></i>
-				</button>
-			</div>
-			<br> <br>
+			<br> <br>  <br>  <br>
 			<p>
 				<img src="assets/img/user.png">
 			</p>
 			<h2>Bem vindo(a)</h2>
 			<br>
 			<br>
-			<div>
-				<div id="div1">
-					<h5>Um lugar para chamar de seu</h5>
-					<div><p>Com o Discord, você pode criar um lugar com a sua cara.
-						Seu servidor do Discord é um lar, onde só entra quem você quiser.
-						É como se a sua casa.</p></div>
+			<div align="center">
+				<div class="conteiner">
+					<h5>titulo 1</h5>
+					<div>
+						<p>aaaaaaa aaaaaaaaa aaaaaaa aaaa aaaaaaaaa aaaaaaaaaaaa aaaaaa aaaaaaaaa aaaa
+						aaaaaaaaa aaaaa aaaaa aaa aaaa aaaa aaaaa aaaaa aaaa aa aaaa aaaaa aaaaa aa aaaa</p>
+					</div>
 				</div>
-				<div id="div2">
-					<h5>Conversas Organizadas</h5>
-					<div><p>Canais de texto organizados por tópicos permitem que
-						você converse facilmente sobre tudo que você ama. Fale das falhas
-						culinárias do fim de semana enquanto marca a sessão de RPG do
-						feriado.</p></div>
+				<div class="conteiner">
+					<h5>titulo 2</h5>
+					<div>
+						<p>bbbbbbb bbbbbb bbbb bbbbbbb bbbbb bbbbbb bbbbb bbbb bbbb bbbb bbb bbbbb
+						bbbbb bbbbbb bbbbbb bbbbbbb bbbbb bbbb bbbb bbbb bbbb bbb bbbbb bbbb bbb bb</p>
+					</div>
 				</div>
 			</div>
+		</div>
+	</div>
 	<!-- jQuery CDN - Slim version (=without AJAX) -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<!-- Popper.JS -->
