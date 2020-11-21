@@ -4,12 +4,9 @@
 @import
 	"https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 
-.img {
-	text-align: center;
-}
-
 h2 {
 	text-align: center;
+	color: #999;
 }
 
 h5 {
@@ -17,25 +14,9 @@ h5 {
 	color: #5c8cb4;
 }
 
-#div1 {
-	position:relative;
-    border-width:2px;
-    width:500px;
-    height: 20px;
-    float: left;
-}
-
-#div2 {
-	position:relative;
-    border-width:2px;
-    width:500px;
-    height: 20px;
-    float: right;
-}
-
 body {
 	font-family: 'Poppins', sans-serif;
-	background: #fafafa;
+	background: #272b43;
 }
 
 p {
@@ -51,6 +32,18 @@ a, a:hover, a:focus {
 	color: inherit;
 	text-decoration: none;
 	transition: all 0.3s;
+}
+
+.conteiner1 {
+	width: 400px;
+	display: inline-block;
+	margin-left: 30px;
+}
+
+.conteiner2 {
+	width: 400px;
+	display: inline-block;
+	margin-left: 30px;
 }
 
 .navbar {
