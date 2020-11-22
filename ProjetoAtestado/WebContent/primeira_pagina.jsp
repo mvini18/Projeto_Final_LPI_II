@@ -38,7 +38,7 @@
 				<li><a href="ajuda.jsp">Ajuda</a></li>
 				<li><a href="#">Informações do usuário</a></li>  
 				<li><a href="objetivo.jsp">Objetivo</a></li>
-				<li><a href="#">Senha</a></li> 
+				<li><a href="mudar_senha.jsp">Senha</a></li> 
 				<br><br><br><br>
 				<li><a href="login.jsp"><img title="Sair" src="assets/img/opcao-de-sair.png"></a></li>
 			</ul>
@@ -55,9 +55,11 @@
 			<br> <br>
 			<div align="center">
 				<div class="conteiner">
-					<h5>titulo 1</h5>
+					<h5>Vamos começar!</h5>
 					<div>
-						<p>aaaaaaa aaaaaaaaa aaaaaaa aaaa aaaaaaaaa aaaaaaaaaaaa aaaaaa aaaaaaaaa aaaa</p>
+						<p>Acesse o menu na esquerda para conseguir um atestado respondendo ao questionário, 
+						obter mais informações sobre as funcionalidades, gerenciar seu perfil, 
+						conhecer melhor o projeto ou realizar a mudança da senha.</p>
 					</div>
 				</div>
 			</div>
