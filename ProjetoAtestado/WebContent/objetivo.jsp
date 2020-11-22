@@ -18,7 +18,9 @@
 	  <div class="row">
 	    <div class="col fadeIn second"><h5>Contato entre médicos e pacientes</h5></div>
 	    <div class="w-100"></div>
-	    <div class="col fadeIn third"><p>algum texto sobre o pq de criar esse site.</p></div>
+	    <div class="col fadeIn third"><p>Nós sabemos que você precisa de um tratamento rápido e, por isso,
+	     queremos te ajudar a conseguir um atestado para adiantar a sua vida e 
+	     a do seu médico para que a sua recuperação possa ser a melhor possível.</p></div>
 	  </div>
 	</div>
     <!-- Remind Passowrd -->

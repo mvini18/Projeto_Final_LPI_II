@@ -55,9 +55,11 @@
 			<br> <br>
 			<div align="center">
 				<div class="conteiner">
-					<h5>titulo 1</h5>
+					<h5>Vamos começar!</h5>
 					<div>
-						<p>aaaaaaa aaaaaaaaa aaaaaaa aaaa aaaaaaaaa aaaaaaaaaaaa aaaaaa aaaaaaaaa aaaa</p>
+						<p>Acesse o menu na esquerda para conseguir um atestado respondendo ao questionário, 
+						obter mais informações sobre as funcionalidades, gerenciar seu perfil, 
+						conhecer melhor o projeto ou realizar a mudança da senha.</p>
 					</div>
 				</div>
 			</div>
