@@ -1,37 +1,90 @@
 <!DOCTYPE html>
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<link href="./css/atestado_segundo.css" type="text/css" rel="stylesheet"/>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link href="./css/atestado_segundo.css" type="text/css" rel="stylesheet" />
 <link rel="icon" href="assets/img/lupus_icone.png" />
 <!------ Include the above in your HEAD tag ---------->
 <title>Lupus</title>
 <div class="wrapper fadeInDown">
-  <div id="formContent">
-    <!-- Icon -->
-    <div class="fadeIn first"><br>
-      <img src="assets/img/sintomas.png" />
-    </div><br>
+	<div id="formContent">
+		<!-- Icon -->
+		<div class="fadeIn first">
+			<br> <img src="assets/img/sintomas.png" />
+		</div>
+		<br>
+		<!-- Login Form -->
+		<form>
+			<h5 class="fadeIn second">Informações</h5>
+			<p class="fadeIn third">Escreva abaixo o que você está sentindo,
+				conte-nos com o máximo de detalhes que puder respeitando o limite de
+				500 caracteres. Procure dar respostas às perguntas abaixo.</p>
+			<div id="carouselSlider" class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li data-target="#carouselSlider" data-slide-to="0" class="active"></li>
+					<li data-target="#carouselSlider" data-slide-to="1"></li>
+					<li data-target="#carouselSlider" data-slide-to="2"></li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img src="assets/img/carousel.png" class="img-fluid d-block"
+							alt="perguntas">
+						<div class="carousel-caption d-none d-md-block">
+							<p>Apresenta febre? Quantos graus?</p>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img src="assets/img/carousel.png" class="img-fluid d-block"
+							alt="perguntas">
+						<div class="carousel-caption d-none d-md-block">
+							<p>Tem náusea?</p>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img src="assets/img/carousel.png" class="img-fluid d-block"
+							alt="perguntas">
+						<div class="carousel-caption d-none d-md-block">
+							<p>Tosse?</p>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img src="assets/img/carousel.png" class="img-fluid d-block"
+							alt="perguntas">
+						<div class="carousel-caption d-none d-md-block">
+							<p>Tontura?</p>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img src="assets/img/carousel.png" class="img-fluid d-block"
+							alt="perguntas">
+						<div class="carousel-caption d-none d-md-block">
+							<p>Dor em alguma parte do corpo? Qual a intensidade?</p>
+						</div>
+					</div>
+				</div>
+				<a class="carousel-control-prev"
+					href="#carouselSlider" role="button"
+					data-slide="prev"> <span class="carousel-control-prev-icon"></span>
+					<span class="sr-only">Anterior</span>
+				</a> <a class="carousel-control-next"
+					href="#carouselSlider" role="button"
+					data-slide="next"> <span class="carousel-control-next-icon"></span>
+					<span class="sr-only">Próximo</span>
+				</a>
+			</div>
+			<textarea maxlength="500"
+				placeholder="Exemplo: Dor forte como uma faixa apertando a cabeça e problemas em movimentar o pescoço."
+				class="fadeIn fourth" id="sintomas" name="sintomas" rows="6"
+				cols="33"></textarea>
+			<input type="submit"
+				class="btn btn-primary js-scroll-trigger fadeIn five"
+				onclick="./login.jsp" value="Confirmar">
+		</form>
 
-    <!-- Login Form -->
-    <form>
-    <h5 class="fadeIn second">Informações</h5>
-    <p class="fadeIn third">Escreva o máximo possível dos síntomas ou dados adicionais. (500 caracteres)</p>
-      <textarea maxlength="500" placeholder="Exemplo: Dor forte como uma faixa apertando a cabeça e problemas em movimentar o pescoço." class="fadeIn fourth" id="sintomas" name="sintomas"rows="9" cols="33"></textarea>
-      
+		<!-- Remind Passowrd -->
+		<div id="formFooter">
+			<a href="primeira_pagina.jsp"><img src="assets/img/retorna.png"></a>
+		</div>
 
-      
-
-	         
-      
-      
-      <input type="submit" class="btn btn-primary js-scroll-trigger fadeIn five" onclick="./login.jsp" value="Confirmar">
-    </form>
-
-    <!-- Remind Passowrd -->
-    <div id="formFooter">
-      <a href="primeira_pagina.jsp"><img src="assets/img/retorna.png"></a>
-    </div>
-
-  </div>
+	</div>
 </div>
