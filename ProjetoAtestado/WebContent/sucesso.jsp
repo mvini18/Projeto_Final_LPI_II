@@ -10,7 +10,7 @@
   <div id="formContent">
     <!-- Icon -->
     <div class="fadeIn first"><br>
-      <img src="assets/img/confirmacao.png" />
+      <a href="login.jsp"><img class="sucesso" src="assets/img/confirmacao.png" /></a>
     </div><br>
 
     <!-- Login Form -->
@@ -23,7 +23,7 @@
 	</div>
     <!-- Remind Passowrd -->
     <div id="formFooter">
-      <a href="primeira_pagina.jsp"><img src="assets/img/retorna.png"></a>
+      <a href="login.jsp"><img src="assets/img/retorna.png"></a>
     </div>
 
   </div>

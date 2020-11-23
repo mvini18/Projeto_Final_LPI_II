@@ -137,8 +137,9 @@ select{
   -webkit-border-radius: 5px 5px 5px 5px;
   border-radius: 5px 5px 5px 5px;
 }
-select:invalid{
-	color: #cccccc
+
+select:invalid {
+	color: #797979;
 }
 
 input[type=text],input[type=email],input[type=date] {
