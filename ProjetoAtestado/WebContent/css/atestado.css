@@ -137,7 +137,12 @@ select{
   -webkit-border-radius: 5px 5px 5px 5px;
   border-radius: 5px 5px 5px 5px;
 }
+<<<<<<< HEAD
 select:invalid{
+=======
+
+select:invalid {
+>>>>>>> 94a3f16d06735227317dc1a75a39b0763071a18a
 	color: #797979;
 }
 

@@ -10,7 +10,7 @@
   <div id="formContent">
     <!-- Icon -->
     <div class="fadeIn first"><br>
-      <img src="assets/img/confirmacao.png" />
+      <a href="login.jsp"><img class="sucesso" src="assets/img/confirmacao.png" /></a>
     </div><br>
 
     <!-- Login Form -->
