@@ -260,6 +260,11 @@ input[type=text]:placeholder {
   -moz-animation-delay: 1.4s;
   animation-delay: 1.4s;
 }
+.fadeIn.six {
+  -webkit-animation-delay: 1.4s;
+  -moz-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+}
 
 /* Simple CSS3 Fade-in Animation */
 .underlineHover:after {

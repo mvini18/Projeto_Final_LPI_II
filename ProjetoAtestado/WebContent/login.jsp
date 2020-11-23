@@ -19,8 +19,8 @@
     <form>
       <input type="email" id="login" class="fadeIn second" name="login" placeholder="email">
       <input type="password" id="password" class="fadeIn third" name="login" placeholder="senha">
-      <input type="submit" class="btn btn-primary js-scroll-trigger" value="Entrar">
-      <a href="registro.jsp"><input type="button" class="btn btn-primary js-scroll-trigger" value="Registrar"></a>
+      <input type="submit" class="btn btn-primary js-scroll-trigger fadeIn fourth" value="Entrar">
+      <a href="registro.jsp"><input type="button" class="btn btn-primary js-scroll-trigger fadeIn fourth" value="Registrar"></a>
     </form>
 
     <!-- Remind Passowrd -->

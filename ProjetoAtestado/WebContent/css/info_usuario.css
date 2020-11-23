@@ -116,17 +116,38 @@ input[type=button]:active, input[type=submit]:active, input[type=reset]:active  
   transform: scale(0.95);
 }
 
-input[type=text],input[type=password],input[type=email] {
+input[type=text],input[type=email],input[date] {
   background-color: rgb(198,195,189);
   border: none;
   color: #0d0d0d;
-  padding: 15px 32px;
+  padding: 15px 62px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   margin: 5px;
-  width: 85%;
+  width: 65%;
+  border: 2px solid #272b43;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+input[type=password]{
+  background-color: rgb(198,195,189);
+  border: none;
+  color: #0d0d0d;
+  padding: 15px 62px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  width: 45%;
   border: 2px solid #272b43;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -234,6 +255,11 @@ input[type=text]:placeholder {
   -moz-animation-delay: 1.2s;
   animation-delay: 1.2s;
 }
+.fadeIn.six {
+  -webkit-animation-delay: 1.4s;
+  -moz-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+}
 
 /* Simple CSS3 Fade-in Animation */
 .underlineHover:after {
@@ -242,7 +268,7 @@ input[type=text]:placeholder {
   bottom: -10px;
   width: 0;
   height: 2px;
-  background-color: #56baed;
+  background-color: rgb(81, 206, 118);
   content: "";
   transition: width 0.2s;
 }
