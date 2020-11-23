@@ -42,6 +42,8 @@
 
 	  </select>
 	         
+	  <input placeholder="período" class="textbox-n fadeIn seven" type="text" id="período" />
+	  
       
       
       <input type="submit" class="btn btn-primary js-scroll-trigger fadeIn seven" onclick="./login.jsp" value="Confirmar">
