@@ -19,23 +19,23 @@
       
       <input placeholder="data atual" class="textbox-n fadeIn third" type="text" onfocus="(this.type='date')" onblur="(this.type='text')" id="data_atual" />
       
-      <select class="fadeIn fourth" name="select">
-		  <option value="0" disabled selected>sexo</option> 
+      <select required class="fadeIn fourth" name="select">
+		  <option value="" disabled selected hidden>sexo</option> 
 		  <option value="1">masculino</option>
 		  <option value="2">feminino</option>
 	  </select>
 	  
-	  <select class="fadeIn five" name="select">
-		  <option value="0" disabled selected>finalidade</option> 
+	  <select required class="fadeIn five" name="select">
+		  <option value="" disabled selected hidden>finalidade</option> 
 		  <option value="1">Ausência de Atividade (Escola/Universidade/Não Laboral)</option>
 		  <option value="2">Acompanhante em Consulta</option>
 		  <option value="3">Comparecimento em Consulta</option>
 		  <option value="4">Ausência do Trabalho</option>
 	  </select>
 	  
-	  <select class="fadeIn six" name="select">
-		  <option value="0" disabled selected>cid 10</option> 
-		  <option value="1">Ausência de Atividade (Escola/Universidade/Não Laboral)</option>
+	  <select required class="fadeIn six" name="select">
+		  <option value="" disabled selected hidden>cid 10</option> 
+		  <option value="1">não sei como o cara fez</option>
 	  </select>
 	         
       
@@ -45,7 +45,7 @@
 
     <!-- Remind Passowrd -->
     <div id="formFooter">
-      <a href="login.jsp"><img src="assets/img/retorna.png"></a>
+      <a href="primeira_pagina.jsp"><img src="assets/img/retorna.png"></a>
     </div>
 
   </div>

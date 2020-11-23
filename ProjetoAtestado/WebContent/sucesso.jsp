@@ -23,7 +23,7 @@
 	</div>
     <!-- Remind Passowrd -->
     <div id="formFooter">
-      <a href="primeira_pagina.jsp"><img src="assets/img/retorna.png"></a>
+      <a href="login.jsp"><img src="assets/img/retorna.png"></a>
     </div>
 
   </div>
