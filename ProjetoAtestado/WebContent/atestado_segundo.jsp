@@ -8,6 +8,7 @@
 <title>Lupus</title>
 <div class="wrapper fadeInDown">
   <div id="formContent">
+  
     <!-- Icon -->
     <div class="fadeIn first"><br>
       <img src="assets/img/sintomas.png" />
@@ -17,7 +18,7 @@
     <form>
     <h5 class="fadeIn second">Informações</h5>
     <p class="fadeIn third">Escreva o máximo possível dos síntomas ou dados adicionais. (500 caracteres)</p>
-      <textarea maxlength="500" placeholder="Exemplo: Dor forte como uma faixa apertando a cabeça e problemas em movimentar o pescoço." class="fadeIn fourth" id="sintomas" name="sintomas"rows="9" cols="33"></textarea>
+      <textarea maxlength="500" placeholder="Exemplo: Dor forte como uma faixa apertando a cabeça e problemas em movimentar o pescoço." class="fadeIn fourth" id="sintomas" name="sintomas" rows="6" cols="10"></textarea>
       
 
       

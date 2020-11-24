@@ -22,8 +22,8 @@
 
       <select class="fadeIn fourth" name="select" required>
 		  <option value="" disabled selected hidden>sexo</option> 
-		  <option value="1">masculino</option>
-		  <option value="2">feminino</option>
+		  <option value="1">Masculino</option>
+		  <option value="2">Feminino</option>
 	  </select>
 	  
 
