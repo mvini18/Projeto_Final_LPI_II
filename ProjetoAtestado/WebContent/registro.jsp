@@ -18,9 +18,10 @@
       <input type="text" id="nome" class="fadeIn second" name="nome" placeholder="nome"> 
       <input type="email" id="login" class="fadeIn third" name="login" placeholder="email">
       <input type="text" id="cpf" class="fadeIn fourth" name="cpf" placeholder="cpf">
-      <input type="password" id="senha" class="fadeIn five" name="senha" placeholder="senha">     
-      <input type="password" id="confirmarsenha" class="fadeIn five" name="confirmarsenha" placeholder="confirmar">
-      <input type="submit" class="btn btn-primary js-scroll-trigger fadeIn six" onclick="./login.jsp" value="Confirmar">
+      <input type="text" id="telefone" class="fadeIn five" name="telefone" placeholder="telefone">
+      <input type="password" id="senha" class="fadeIn six" name="senha" placeholder="senha">     
+      <input type="password" id="confirmarsenha" class="fadeIn six" name="confirmarsenha" placeholder="confirmar">
+      <input type="submit" class="btn btn-primary js-scroll-trigger fadeIn seven" onclick="./login.jsp" value="Confirmar">
     </form>
 
     <!-- Remind Passowrd -->

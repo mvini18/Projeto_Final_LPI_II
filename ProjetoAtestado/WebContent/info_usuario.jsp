@@ -16,9 +16,10 @@
     <!-- Login Form -->
     <form>
       <input type="text" id="nome" class="fadeIn second" name="nome" placeholder="nome"> 
-      <input type="email" id="login" class="fadeIn third" name="login" placeholder="email">
+      <input type="email" id="email" class="fadeIn third" name="email" placeholder="email">
       <input type="text" id="cpf" class="fadeIn fourth" name="cpf" placeholder="cpf">
-      <input type="submit" class="btn btn-primary js-scroll-trigger fadeIn five" onclick="./login.jsp" value="Editar">
+      <input type="text" id="telefone" class="fadeIn five" name="telefone" placeholder="telefone">
+      <input type="submit" class="btn btn-primary js-scroll-trigger fadeIn six" onclick="./login.jsp" value="Editar">
     </form>
 
     <!-- Remind Passowrd -->
