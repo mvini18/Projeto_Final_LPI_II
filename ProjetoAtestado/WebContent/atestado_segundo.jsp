@@ -13,54 +13,76 @@
 			<br> <img src="assets/img/sintomas.png" />
 		</div>
 		<br>
-		<!-- Login Form -->
 		<form>
-			<h5 class="fadeIn second">Informações</h5>
 			<p class="fadeIn third">Escreva abaixo o que você está sentindo,
 				conte-nos com o máximo de detalhes que puder respeitando o limite de
 				500 caracteres. Procure dar respostas às perguntas abaixo.</p>
-			<div id="carouselSlider" class="carousel slide" data-ride="carousel">
+			<div id="carouselSlider" class="carousel slide fadeIn fourth" data-ride="carousel">
 				<ol class="carousel-indicators">
 					<li data-target="#carouselSlider" data-slide-to="0" class="active"></li>
 					<li data-target="#carouselSlider" data-slide-to="1"></li>
 					<li data-target="#carouselSlider" data-slide-to="2"></li>
 					<li data-target="#carouselSlider" data-slide-to="3"></li>
+					<li data-target="#carouselSlider" data-slide-to="4"></li>
 					<li data-target="#carouselSlider" data-slide-to="5"></li>
+					<li data-target="#carouselSlider" data-slide-to="6"></li>
+					<li data-target="#carouselSlider" data-slide-to="7"></li>
 				</ol>
 				<div class="carousel-inner">
 					<div class="carousel-item active">
 						<img src="assets/img/carousel.png" class="img-fluid d-block"
 							alt="perguntas">
 						<div class="carousel-caption d-none d-md-block">
-							<p>Apresenta febre? Quantos graus?</p>
+							<h5>Apresenta febre? Quantos graus?</h5>
 						</div>
 					</div>
 					<div class="carousel-item">
 						<img src="assets/img/carousel.png" class="img-fluid d-block"
 							alt="perguntas">
 						<div class="carousel-caption d-none d-md-block">
-							<p>Tem náusea?</p>
+							<h5>Tem náusea?</h5>
 						</div>
 					</div>
 					<div class="carousel-item">
 						<img src="assets/img/carousel.png" class="img-fluid d-block"
 							alt="perguntas">
 						<div class="carousel-caption d-none d-md-block">
-							<p>Tosse?</p>
+							<h5>Tosse?</h5>
 						</div>
 					</div>
 					<div class="carousel-item">
 						<img src="assets/img/carousel.png" class="img-fluid d-block"
 							alt="perguntas">
 						<div class="carousel-caption d-none d-md-block">
-							<p>Tontura?</p>
+							<h5>Tontura?</h5>
 						</div>
 					</div>
 					<div class="carousel-item">
 						<img src="assets/img/carousel.png" class="img-fluid d-block"
 							alt="perguntas">
 						<div class="carousel-caption d-none d-md-block">
-							<p>Dor em alguma parte do corpo? Qual a intensidade?</p>
+							<h5>Dor em alguma parte do corpo? Qual a intensidade?</h5>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img src="assets/img/carousel.png" class="img-fluid d-block"
+							alt="perguntas">
+						<div class="carousel-caption d-none d-md-block">
+							<h5>Problemas em respirar?</h5>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img src="assets/img/carousel.png" class="img-fluid d-block"
+							alt="perguntas">
+						<div class="carousel-caption d-none d-md-block">
+							<h5>Problemas na visão?</h5>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img src="assets/img/carousel.png" class="img-fluid d-block"
+							alt="perguntas">
+						<div class="carousel-caption d-none d-md-block">
+							<h5>Inchaço em alguma parte do corpo?</h5>
 						</div>
 					</div>
 				</div>
@@ -75,11 +97,11 @@
 				</a>
 			</div>
 			<textarea maxlength="500"
-				placeholder="Exemplo: Dor forte como uma faixa apertando a cabeça e problemas em movimentar o pescoço."
-				class="fadeIn fourth" id="sintomas" name="sintomas" rows="6"
+				placeholder="Exemplo: Dor forte como uma faixa apertando a cabeça."
+				class="fadeIn five" id="sintomas" name="sintomas" rows="2"
 				cols="33"></textarea>
 			<input type="submit"
-				class="btn btn-primary js-scroll-trigger fadeIn five"
+				class="btn btn-primary js-scroll-trigger fadeIn six"
 				onclick="./login.jsp" value="Confirmar">
 		</form>
 
