@@ -26,12 +26,12 @@
 	<div class="wrapper">
 		<!-- Sidebar Holder -->
 		<nav id="sidebar">
-			<div class="sidebar-header">
+			<div class="sidebar-header fadeIn first">
 				<a href="index.html"><h3>
 						<img title="menu" src="assets/img/lupus_icone.png">Lupus
 					</h3></a>
 			</div>
-			<ul class="list-unstyled components">
+			<ul class="list-unstyled components fadeIn second">
 				<br>
 				<br>
 				<li><a href="atestado.jsp">Atestado</a></li>
@@ -46,7 +46,7 @@
 		</nav>
 
 		<!-- Page Content Holder -->
-		<div id="content">
+		<div id="content" class="fadeIn third">
 			<br> <br>
 			<p>
 				<img src="assets/img/user.png">
@@ -54,7 +54,7 @@
 			<h2>Bem vindo(a)</h2>
 			<br> <br>
 			<div align="center">
-				<div class="conteiner">
+				<div class="conteiner fadeIn fourth">
 					<h5>Vamos começar!</h5>
 					<div>
 						<p>Acesse o menu na esquerda para conseguir um atestado respondendo ao questionário, 
