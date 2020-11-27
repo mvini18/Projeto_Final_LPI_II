@@ -4,6 +4,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 import br.uniube.model.Usuario;
 /**
@@ -32,17 +35,22 @@ public class UsuarioDAO extends AcessoBancoDAO {
 			desconectar();
 		}
 	}
-	public void loginUsuario(Usuario objUsuario) throws Exception{
+	public boolean loginUsuario(Usuario objUsuario) throws Exception{
 		try {
+			ResultSet rs;
 			conectar();
 
 			String query = "select * from tb_login where email =  '"+ objUsuario.getEmail() + "' "
 					+ "and senha = '"+ objUsuario.getSenha() + "'";
-			System.out.println(query);
 			Statement instrucao = getConexao().createStatement();
-			instrucao.executeUpdate(query);
-
-
+			rs = instrucao.executeQuery(query);
+			
+			if(rs.next()) {
+                return true;
+            } else {
+                return false;
+            }
+			
 		} catch (SQLException ex) {
 			throw new SQLException(ex);
 		} catch(Exception ex) {
