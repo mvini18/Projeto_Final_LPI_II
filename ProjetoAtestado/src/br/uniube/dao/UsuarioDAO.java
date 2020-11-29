@@ -42,8 +42,10 @@ public class UsuarioDAO extends AcessoBancoDAO {
 
 			String query = "select * from tb_login where email =  '"+ objUsuario.getEmail() + "' "
 					+ "and senha = '"+ objUsuario.getSenha() + "'";
+			
 			Statement instrucao = getConexao().createStatement();
 			rs = instrucao.executeQuery(query);
+			
 			
 			if(rs.next()) {
                 return true;
@@ -58,5 +60,32 @@ public class UsuarioDAO extends AcessoBancoDAO {
 		} finally{
 			desconectar();
 		}
+	}
+	
+	public Usuario consultarUsuarioByEmail(String email) throws Exception {
+		Usuario Usuario = null;
+		try {
+			ResultSet rs;
+			conectar();
+			
+			String query = "select nome from tb_login where email=" + email;
+			Statement instrucao = getConexao().createStatement();
+			rs = instrucao.executeQuery(query);
+			
+			if(rs.next()) {
+				String nome = rs.getString(1);
+
+				Usuario = new Usuario();
+				Usuario.setNome(nome);
+			}
+			
+		} catch (SQLException ex) {
+			throw new SQLException(ex);
+		} catch(Exception ex) {
+			throw new Exception(ex);
+		} finally{
+			desconectar();
+		}
+		return Usuario;
 	}
 }

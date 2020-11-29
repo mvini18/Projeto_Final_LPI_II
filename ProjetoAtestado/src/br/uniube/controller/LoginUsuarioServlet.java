@@ -29,6 +29,7 @@ public class LoginUsuarioServlet extends HttpServlet {
 				dao.loginUsuario(objUsuario);
 				if(dao.loginUsuario(objUsuario))
 				{
+					request.getSession().setAttribute("objUsuario", objUsuario);
 					response.sendRedirect("primeira_pagina.jsp");
 				}
 				else
