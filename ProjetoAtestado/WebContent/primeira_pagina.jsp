@@ -24,7 +24,6 @@
 	src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"></script>
 
 </head>
-<% String email = request.getParameter("email"); %>
 <body>
 
 	<div class="wrapper">
@@ -55,8 +54,7 @@
 				<img src="assets/img/user.png">
 			</p>
 			<% Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuario"); %>
-			<% %>nome = dao.consultarUsuarioByEmail(getEmail())
-			<h2>Bem vindo(a), ${nome}</h2>
+			<h2>Bem vindo(a), <%=objUsuario.getEmail()%></h2>
 			
 			
 			<br> <br>
