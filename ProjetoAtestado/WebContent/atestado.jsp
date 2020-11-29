@@ -34,11 +34,10 @@
 		  <option value="3">Comparecimento em Consulta</option>
 		  <option value="4">Ausência do Trabalho</option>
 	  </select>
-	  
 
 	  <select required class="fadeIn six" name="select">
 		  <option value="" disabled selected hidden>cid 10</option> 
-		  <option value="1">não sei como o cara fez</option>
+		  <option value="1"></option>
 
 	  </select>
 	         
