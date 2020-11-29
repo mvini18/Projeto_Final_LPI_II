@@ -3,15 +3,15 @@ package br.uniube.model;
 
 public class Usuario {
 
-	private Long id;
+	private int id;
 	
 	private String cpf, nome, email, telefone, senha, estilo_usuario ;
 	
-	public Long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 

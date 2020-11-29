@@ -9,6 +9,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 import br.uniube.model.Usuario;
+import br.uniube.model.Usuario;
 /**
  * Classe de acesso ao banco de dados
  * 
@@ -35,6 +36,48 @@ public class UsuarioDAO extends AcessoBancoDAO {
 			desconectar();
 		}
 	}
+	
+	public ArrayList<Usuario> consultarUsuarioByEmail(String emailUsuario) throws Exception {
+		ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();
+		try {
+			ResultSet rs;
+			conectar();
+			
+			String query = "select * from tb_login where email=" + emailUsuario;
+
+			Statement instrucao = getConexao().createStatement();
+			rs = instrucao.executeQuery(query);
+			
+			if(rs.next()) {
+				int id = rs.getInt(1);
+				String cpf = rs.getString(2);
+				String email = rs.getString(3);
+				String telefone = rs.getString(4);
+				String senha = rs.getString(5);
+				String estilo_usuario = rs.getString(6);
+				String nome = rs.getString(7);
+				
+				Usuario Usuario = new Usuario();
+				Usuario.setId(id);
+				Usuario.setNome(nome);
+				Usuario.setCpf(cpf);
+				Usuario.setEmail(email);
+				Usuario.setSenha(senha);
+				Usuario.setEstilo_usuario(estilo_usuario);
+				Usuario.setTelefone(telefone);
+				listaUsuarios.add(Usuario);
+			}
+			
+		} catch (SQLException ex) {
+			throw new SQLException(ex);
+		} catch(Exception ex) {
+			throw new Exception(ex);
+		} finally{
+			desconectar();
+		}
+		return listaUsuarios;
+	}
+	
 	public boolean loginUsuario(Usuario objUsuario) throws Exception{
 		try {
 			ResultSet rs;
@@ -62,30 +105,4 @@ public class UsuarioDAO extends AcessoBancoDAO {
 		}
 	}
 	
-	public Usuario consultarUsuarioByEmail(String email) throws Exception {
-		Usuario Usuario = null;
-		try {
-			ResultSet rs;
-			conectar();
-			
-			String query = "select nome from tb_login where email=" + email;
-			Statement instrucao = getConexao().createStatement();
-			rs = instrucao.executeQuery(query);
-			
-			if(rs.next()) {
-				String nome = rs.getString(1);
-
-				Usuario = new Usuario();
-				Usuario.setNome(nome);
-			}
-			
-		} catch (SQLException ex) {
-			throw new SQLException(ex);
-		} catch(Exception ex) {
-			throw new Exception(ex);
-		} finally{
-			desconectar();
-		}
-		return Usuario;
-	}
 }
