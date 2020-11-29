@@ -58,7 +58,6 @@
 			<p>
 				<img src="assets/img/user.png">
 			</p>
-
 			<%
 				ArrayList listaUsuarios = (ArrayList) request.getSession().getAttribute("listaUsuarios");
 			%>
@@ -73,10 +72,8 @@
 				<%=objUsuario.getNome()%>
 				<%
 					}
-				}
 				%>
 			</h2>
-
 			<br> <br>
 			<div align="center">
 				<div class="conteiner fadeIn fourth">
