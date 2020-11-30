@@ -1,4 +1,6 @@
-<%@page import="java.util.ArrayList,br.uniube.model.Usuario,br.uniube.dao.UsuarioDAO"%>
+
+<%@page
+	import="java.util.ArrayList,br.uniube.model.Usuario,br.uniube.dao.UsuarioDAO"%>
 <!DOCTYPE html>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <link href="./css/mudar_senha.css" type="text/css" rel="stylesheet"/>
@@ -14,9 +16,9 @@
       <img src="assets/img/senha.png" />
     </div><br>
 
+    <!-- Login Form -->
     <% Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuario"); %>
-    <form action="alterarSenha?email=<%= objUsuario.getEmail()%>">
-   
+    <form action="alterarSenha?email=<%= objUsuario.getEmail() %>">
       <input type="password" id="antiga_senha" class="fadeIn second" name="antiga_senha" placeholder="antiga">
       <input type="password" id="nova_senha" class="fadeIn third" name="nova_senha" placeholder="nova">      
       <input type="password" id="confirmar_senha" class="fadeIn fourth" name="confirmar_senha" placeholder="confirmar">
@@ -25,7 +27,7 @@
 
     <!-- Remind Passowrd -->
     <div id="formFooter">
-      <a href="primeira_pagina.jsp"><img src="assets/img/retorna.png"></a>
+      <a href="primeira_pagina.jsp?email=<%= objUsuario.getEmail() %>"><img src="assets/img/retorna.png"></a>
     </div>
 
   </div>
