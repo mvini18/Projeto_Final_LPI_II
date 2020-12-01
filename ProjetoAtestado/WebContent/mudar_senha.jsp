@@ -18,7 +18,7 @@
 
     <!-- Login Form -->
     <% Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuario"); %>
-    <form action="alterarSenha?email=<%= objUsuario.getEmail() %>">
+    <form method="post" action="alterarSenha?email=<%= objUsuario.getEmail() %>">
       <input type="password" id="antiga_senha" class="fadeIn second" name="antiga_senha" placeholder="antiga">
       <input type="password" id="nova_senha" class="fadeIn third" name="nova_senha" placeholder="nova">      
       <input type="password" id="confirmar_senha" class="fadeIn fourth" name="confirmar_senha" placeholder="confirmar">

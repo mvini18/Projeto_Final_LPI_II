@@ -14,9 +14,6 @@ import br.uniube.model.Usuario;
 
 public class AlterarSenhaServlet extends HttpServlet {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -27,16 +24,21 @@ public class AlterarSenhaServlet extends HttpServlet {
 
 			Usuario objUsuario = new Usuario();
 			objUsuario.setSenha(senhaNova);
-
+			
 			UsuarioDAO dao = new UsuarioDAO();
-			if (dao.verificaSenha(senhaAntiga, objUsuario)) {
-				dao.alterarSenha(objUsuario);
-			}
-
 			ArrayList<Usuario> listaUsuarios = dao.consultarUsuarioByEmail("");
 
-			request.getSession().setAttribute("listaUsuarios", listaUsuarios);
-			response.sendRedirect("mudar_senha.jsp");
+			if (dao.verificaSenha(senhaAntiga, objUsuario)) {
+				dao.alterarSenha(objUsuario);
+				request.getSession().setAttribute("listaUsuarios", listaUsuarios);
+				response.sendRedirect("mudar_senha.jsp");
+			}
+			else
+			{
+				response.sendRedirect("primeira_pagina.jsp");
+			}
+
+			
 
 		} catch(Exception ex) {
 			System.out.println(ex.getMessage());
