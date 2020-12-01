@@ -31,8 +31,8 @@ public class LoginUsuarioServlet extends HttpServlet {
 				objUsuario.setSenha(senhaUsuario);
 				// chama o DAO para para fazer a inserção
 				UsuarioDAO dao = new UsuarioDAO();
-				dao.loginUsuario(objUsuario);
-				if(dao.loginUsuario(objUsuario))
+				dao.loginUsuario(emailUsuario, senhaUsuario);
+				if(dao.loginUsuario(emailUsuario, senhaUsuario))
 				{
 					request.getSession().setAttribute("objUsuario", objUsuario);
 					response.sendRedirect("primeira_pagina.jsp");
