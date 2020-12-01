@@ -36,7 +36,7 @@
 			<ul class="list-unstyled components fadeIn second">
 				<br>
 				<br>
-				<li><a href="atestado.jsp">Atestado</a></li>
+				<li><a href="atestado">Atestado</a></li>
 				<li><a href="ajuda.jsp">Ajuda</a></li>
 				<li><a href="info_usuario.jsp">Informações do usuário</a></li>  
 				<li><a href="objetivo.jsp">Objetivo</a></li>
