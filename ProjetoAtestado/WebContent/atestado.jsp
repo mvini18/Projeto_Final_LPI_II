@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<%@page import = "java.util.List, br.uniube.model.Cid"
+%>
+
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <link href="./css/atestado.css" type="text/css" rel="stylesheet"/>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -34,12 +37,24 @@
 		  <option value="3">Comparecimento em Consulta</option>
 		  <option value="4">Ausência do Trabalho</option>
 	  </select>
+		
+		<%List listaCid = (List)request.getSession().getAttribute("listaCid");
+			
+			if(listaCid != null)
+			{
+		%>
 
-	  <select required class="fadeIn six" name="select">
-		  <option value="" disabled selected hidden>cid 10</option> 
-		  <option value="1"></option>
-
-	  </select>
+				  <select required class="fadeIn six" name="select">
+				  <option value ="0"></option>
+				  <% for(int i = 0; i<listaCid.size(); i++)
+					 {	
+					  	Cid objCid = (Cid)listaCid.get(i);
+					  %>
+					  <option value="<%= objCid.getCodigo_cid()%>"><%= objCid.getNome_cid()%></option>
+				  <% } %>
+			
+				  </select>
+		<% } %>
 	         
 	  <input placeholder="período" class="textbox-n fadeIn seven" type="text" id="período" />
 	  
