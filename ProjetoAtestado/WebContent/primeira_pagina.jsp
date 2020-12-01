@@ -29,27 +29,23 @@
 	<% Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuario"); %>
 	<div class="wrapper">
 		<nav id="sidebar">
-		<div class="sidebar-header fadeIn first">
-			<a href="index.html"><h3>
-					<img title="menu" src="assets/img/lupus_icone.png">Lupus
-				</h3></a>
-		</div>
-		<ul class="list-unstyled components fadeIn second">
-			<br>
-			<br>
-			<li><a href="atestado.jsp">Atestado</a></li>
-			<li><a href="ajuda.jsp">Ajuda</a></li>
-			<li><a href="info_usuario.jsp">Informações do usuário</a></li>
-			<li><a href="objetivo.jsp">Objetivo</a></li>
-			<li><a href="mudar_senha.jsp?email=<%=objUsuario.getEmail()%>">Senha</a></li>
-			<br>
-			<br>
-			<br>
-			<br>
-			<li><a href="login.jsp"><img title="Sair"
-					src="assets/img/opcao-de-sair.png"></a></li>
-		</ul>
 
+			<div class="sidebar-header fadeIn first">
+				<a href="index.html"><h3>
+						<img title="menu" src="assets/img/lupus_icone.png">Lupus
+					</h3></a>
+			</div>
+			<ul class="list-unstyled components fadeIn second">
+				<br>
+				<br>
+				<li><a href="atestado">Atestado</a></li>
+				<li><a href="ajuda.jsp">Ajuda</a></li>
+				<li><a href="info_usuario.jsp">Informações do usuário</a></li>  
+				<li><a href="objetivo.jsp">Objetivo</a></li>
+				<li><a href="mudar_senha.jsp">Senha</a></li> 
+				<br><br><br><br>
+				<li><a href="login.jsp"><img title="Sair" src="assets/img/opcao-de-sair.png"></a></li>
+			</ul>
 		</nav>
 
 		<!-- Page Content Holder -->
