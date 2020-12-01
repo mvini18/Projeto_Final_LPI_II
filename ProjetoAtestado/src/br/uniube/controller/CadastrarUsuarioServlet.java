@@ -37,7 +37,7 @@ public class CadastrarUsuarioServlet extends HttpServlet {
 				objUsuario.setSenha(senhaUsuario);
 				// chama o DAO para para fazer a inserção
 				UsuarioDAO dao = new UsuarioDAO();
-				dao.salva(objUsuario);
+				dao.inserirUsuario(objUsuario);
 
 				response.sendRedirect("sucesso_login.jsp");
 			

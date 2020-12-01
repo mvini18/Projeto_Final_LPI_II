@@ -31,10 +31,11 @@ public class LoginUsuarioServlet extends HttpServlet {
 				objUsuario.setSenha(senhaUsuario);
 				// chama o DAO para para fazer a inserção
 				UsuarioDAO dao = new UsuarioDAO();
-				dao.loginUsuario(emailUsuario, senhaUsuario);
-				if(dao.loginUsuario(emailUsuario, senhaUsuario))
+				dao.loginUsuario(objUsuario);
+				if(dao.loginUsuario(objUsuario))
 				{
-					request.getSession().setAttribute("objUsuario", objUsuario);
+					Usuario objUsuarioCompleto = dao.consultarUsuarioByEmail(objUsuario.getEmail());
+					request.getSession().setAttribute("objUsuarioCompleto", objUsuarioCompleto);
 					response.sendRedirect("primeira_pagina.jsp");
 				}
 				else
