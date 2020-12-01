@@ -45,7 +45,7 @@
 		%>
 
 				  <select required class="fadeIn six" name="select">
-				  <option value ="0"></option>
+				  <option value="" disabled selected hidden>cid 10</option> 
 				  <% for(int i = 0; i<listaCid.size(); i++)
 					 {	
 					  	Cid objCid = (Cid)listaCid.get(i);
