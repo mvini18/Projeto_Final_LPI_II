@@ -26,11 +26,11 @@ public class AlterarSenhaServlet extends HttpServlet {
 			objUsuario.setSenha(senhaNova);
 			
 			UsuarioDAO dao = new UsuarioDAO();
-			ArrayList<Usuario> listaUsuarios = dao.consultarUsuarioByEmail("");
+			Usuario objUsuarioCompleto = dao.consultarUsuarioByEmail("");
 
 			if (dao.verificaSenha(senhaAntiga, objUsuario)) {
 				dao.alterarSenha(objUsuario);
-				request.getSession().setAttribute("listaUsuarios", listaUsuarios);
+				request.getSession().setAttribute("objUsuarioCompleto", objUsuarioCompleto);
 				response.sendRedirect("mudar_senha.jsp");
 			}
 			else

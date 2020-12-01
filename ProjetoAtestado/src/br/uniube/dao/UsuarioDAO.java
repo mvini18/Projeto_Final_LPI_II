@@ -38,13 +38,14 @@ public class UsuarioDAO extends AcessoBancoDAO {
 		}
 	}
 
-	public ArrayList<Usuario> consultarUsuarioByEmail(String emailUsuario) throws Exception {
-		ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();
+	public Usuario consultarUsuarioByEmail(String emailUsuario) throws Exception {
+		Usuario usuario = new Usuario();
 		try {
 			ResultSet rs;
 			conectar();
-
-			String query = "select * from tb_login where email=" + emailUsuario;
+			
+			String query = "select id,cpf,email,telefone,senha,estilo_usuario,nome"
+					+ " from tb_login where email='" + emailUsuario + "'";
 
 			Statement instrucao = getConexao().createStatement();
 			rs = instrucao.executeQuery(query);
@@ -58,15 +59,14 @@ public class UsuarioDAO extends AcessoBancoDAO {
 				String estilo_usuario = rs.getString(6);
 				String nome = rs.getString(7);
 
-				Usuario Usuario = new Usuario();
-				Usuario.setId(id);
-				Usuario.setNome(nome);
-				Usuario.setCpf(cpf);
-				Usuario.setEmail(email);
-				Usuario.setSenha(senha);
-				Usuario.setEstilo_usuario(estilo_usuario);
-				Usuario.setTelefone(telefone);
-				listaUsuarios.add(Usuario);
+				
+				usuario.setId(id);
+				usuario.setNome(nome);
+				usuario.setCpf(cpf);
+				usuario.setEmail(email);
+				usuario.setSenha(senha);
+				usuario.setEstilo_usuario(estilo_usuario);
+				usuario.setTelefone(telefone);
 			}
 
 		} catch (SQLException ex) {
@@ -76,7 +76,7 @@ public class UsuarioDAO extends AcessoBancoDAO {
 		} finally{
 			desconectar();
 		}
-		return listaUsuarios;
+		return usuario;
 	}
 
 	public void alterarSenha(Usuario objUsuario) throws Exception {

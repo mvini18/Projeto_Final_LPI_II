@@ -26,7 +26,7 @@
 
 </head>
 <body>
-	<% Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuario"); %>
+	<% Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuarioCompleto"); %>
 	<div class="wrapper">
 		<nav id="sidebar">
 
@@ -55,7 +55,7 @@
 				<img src="assets/img/user.png">
 			</p>
 			<h2>
-				Bem vindo(a),
+				Bem vindo(a), <%= objUsuario.getNome() %>
 			</h2>
 			<br> <br>
 			<div align="center">

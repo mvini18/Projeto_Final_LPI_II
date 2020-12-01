@@ -28,9 +28,9 @@ public class ConsultarUsuarioServlet extends HttpServlet {
 		
 
 			UsuarioDAO dao = new UsuarioDAO();
-			ArrayList<Usuario> listaUsuarios = dao.consultarUsuarioByEmail(emailUsuario);
+			Usuario objUsuarioCompleto = dao.consultarUsuarioByEmail(emailUsuario);
 			
-			request.getSession().setAttribute("listaUsuarios", listaUsuarios);
+			request.getSession().setAttribute("objUsuarioCompleto", objUsuarioCompleto);
 			response.sendRedirect("primeira_pagina.jsp");
 			
 		} catch(Exception ex) {
