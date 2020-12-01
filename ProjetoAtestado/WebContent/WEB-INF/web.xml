@@ -31,6 +31,15 @@
 		<servlet-name>consultarCid</servlet-name>
 		<url-pattern>/atestado</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>alterarSenha</servlet-name>
+		<servlet-class>br.uniube.controller.AlterarSenhaServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>alterarSenha</servlet-name>
+		<url-pattern>/alterarSenha</url-pattern>
+	</servlet-mapping>
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>

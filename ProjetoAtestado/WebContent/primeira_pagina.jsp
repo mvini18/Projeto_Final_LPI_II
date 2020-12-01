@@ -1,6 +1,7 @@
-<%@page import="br.uniube.model.Usuario" %>
+<%@page
+	import="java.util.ArrayList,br.uniube.model.Usuario,br.uniube.dao.UsuarioDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
     "http://www.w3.org/TR/html4/loose.dtd" >
 <html>
@@ -25,9 +26,10 @@
 
 </head>
 <body>
-
+	<% Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuario"); %>
 	<div class="wrapper">
 		<nav id="sidebar">
+
 			<div class="sidebar-header fadeIn first">
 				<a href="index.html"><h3>
 						<img title="menu" src="assets/img/lupus_icone.png">Lupus
@@ -44,7 +46,6 @@
 				<br><br><br><br>
 				<li><a href="login.jsp"><img title="Sair" src="assets/img/opcao-de-sair.png"></a></li>
 			</ul>
-
 		</nav>
 
 		<!-- Page Content Holder -->
@@ -53,18 +54,18 @@
 			<p>
 				<img src="assets/img/user.png">
 			</p>
-			<% Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuario"); %>
-			<h2>Bem vindo(a), <%=objUsuario.getEmail()%></h2>
-			
-			
+			<h2>
+				Bem vindo(a),
+			</h2>
 			<br> <br>
 			<div align="center">
 				<div class="conteiner fadeIn fourth">
 					<h5>Vamos começar!</h5>
 					<div>
-						<p>Acesse o menu na esquerda para conseguir um atestado respondendo ao questionário, 
-						obter mais informações sobre as funcionalidades, gerenciar seu perfil, 
-						conhecer melhor o projeto ou realizar a mudança da senha.</p>
+						<p>Acesse o menu na esquerda para conseguir um atestado
+							respondendo ao questionário, obter mais informações sobre as
+							funcionalidades, gerenciar seu perfil, conhecer melhor o projeto
+							ou realizar a mudança da senha.</p>
 					</div>
 				</div>
 			</div>
@@ -90,5 +91,4 @@
 		});
 	</script>
 </body>
-
 </html>
