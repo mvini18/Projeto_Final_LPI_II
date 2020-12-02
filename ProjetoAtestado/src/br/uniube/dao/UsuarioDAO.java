@@ -11,6 +11,7 @@ import java.sql.ResultSet;
 import br.uniube.model.Usuario;
 import br.uniube.model.Usuario;
 import br.uniube.model.Usuario;
+import br.uniube.model.Usuario;
 /**
  * Classe de acesso ao banco de dados
  * 
@@ -148,6 +149,27 @@ public class UsuarioDAO extends AcessoBancoDAO {
 				return false;
 			}
 
+		} catch (SQLException ex) {
+			throw new SQLException(ex);
+		} catch(Exception ex) {
+			throw new Exception(ex);
+		} finally{
+			desconectar();
+		}
+	}
+	public void atualizarUsuario(String objUsuarioEmail, Usuario objUsuario) throws Exception {
+		try {
+			conectar();
+			
+			String query = "update tb_login set nome='"+ objUsuario.getNome() + "',"
+					+ ""+ "cpf='"+ objUsuario.getCpf() + "',"
+					+ " telefone = '"+ objUsuario.getTelefone() + "',"
+					+ "  email = '"+ objUsuario.getEmail() +
+					"' where email = '"+ objUsuarioEmail +"'";
+			Statement instrucao = getConexao().createStatement();
+			instrucao.executeUpdate(query);
+			
+	
 		} catch (SQLException ex) {
 			throw new SQLException(ex);
 		} catch(Exception ex) {

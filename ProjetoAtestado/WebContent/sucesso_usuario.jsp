@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<link href="./css/sucesso_atestado.css" type="text/css" rel="stylesheet"/>
+<link href="./css/sucesso_usuario.css" type="text/css" rel="stylesheet"/>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <link rel="icon" href="assets/img/lupus_icone.png" />
@@ -17,7 +17,7 @@
 	  <div class="row">
 	    <div class="col fadeIn second"><h5>Concluído!</h5></div>
 	    <div class="w-100"></div>
-	    <div class="col fadeIn third"><p>Espere algum médico entrar em contato.</p></div>
+	    <div class="col fadeIn third"><p>Suas informações foram atualizadas.</p></div>
 	  </div>
 	</div>
     <div id="formFooter">

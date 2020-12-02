@@ -11,26 +11,26 @@
 <title>Lupus</title>
 <div class="wrapper fadeInDown">
   <div id="formContent">
-    <!-- Icon -->
+  
     <div class="fadeIn first"><br>
       <img src="assets/img/estetoscopio.png" />
     </div><br>
 
-    <!-- Login Form -->
+    
     <form>
-      <input placeholder="nascimento" class="textbox-n fadeIn second" type="text" onfocus="(this.type='date')" id="nascimento" />
+      <input placeholder="nascimento" title="Data de nascimento" class="textbox-n fadeIn second" type="text" onfocus="(this.type='date')" id="nascimento" />
       
-      <input placeholder="data atual" class="textbox-n fadeIn third" type="text" onfocus="(this.type='date')" id="data_atual" />
+      <input placeholder="data atual" title="Dia atual" class="textbox-n fadeIn third" type="text" onfocus="(this.type='date')" id="data_atual" />
       
 
-      <select class="fadeIn fourth" name="select" required>
+      <select class="fadeIn fourth" title="Sexo" name="select" required>
 		  <option value="" disabled selected hidden>sexo</option> 
 		  <option value="1">masculino</option>
 		  <option value="2">feminino</option>
 	  </select>
 	  
 
-	  <select class="fadeIn five" name="select" required>
+	  <select class="fadeIn five" title="Finalidade" name="select" required>
 		  <option value="" disabled selected hidden>finalidade</option> 
 		  <option value="1">Ausência de Atividade (Escola/Universidade/Não Laboral)</option>
 		  <option value="2">Acompanhante em Consulta</option>
@@ -44,7 +44,7 @@
 			{
 		%>
 
-				  <select required class="fadeIn six" name="select">
+				  <select required class="fadeIn six" title="Cid 10" name="select">
 				  <option value="" disabled selected hidden>cid 10</option> 
 				  <% for(int i = 0; i<listaCid.size(); i++)
 					 {	
@@ -56,14 +56,13 @@
 				  </select>
 		<% } %>
 	         
-	  <input placeholder="período" class="textbox-n fadeIn seven" type="text" id="período" />
+	  <input placeholder="período" class="textbox-n fadeIn seven" title="Período" type="text" id="período" />
 	  
       
       
       <input type="submit" class="btn btn-primary js-scroll-trigger fadeIn seven" onclick="./login.jsp" value="Confirmar">
     </form>
 
-    <!-- Remind Passowrd -->
     <div id="formFooter">
       <a href="primeira_pagina.jsp"><img src="assets/img/retorna.png"></a>
     </div>

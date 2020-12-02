@@ -16,16 +16,14 @@
       <img src="assets/img/senha.png" />
     </div><br>
 
-    <!-- Login Form -->
     <% Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuarioCompleto"); %>
     <form method="post" action="alterarSenha">
-      <input type="password" id="antiga_senha" class="fadeIn second" name="antiga_senha" placeholder="antiga">
-      <input type="password" id="nova_senha" class="fadeIn third" name="nova_senha" placeholder="nova">      
-      <input type="password" id="confirmar_senha" class="fadeIn fourth" name="confirmar_senha" placeholder="confirmar">
+      <input type="password" id="antiga_senha" title="Antiga senha" class="fadeIn second" name="antiga_senha" placeholder="antiga">
+      <input type="password" id="nova_senha" title="Nova senha" class="fadeIn third" name="nova_senha" placeholder="nova">      
+      <input type="password" id="confirmar_senha" title="Confirmar senha" class="fadeIn fourth" name="confirmar_senha" placeholder="confirmar">
       <input type="submit" class="btn btn-primary js-scroll-trigger fadeIn five" value="Confirmar">
     </form>
-
-    <!-- Remind Passowrd -->
+    
     <div id="formFooter">
       <a href="primeira_pagina.jsp"><img src="assets/img/retorna.png"></a>
     </div>

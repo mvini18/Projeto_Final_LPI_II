@@ -13,7 +13,6 @@
       <img src="assets/img/lupus_128.png" />
     </div><br>
 
-    <!-- Login Form -->
 	<div class="container">
 	  <div class="row">
 	    <div class="col fadeIn second"><h5>Contato entre médicos e pacientes</h5></div>
@@ -23,7 +22,6 @@
 	     a do seu médico para que a sua recuperação possa ser a melhor possível.</p></div>
 	  </div>
 	</div>
-    <!-- Remind Passowrd -->
     <div id="formFooter">
       <a href="primeira_pagina.jsp"><img src="assets/img/retorna.png"></a>
     </div>

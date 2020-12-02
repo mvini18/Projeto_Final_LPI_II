@@ -12,8 +12,7 @@
     <div class="fadeIn first"><br>
       <a href="login.jsp"><img class="sucesso" src="assets/img/confirmacao.png" /></a>
     </div><br>
-
-    <!-- Login Form -->
+    
 	<div class="container">
 	  <div class="row">
 	    <div class="col fadeIn second"><h5>Concluído!</h5></div>
@@ -21,9 +20,9 @@
 	    <div class="col fadeIn third"><p>Volte para a página inicial.</p></div>
 	  </div>
 	</div>
-    <!-- Remind Passowrd -->
+	
     <div id="formFooter">
-      <a href="login.jsp"><img src="assets/img/retorna.png"></a>
+      <a href="deslogar"><img src="assets/img/retorna.png"></a>
     </div>
 
   </div>

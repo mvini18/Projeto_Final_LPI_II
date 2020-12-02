@@ -14,12 +14,12 @@
     </div><br>
 
       <form action="novoUsuario" name="registro" method="post">
-	      <input type="text" id="nome" class="fadeIn second" name="txtNome" placeholder="nome"> 
-	      <input type="email" id="email" class="fadeIn third" name="txtEmail" placeholder="email">
-	      <input type="text" id="cpf" class="fadeIn fourth" name="txtCpf" placeholder="cpf">
-	      <input type="text" id="telefone" class="fadeIn five" name="txtTelefone" placeholder="telefone">
-	      <input type="password" id="senha" class="fadeIn six" name="txtSenha" placeholder="senha">     
-	      <input type="password" id="confirmarsenha" class="fadeIn six" name="txtConfirmarSenha" placeholder="confirmar">
+	      <input type="text" title="Nome" id="nome" class="fadeIn second" name="txtNome" placeholder="nome"> 
+	      <input type="email" title="Email" id="email" class="fadeIn third" name="txtEmail" placeholder="email">
+	      <input type="text" title="Cpf" id="cpf" class="fadeIn fourth" name="txtCpf" placeholder="cpf">
+	      <input type="text" title="Telefone" id="telefone" class="fadeIn five" name="txtTelefone" placeholder="telefone">
+	      <input type="password" title="Senha" id="senha" class="fadeIn six" name="txtSenha" placeholder="senha">     
+	      <input type="password" title="Confirmar senha" id="confirmarsenha" class="fadeIn six" name="txtConfirmarSenha" placeholder="confirmar">
 	      <input type="submit" class="btn btn-primary js-scroll-trigger fadeIn seven" value="Confirmar">
       </form>
 
