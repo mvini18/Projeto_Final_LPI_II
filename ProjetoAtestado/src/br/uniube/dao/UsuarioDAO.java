@@ -103,14 +103,20 @@ public class UsuarioDAO extends AcessoBancoDAO {
 			Statement instrucao = getConexao().createStatement();
 			rs = instrucao.executeQuery(query);
 
-			if(rs.next()) {
+			if(rs.next()) 
+			{
 				String senha = rs.getString(1);
-				if (senhaAntiga == senha) {
+				if (senhaAntiga == senha)
+				{
 					return true;
-				} else {
+				} 
+				else 
+				{
 					return false;
 				}
-			} else {
+			} 
+			else 
+			{
 				return false;
 			}
 

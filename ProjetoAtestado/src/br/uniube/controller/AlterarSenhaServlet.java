@@ -19,24 +19,28 @@ public class AlterarSenhaServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		try {
-			String senhaAntiga = request.getParameter("antiga_senha");
+			Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuarioCompleto");
+			
 			String senhaNova = request.getParameter("nova_senha");
-
-			Usuario objUsuario = new Usuario();
-			objUsuario.setSenha(senhaNova);
+			String senhaAntiga = request.getParameter("antiga_senha");
 			
 			UsuarioDAO dao = new UsuarioDAO();
-			Usuario objUsuarioCompleto = dao.consultarUsuarioByEmail("");
-
-			if (dao.verificaSenha(senhaAntiga, objUsuario)) {
-				dao.alterarSenha(objUsuario);
+			Usuario objUsuarioCompleto = dao.consultarUsuarioByEmail(objUsuario.getEmail());
+			
+			if(objUsuario.getSenha().equals(senhaAntiga))
+			{
+				objUsuarioCompleto.setSenha(senhaNova);
+				
+				dao.alterarSenha(objUsuarioCompleto);
 				request.getSession().setAttribute("objUsuarioCompleto", objUsuarioCompleto);
-				response.sendRedirect("mudar_senha.jsp");
+				response.sendRedirect("sucesso_login.jsp");
+					
 			}
 			else
 			{
-				response.sendRedirect("primeira_pagina.jsp");
+				response.sendRedirect("mudar_senha.jsp");
 			}
+
 
 			
 
