@@ -13,6 +13,17 @@
 		<servlet-name>cadastraUsuario</servlet-name>
 		<url-pattern>/novoUsuario</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>alterarUsuario</servlet-name>
+		<servlet-class>br.uniube.controller.AlterarUsuarioServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>alterarUsuario</servlet-name>
+		<url-pattern>/alterarUsuario</url-pattern>
+	</servlet-mapping>
+	
 	<servlet>
 		<servlet-name>loginUsuario</servlet-name>
 		<servlet-class>br.uniube.controller.LoginUsuarioServlet</servlet-class>
@@ -22,6 +33,7 @@
 		<servlet-name>loginUsuario</servlet-name>
 		<url-pattern>/loginUsuario</url-pattern>
 	</servlet-mapping>
+	
 	<servlet>
 		<servlet-name>consultarCid</servlet-name>
 		<servlet-class>br.uniube.controller.ConsultarCidServlet</servlet-class>
@@ -31,6 +43,7 @@
 		<servlet-name>consultarCid</servlet-name>
 		<url-pattern>/atestado</url-pattern>
 	</servlet-mapping>
+	
 	<servlet>
 		<servlet-name>alterarSenha</servlet-name>
 		<servlet-class>br.uniube.controller.AlterarSenhaServlet</servlet-class>
@@ -40,7 +53,8 @@
 		<servlet-name>alterarSenha</servlet-name>
 		<url-pattern>/alterarSenha</url-pattern>
 	</servlet-mapping>
-		<servlet>
+	
+	<servlet>
 		<servlet-name>deslogar</servlet-name>
 		<servlet-class>br.uniube.controller.DeslogarUsuarioServlet</servlet-class>
 		<load-on-startup>0</load-on-startup>
@@ -50,6 +64,7 @@
 		<url-pattern>/deslogar</url-pattern>
 	</servlet-mapping>
 	<welcome-file-list>
+	
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
 </web-app>

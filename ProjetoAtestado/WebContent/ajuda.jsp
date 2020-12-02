@@ -13,7 +13,6 @@
       <img src="assets/img/enfermeira.png" />
     </div><br>
 
-    <!-- Login Form -->
 	<div class="container">
 	  <div class="row">
 	    <div class="col fadeIn second"><h5>Mudança de senha</h5></div>
@@ -23,7 +22,7 @@
 	    <div class="col fadeIn third"><p>O atestado só é gerado caso todas as informações forem preenchidas corretamente.</p></div>
 	  </div>
 	</div>
-    <!-- Remind Passowrd -->
+    
     <div id="formFooter">
       <a href="primeira_pagina.jsp"><img src="assets/img/retorna.png"></a>
     </div>

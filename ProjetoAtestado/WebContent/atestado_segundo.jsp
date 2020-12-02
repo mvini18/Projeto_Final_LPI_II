@@ -8,7 +8,7 @@
 <title>Lupus</title>
 <div class="wrapper fadeInDown">
 	<div id="formContent">
-		<!-- Icon -->
+		
 		<div class="fadeIn first">
 			<br> <img src="assets/img/sintomas.png" />
 		</div>
@@ -96,7 +96,7 @@
 					<span class="sr-only">Próximo</span>
 				</a>
 			</div>
-			<textarea maxlength="500"
+			<textarea title="Informações" maxlength="500"
 				placeholder="Exemplo: Dor forte como uma faixa apertando a cabeça."
 				class="fadeIn five" id="sintomas" name="sintomas" rows="2"
 				cols="33"></textarea>
@@ -105,7 +105,6 @@
 				onclick="./login.jsp" value="Confirmar">
 		</form>
 
-		<!-- Remind Passowrd -->
 		<div id="formFooter">
 			<a href="primeira_pagina.jsp"><img src="assets/img/retorna.png"></a>
 		</div>

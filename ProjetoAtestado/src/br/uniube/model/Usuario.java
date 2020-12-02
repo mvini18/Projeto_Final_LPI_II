@@ -1,8 +1,16 @@
 package br.uniube.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity 
+@Table(name="tb_login")
 public class Usuario {
 
+	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	
 	private String cpf, nome, email, telefone, senha, estilo_usuario ;
