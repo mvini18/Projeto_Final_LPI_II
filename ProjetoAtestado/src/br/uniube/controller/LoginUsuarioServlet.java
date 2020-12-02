@@ -44,7 +44,6 @@ public class LoginUsuarioServlet extends HttpServlet {
 			{
 				response.sendRedirect("login.jsp");
 			}
-
 		} catch(Exception ex) {
 			System.out.println(ex.getMessage());
 			// Monta um HTML de resposta contendo a mensagem de erro

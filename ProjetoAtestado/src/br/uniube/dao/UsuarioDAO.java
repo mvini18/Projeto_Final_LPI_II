@@ -43,7 +43,6 @@ public class UsuarioDAO extends AcessoBancoDAO {
 		try {
 			ResultSet rs;
 			conectar();
-
 			String query = "select id,cpf,email,telefone,senha,estilo_usuario,nome"
 					+ " from tb_login where email='" + emailUsuario + "'";
 
@@ -58,7 +57,6 @@ public class UsuarioDAO extends AcessoBancoDAO {
 				String senha = rs.getString(5);
 				String estilo_usuario = rs.getString(6);
 				String nome = rs.getString(7);
-
 
 				usuario.setId(id);
 				usuario.setNome(nome);

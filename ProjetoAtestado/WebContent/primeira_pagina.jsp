@@ -64,8 +64,7 @@
 				<img src="assets/img/user.png">
 			</p>
 			<h2>
-				Bem vindo(a),
-				<%=objUsuario.getNome()%>
+				Bem vindo(a), <%= objUsuario.getNome() %>
 			</h2>
 			<br> <br>
 			<div align="center">
