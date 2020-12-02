@@ -23,7 +23,6 @@ public class LoginUsuarioServlet extends HttpServlet {
 		try {
 			String emailUsuario = request.getParameter("txtEmail");
 			String senhaUsuario = request.getParameter("txtSenha");
-			String login = "1";
 
 
 			// cria o model Usuario
@@ -37,13 +36,13 @@ public class LoginUsuarioServlet extends HttpServlet {
 			{
 				Usuario objUsuarioCompleto = dao.consultarUsuarioByEmail(objUsuario.getEmail());
 				request.getSession().setAttribute("objUsuarioCompleto", objUsuarioCompleto);
-				request.getSession().setAttribute("login", login);
 				response.sendRedirect("primeira_pagina.jsp");
 			}
 			else
 			{
 				response.sendRedirect("login.jsp");
 			}
+
 		} catch(Exception ex) {
 			System.out.println(ex.getMessage());
 			// Monta um HTML de resposta contendo a mensagem de erro
