@@ -1,7 +1,13 @@
-<%@page
-	import="java.util.ArrayList,br.uniube.model.Usuario,br.uniube.dao.UsuarioDAO"%>
+<%@page import="br.uniube.model.Usuario,br.uniube.dao.UsuarioDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%
+	Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuarioCompleto");
+	String login = (String) request.getSession().getAttribute("login");
+	if (!login.equals("1")) {
+		response.sendRedirect("login.jsp");
+	}
+%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
     "http://www.w3.org/TR/html4/loose.dtd" >
 <html>
@@ -26,26 +32,29 @@
 
 </head>
 <body>
-	<% Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuarioCompleto"); %>
 	<div class="wrapper">
 		<nav id="sidebar">
 
-			<div class="sidebar-header fadeIn first">
-				<a href="index.html"><h3>
-						<img title="menu" src="assets/img/lupus_icone.png">Lupus
-					</h3></a>
-			</div>
-			<ul class="list-unstyled components fadeIn second">
-				<br>
-				<br>
-				<li><a href="atestado">Atestado</a></li>
-				<li><a href="ajuda.jsp">Ajuda</a></li>
-				<li><a href="info_usuario.jsp">Informações do usuário</a></li>  
-				<li><a href="objetivo.jsp">Objetivo</a></li>
-				<li><a href="mudar_senha.jsp">Senha</a></li> 
-				<br><br><br><br>
-				<li><a href="login.jsp"><img title="Sair" src="assets/img/opcao-de-sair.png"></a></li>
-			</ul>
+		<div class="sidebar-header fadeIn first">
+			<a href="index.html"><h3>
+					<img title="menu" src="assets/img/lupus_icone.png">Lupus
+				</h3></a>
+		</div>
+		<ul class="list-unstyled components fadeIn second">
+			<br>
+			<br>
+			<li><a href="atestado">Atestado</a></li>
+			<li><a href="ajuda.jsp">Ajuda</a></li>
+			<li><a href="info_usuario.jsp">Informações do usuário</a></li>
+			<li><a href="objetivo.jsp">Objetivo</a></li>
+			<li><a href="mudar_senha.jsp">Senha</a></li>
+			<br>
+			<br>
+			<br>
+			<br>
+			<li><a href="deslogar"><img title="Sair"
+					src="assets/img/opcao-de-sair.png"></a></li>
+		</ul>
 		</nav>
 
 		<!-- Page Content Holder -->
@@ -55,7 +64,8 @@
 				<img src="assets/img/user.png">
 			</p>
 			<h2>
-				Bem vindo(a), <%= objUsuario.getNome() %>
+				Bem vindo(a),
+				<%=objUsuario.getNome()%>
 			</h2>
 			<br> <br>
 			<div align="center">

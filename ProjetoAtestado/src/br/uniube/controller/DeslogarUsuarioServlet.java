@@ -11,39 +11,18 @@ import javax.servlet.http.HttpServletResponse;
 import br.uniube.dao.UsuarioDAO;
 import br.uniube.model.Usuario;
 
-public class LoginUsuarioServlet extends HttpServlet {
+public class DeslogarUsuarioServlet extends HttpServlet {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		try {
-			String emailUsuario = request.getParameter("txtEmail");
-			String senhaUsuario = request.getParameter("txtSenha");
-			String login = "1";
-
-
-			// cria o model Usuario
-			Usuario objUsuario = new Usuario();
-			objUsuario.setEmail(emailUsuario);
-			objUsuario.setSenha(senhaUsuario);
-			// chama o DAO para para fazer a inserção
-			UsuarioDAO dao = new UsuarioDAO();
-			dao.loginUsuario(objUsuario);
-			if(dao.loginUsuario(objUsuario))
-			{
-				Usuario objUsuarioCompleto = dao.consultarUsuarioByEmail(objUsuario.getEmail());
-				request.getSession().setAttribute("objUsuarioCompleto", objUsuarioCompleto);
-				request.getSession().setAttribute("login", login);
-				response.sendRedirect("primeira_pagina.jsp");
-			}
-			else
-			{
-				response.sendRedirect("login.jsp");
-			}
+			request.getSession().invalidate();
+			response.sendRedirect("login.jsp");
 
 		} catch(Exception ex) {
 			System.out.println(ex.getMessage());

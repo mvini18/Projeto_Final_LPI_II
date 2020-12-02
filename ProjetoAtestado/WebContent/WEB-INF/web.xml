@@ -40,6 +40,15 @@
 		<servlet-name>alterarSenha</servlet-name>
 		<url-pattern>/alterarSenha</url-pattern>
 	</servlet-mapping>
+		<servlet>
+		<servlet-name>deslogar</servlet-name>
+		<servlet-class>br.uniube.controller.DeslogarUsuarioServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>deslogar</servlet-name>
+		<url-pattern>/deslogar</url-pattern>
+	</servlet-mapping>
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
