@@ -18,6 +18,13 @@ a {
   font-weight: 400;
 }
 
+.error{
+	color: red;
+	border-color: red;
+}
+input:invalid {
+  border-color: red;
+}
 h2 {
   text-align: center;
   font-size: 16px;

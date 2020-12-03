@@ -18,9 +18,9 @@
 
     <% Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuarioCompleto"); %>
     <form method="post" action="../alterarSenha">
-      <input type="password" id="antiga_senha" title="Antiga senha" class="fadeIn second" name="antiga_senha" placeholder="antiga">
-      <input type="password" id="nova_senha" title="Nova senha" class="fadeIn third" name="nova_senha" placeholder="nova">      
-      <input type="password" id="confirmar_senha" title="Confirmar senha" class="fadeIn fourth" name="confirmar_senha" placeholder="confirmar">
+      <input type="password" id="antiga_senha" title="Antiga senha" class="fadeIn second" name="antiga_senha" placeholder="antiga" required>
+      <input type="password" id="nova_senha" title="Nova senha" class="fadeIn third" name="nova_senha" minlength="6" autocomplete="off" size="15" placeholder="nova" required>      
+      <input type="password" id="confirmar_senha" title="Confirmar senha" class="fadeIn fourth" name="confirmar_senha" autocomplete="off" size="15" placeholder="confirmar" required>
       <input type="submit" class="btn btn-primary js-scroll-trigger fadeIn five" value="Confirmar">
     </form>
     
