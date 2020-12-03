@@ -1,9 +1,13 @@
-function validarSenha(){
-	var senha = document.getElementById("senha"), confirmar_senha = document.getElementById("confirmar_senha");
+var password = document.getElementById("senha")
+  , confirm_password = document.getElementById("confirmar_senha");
 
-	if (senha != confirmar_senha) {
-		senha.setCustomValidity("Senhas diferentes!");
-		return false; 
-	}
-	return true;
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Senhas diferentes!");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
 }
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
