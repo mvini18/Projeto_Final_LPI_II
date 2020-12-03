@@ -1,19 +1,17 @@
 <!DOCTYPE html>
-<%@page import = "java.util.List, br.uniube.model.Cid"
-%>
-
+<%@page import = "java.util.List, br.uniube.model.Cid"%>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<link href="./css/atestado.css" type="text/css" rel="stylesheet"/>
+<link href="../css/atestado.css" type="text/css" rel="stylesheet"/>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<link rel="icon" href="assets/img/lupus_icone.png" />
+<link rel="icon" href="../assets/img/lupus_icone.png" />
 <!------ Include the above in your HEAD tag ---------->
 <title>Lupus</title>
 <div class="wrapper fadeInDown">
   <div id="formContent">
   
     <div class="fadeIn first"><br>
-      <img src="assets/img/estetoscopio.png" />
+      <img src="../assets/img/estetoscopio.png" />
     </div><br>
 
     
@@ -64,7 +62,7 @@
     </form>
 
     <div id="formFooter">
-      <a href="primeira_pagina.jsp"><img src="assets/img/retorna.png"></a>
+      <a href="primeira_pagina.jsp"><img src="../assets/img/retorna.png"></a>
     </div>
 
   </div>

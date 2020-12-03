@@ -36,11 +36,11 @@ public class LoginUsuarioServlet extends HttpServlet {
 			{
 				Usuario objUsuarioCompleto = dao.consultarUsuarioByEmail(objUsuario.getEmail());
 				request.getSession().setAttribute("objUsuarioCompleto", objUsuarioCompleto);
-				response.sendRedirect("primeira_pagina.jsp");
+				response.sendRedirect("paginas/primeira_pagina.jsp");
 			}
 			else
 			{
-				response.sendRedirect("login.jsp");
+				response.sendRedirect("paginas/login.jsp");
 			}
 
 		} catch(Exception ex) {

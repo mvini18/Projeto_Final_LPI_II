@@ -2,15 +2,15 @@
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<link href="./css/atestado_segundo.css" type="text/css" rel="stylesheet" />
-<link rel="icon" href="assets/img/lupus_icone.png" />
+<link href="../css/atestado_segundo.css" type="text/css" rel="stylesheet" />
+<link rel="icon" href="../assets/img/lupus_icone.png" />
 <!------ Include the above in your HEAD tag ---------->
 <title>Lupus</title>
 <div class="wrapper fadeInDown">
 	<div id="formContent">
 		
 		<div class="fadeIn first">
-			<br> <img src="assets/img/sintomas.png" />
+			<br> <img src="../assets/img/sintomas.png" />
 		</div>
 		<br>
 		<form>
@@ -30,56 +30,56 @@
 				</ol>
 				<div class="carousel-inner">
 					<div class="carousel-item active">
-						<img src="assets/img/carousel.png" class="img-fluid d-block"
+						<img src="../assets/img/carousel.png" class="img-fluid d-block"
 							alt="perguntas">
 						<div class="carousel-caption d-none d-md-block">
 							<h5>Apresenta febre? Quantos graus?</h5>
 						</div>
 					</div>
 					<div class="carousel-item">
-						<img src="assets/img/carousel.png" class="img-fluid d-block"
+						<img src="../assets/img/carousel.png" class="img-fluid d-block"
 							alt="perguntas">
 						<div class="carousel-caption d-none d-md-block">
 							<h5>Tem náusea?</h5>
 						</div>
 					</div>
 					<div class="carousel-item">
-						<img src="assets/img/carousel.png" class="img-fluid d-block"
+						<img src="../assets/img/carousel.png" class="img-fluid d-block"
 							alt="perguntas">
 						<div class="carousel-caption d-none d-md-block">
 							<h5>Tosse?</h5>
 						</div>
 					</div>
 					<div class="carousel-item">
-						<img src="assets/img/carousel.png" class="img-fluid d-block"
+						<img src="../assets/img/carousel.png" class="img-fluid d-block"
 							alt="perguntas">
 						<div class="carousel-caption d-none d-md-block">
 							<h5>Tontura?</h5>
 						</div>
 					</div>
 					<div class="carousel-item">
-						<img src="assets/img/carousel.png" class="img-fluid d-block"
+						<img src="../assets/img/carousel.png" class="img-fluid d-block"
 							alt="perguntas">
 						<div class="carousel-caption d-none d-md-block">
 							<h5>Dor em alguma parte do corpo? Qual a intensidade?</h5>
 						</div>
 					</div>
 					<div class="carousel-item">
-						<img src="assets/img/carousel.png" class="img-fluid d-block"
+						<img src="../assets/img/carousel.png" class="img-fluid d-block"
 							alt="perguntas">
 						<div class="carousel-caption d-none d-md-block">
 							<h5>Problemas em respirar?</h5>
 						</div>
 					</div>
 					<div class="carousel-item">
-						<img src="assets/img/carousel.png" class="img-fluid d-block"
+						<img src="../assets/img/carousel.png" class="img-fluid d-block"
 							alt="perguntas">
 						<div class="carousel-caption d-none d-md-block">
 							<h5>Problemas na visão?</h5>
 						</div>
 					</div>
 					<div class="carousel-item">
-						<img src="assets/img/carousel.png" class="img-fluid d-block"
+						<img src="../assets/img/carousel.png" class="img-fluid d-block"
 							alt="perguntas">
 						<div class="carousel-caption d-none d-md-block">
 							<h5>Inchaço em alguma parte do corpo?</h5>
@@ -106,7 +106,7 @@
 		</form>
 
 		<div id="formFooter">
-			<a href="primeira_pagina.jsp"><img src="assets/img/retorna.png"></a>
+			<a href="primeira_pagina.jsp"><img src="../assets/img/retorna.png"></a>
 		</div>
 
 	</div>

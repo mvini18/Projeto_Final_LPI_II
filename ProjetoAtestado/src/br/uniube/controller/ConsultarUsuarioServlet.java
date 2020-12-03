@@ -31,7 +31,7 @@ public class ConsultarUsuarioServlet extends HttpServlet {
 			Usuario objUsuarioCompleto = dao.consultarUsuarioByEmail(emailUsuario);
 			
 			request.getSession().setAttribute("objUsuarioCompleto", objUsuarioCompleto);
-			response.sendRedirect("primeira_pagina.jsp");
+			response.sendRedirect("paginas/primeira_pagina.jsp");
 			
 		} catch(Exception ex) {
 			System.out.println(ex.getMessage());
@@ -53,6 +53,6 @@ public class ConsultarUsuarioServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 	throws ServletException, IOException {
 		request.getSession().setAttribute("listaUsuarios", null);
-		response.sendRedirect("primeira_pagina.jsp");
+		response.sendRedirect("paginas/primeira_pagina.jsp");
 	}
 }

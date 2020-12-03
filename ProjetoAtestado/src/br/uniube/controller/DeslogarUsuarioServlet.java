@@ -22,7 +22,7 @@ public class DeslogarUsuarioServlet extends HttpServlet {
 			throws ServletException, IOException {
 		try {
 			request.getSession().invalidate();
-			response.sendRedirect("login.jsp");
+			response.sendRedirect("paginas/login.jsp");
 
 		} catch(Exception ex) {
 			System.out.println(ex.getMessage());

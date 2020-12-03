@@ -39,7 +39,7 @@ public class CadastrarUsuarioServlet extends HttpServlet {
 				UsuarioDAO dao = new UsuarioDAO();
 				dao.inserirUsuario(objUsuario);
 
-				response.sendRedirect("sucesso_login.jsp");
+				response.sendRedirect("paginas/sucesso_login.jsp");
 			
 		} catch(Exception ex) {
 			System.out.println(ex.getMessage());

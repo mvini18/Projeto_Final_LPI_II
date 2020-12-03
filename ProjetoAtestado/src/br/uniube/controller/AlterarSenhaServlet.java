@@ -33,12 +33,12 @@ public class AlterarSenhaServlet extends HttpServlet {
 				
 				dao.alterarSenha(objUsuarioCompleto);
 				request.getSession().setAttribute("objUsuarioCompleto", objUsuarioCompleto);
-				response.sendRedirect("sucesso_login.jsp");
+				response.sendRedirect("paginas/sucesso_login.jsp");
 					
 			}
 			else
 			{
-				response.sendRedirect("mudar_senha.jsp");
+				response.sendRedirect("paginas/mudar_senha.jsp");
 			}
 
 

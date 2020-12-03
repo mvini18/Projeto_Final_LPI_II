@@ -21,7 +21,7 @@ public class ConsultarCidServlet extends HttpServlet{
 				List listaCid = cid.consultarCid();
 				request.getSession().setAttribute("listaCid", listaCid);
 
-				response.sendRedirect("atestado.jsp");
+				response.sendRedirect("paginas/atestado.jsp");
 	
 		} catch(Exception ex) {
 		
@@ -48,7 +48,7 @@ public class ConsultarCidServlet extends HttpServlet{
 				List listaCid = cid.consultarCid();
 				request.getSession().setAttribute("listaCid", listaCid);
 
-				response.sendRedirect("atestado.jsp");
+				response.sendRedirect("paginas/atestado.jsp");
 	
 		} catch(Exception ex) {
 		
