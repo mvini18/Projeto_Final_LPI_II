@@ -17,24 +17,24 @@
     
     <form method="post" action="../primeiroAtestado">
     
-      <input required placeholder="nascimento" title="Data de nascimento" name="txtNascimento" class="textbox-n fadeIn second" type="text" onfocus="(this.type='date')" id="nascimento" />
+      <input required placeholder="nascimento" maxlength="10" title="Data de nascimento" name="txtNascimento" class="textbox-n fadeIn second" type="text" onfocus="(this.type='date')" id="nascimento" />
       
-      <input required placeholder="data atual" title="Dia atual" name="txtDiaAtual" class="textbox-n fadeIn third" type="text" onfocus="(this.type='date')" id="data_atual" />
+      <input required placeholder="data atual" maxlength="10" title="Dia atual" name="txtDiaAtual" class="textbox-n fadeIn third" type="text" onfocus="(this.type='date')" id="data_atual" />
       
 
       <select class="fadeIn fourth" title="Sexo" name="selectSexo" required>
 		  <option value="" disabled selected hidden>sexo</option> 
-		  <option value="1">masculino</option>
-		  <option value="2">feminino</option>
+		  <option value="masculino">masculino</option>
+		  <option value="feminino">feminino</option>
 	  </select>
 	  
 
 	  <select class="fadeIn five" title="Finalidade" name="selectFinalidade" required>
 		  <option value="" disabled selected hidden>finalidade</option> 
-		  <option value="1">Ausência de Atividade (Escola/Universidade/Não Laboral)</option>
-		  <option value="2">Acompanhante em Consulta</option>
-		  <option value="3">Comparecimento em Consulta</option>
-		  <option value="4">Ausência do Trabalho</option>
+		  <option value="Ausência de Atividade (Escola/Universidade/Não Laboral)">Ausência de Atividade (Escola/Universidade/Não Laboral)</option>
+		  <option value="Acompanhante em Consulta">Acompanhante em Consulta</option>
+		  <option value="Comparecimento em Consulta">Comparecimento em Consulta</option>
+		  <option value="Ausência do Trabalho">Ausência do Trabalho</option>
 	  </select>
 		
 		<%List listaCid = (List)request.getSession().getAttribute("listaCid");
@@ -43,8 +43,8 @@
 			{
 		%>
 
-				  <select class="fadeIn six" title="Cid 10" name="selectCid10">
-				  <option value="" disabled selected hidden>cid 10</option> 
+				  <select class="fadeIn six" title="Cid 10" name="selectCid10" required>
+				  <option value="" disabled selected hidden>cid10</option> 
 				  <% for(int i = 0; i<listaCid.size(); i++)
 					 {	
 					  	Cid objCid = (Cid)listaCid.get(i);

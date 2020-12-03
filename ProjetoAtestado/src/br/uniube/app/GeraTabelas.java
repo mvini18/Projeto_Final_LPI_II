@@ -6,6 +6,7 @@ import org.hibernate.tool.hbm2ddl.SchemaExport;
 import br.uniube.model.Atestado;
 import br.uniube.model.Cid;
 import br.uniube.model.Usuario;
+import br.uniube.model.Atestado;
 
 public class GeraTabelas {
 	public static void main(String[] args) {

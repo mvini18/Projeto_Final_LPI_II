@@ -18,10 +18,10 @@
 
     <% Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuarioCompleto"); %>     
     <form method="post" action="../alterarUsuario">
-      <input type="text" id="nome" class="fadeIn second" title="Nome" name="txtNome" value="<%= objUsuario.getNome()%>"> 
-      <input type="email" id="email" class="fadeIn third" title="Email" name="txtEmail" value="<%= objUsuario.getEmail()%>">
-      <input type="text" id="cpf" class="fadeIn fourth" title="Cpf" name="txtCpf" value="<%= objUsuario.getCpf()%>">
-      <input type="text" id="telefone" class="fadeIn five" title="Telefone" name="txtTelefone" value="<%= objUsuario.getTelefone()%>">
+      <input type="text" id="nome" class="fadeIn second" title="Nome" name="txtNome" maxlength="30" autocomplete="off" required value="<%= objUsuario.getNome()%>"> 
+      <input type="email" id="email" class="fadeIn third" title="Email" name="txtEmail" maxlength="30" required value="<%= objUsuario.getEmail()%>">
+      <input type="text" id="cpf" class="fadeIn fourth" title="Cpf" name="txtCpf" minlength="11" maxlength="11" pattern="^[0-9]{3}.?[0-9]{3}.?[0-9]{3}-?[0-9]{2}" required value="<%= objUsuario.getCpf()%>">
+      <input type="text" id="telefone" class="fadeIn five" title="Telefone" name="txtTelefone" maxlength="15" maxlength="30" autocomplete="off" pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{4})-([0-9]{4})" required value="<%= objUsuario.getTelefone()%>">
       <input type="submit" class="btn btn-primary js-scroll-trigger fadeIn six" value="Editar">
     </form>
 

@@ -31,9 +31,7 @@ public class SegundoAtestadoServlet extends HttpServlet {
 			
 			AtestadoDAO dao = new AtestadoDAO();
 			dao.inserirAtestado(objAtestado);
-
-
-
+			
 			request.getSession().setAttribute("objUsuarioCompleto", objUsuarioCompleto);
 			response.sendRedirect("paginas/sucesso_atestado.jsp");
 
