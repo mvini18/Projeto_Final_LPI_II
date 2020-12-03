@@ -21,7 +21,7 @@ public class PrimeiroAtestadoServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		try {
-			Usuario objUsuarioCpf = (Usuario) request.getSession().getAttribute("objUsuarioCompleto");
+			Usuario objUsuarioCompleto = (Usuario) request.getSession().getAttribute("objUsuarioCompleto");
 
 			String nascimentoUsuario = request.getParameter("txtNascimento");
 			String diaAtualUsuario = request.getParameter("txtDiaAtual");
@@ -39,8 +39,9 @@ public class PrimeiroAtestadoServlet extends HttpServlet {
 			objAtestado.setFinalidade(finalidadeUsuario);
 			objAtestado.setCid10(cid10Usuario);
 			objAtestado.setPeriodo(periodoUsuario);
-			objAtestado.setCpf_usuario(objUsuarioCpf.getCpf());
-
+			objAtestado.setCpf_usuario(objUsuarioCompleto.getCpf());
+			
+			request.getSession().setAttribute("objUsuarioCompleto", objUsuarioCompleto);
 			request.getSession().setAttribute("objAtestado", objAtestado);
 			response.sendRedirect("paginas/atestado_segundo.jsp");
 
