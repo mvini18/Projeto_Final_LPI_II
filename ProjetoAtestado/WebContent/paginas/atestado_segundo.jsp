@@ -13,7 +13,7 @@
 			<br> <img src="../assets/img/sintomas.png" />
 		</div>
 		<br>
-		<form>
+		<form method="post" action="../segundoAtestado">
 			<p class="fadeIn third">Escreva abaixo o que você está sentindo,
 				conte-nos com o máximo de detalhes que puder respeitando o limite de
 				500 caracteres. Procure dar respostas às perguntas abaixo.</p>
@@ -98,11 +98,10 @@
 			</div>
 			<textarea title="Informações" maxlength="500"
 				placeholder="Exemplo: Dor forte como uma faixa apertando a cabeça."
-				class="fadeIn five" id="sintomas" name="sintomas" rows="2"
+				class="fadeIn five" id="sintomas" name="txtSintomas" rows="2"
 				cols="33"></textarea>
 			<input type="submit"
-				class="btn btn-primary js-scroll-trigger fadeIn six"
-				onclick="./login.jsp" value="Confirmar">
+				class="btn btn-primary js-scroll-trigger fadeIn six" value="Confirmar">
 		</form>
 
 		<div id="formFooter">

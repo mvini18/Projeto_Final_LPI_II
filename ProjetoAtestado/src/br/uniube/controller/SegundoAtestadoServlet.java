@@ -8,10 +8,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.uniube.dao.UsuarioDAO;
 import br.uniube.model.Usuario;
+import br.uniube.model.Atestado;
+import br.uniube.dao.AtestadoDAO;
+import br.uniube.dao.UsuarioDAO;
 
-public class CadastrarUsuarioServlet extends HttpServlet {
+public class SegundoAtestadoServlet extends HttpServlet {
 
 	/**
 	 * 
@@ -21,25 +23,20 @@ public class CadastrarUsuarioServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		try {
-			String cpfUsuario = request.getParameter("txtCpf");
-			String nomeUsuario = request.getParameter("txtNome");
-			String emailUsuario = request.getParameter("txtEmail");
-			String telefoneUsuario = request.getParameter("txtTelefone");
-			String senhaUsuario = request.getParameter("txtSenha");
+			Usuario objUsuarioCompleto = (Usuario) request.getSession().getAttribute("objUsuarioCompleto");
+			Atestado objAtestado = (Atestado) request.getSession().getAttribute("objAtestado");
+
+			String textoUsuario = request.getParameter("txtSintomas");
+			objAtestado.setTexto_paciente(textoUsuario);
+			
+			AtestadoDAO dao = new AtestadoDAO();
+			dao.inserirAtestado(objAtestado);
 
 
-			// cria o model Usuario
-			Usuario objUsuario = new Usuario();
-			objUsuario.setCpf(cpfUsuario);
-			objUsuario.setNome(nomeUsuario);
-			objUsuario.setEmail(emailUsuario);
-			objUsuario.setTelefone(telefoneUsuario);
-			objUsuario.setSenha(senhaUsuario);
-			// chama o DAO para para fazer a inserção
-			UsuarioDAO dao = new UsuarioDAO();
-			dao.inserirUsuario(objUsuario);
 
-			response.sendRedirect("paginas/sucesso_login.jsp");
+			request.getSession().setAttribute("objUsuarioCompleto", objUsuarioCompleto);
+			response.sendRedirect("paginas/sucesso_atestado.jsp");
+
 
 		} catch(Exception ex) {
 			System.out.println(ex.getMessage());

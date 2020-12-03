@@ -8,10 +8,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.uniube.dao.UsuarioDAO;
 import br.uniube.model.Usuario;
+import br.uniube.model.Atestado;
 
-public class CadastrarUsuarioServlet extends HttpServlet {
+public class PrimeiroAtestadoServlet extends HttpServlet {
 
 	/**
 	 * 
@@ -21,25 +21,29 @@ public class CadastrarUsuarioServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		try {
-			String cpfUsuario = request.getParameter("txtCpf");
-			String nomeUsuario = request.getParameter("txtNome");
-			String emailUsuario = request.getParameter("txtEmail");
-			String telefoneUsuario = request.getParameter("txtTelefone");
-			String senhaUsuario = request.getParameter("txtSenha");
+			Usuario objUsuarioCpf = (Usuario) request.getSession().getAttribute("objUsuarioCompleto");
+
+			String nascimentoUsuario = request.getParameter("txtNascimento");
+			String diaAtualUsuario = request.getParameter("txtDiaAtual");
+			String sexoUsuario = request.getParameter("selectSexo");
+			String finalidadeUsuario = request.getParameter("selectFinalidade");
+			String cid10Usuario = request.getParameter("selectCid10");
+			String periodoUsuario = request.getParameter("txtPeriodo");
 
 
-			// cria o model Usuario
-			Usuario objUsuario = new Usuario();
-			objUsuario.setCpf(cpfUsuario);
-			objUsuario.setNome(nomeUsuario);
-			objUsuario.setEmail(emailUsuario);
-			objUsuario.setTelefone(telefoneUsuario);
-			objUsuario.setSenha(senhaUsuario);
-			// chama o DAO para para fazer a inserção
-			UsuarioDAO dao = new UsuarioDAO();
-			dao.inserirUsuario(objUsuario);
 
-			response.sendRedirect("paginas/sucesso_login.jsp");
+			Atestado objAtestado = new Atestado();
+			objAtestado.setNascimento(nascimentoUsuario);
+			objAtestado.setDia_atual(diaAtualUsuario);
+			objAtestado.setSexo(sexoUsuario);
+			objAtestado.setFinalidade(finalidadeUsuario);
+			objAtestado.setCid10(cid10Usuario);
+			objAtestado.setPeriodo(periodoUsuario);
+			objAtestado.setCpf_usuario(objUsuarioCpf.getCpf());
+
+			request.getSession().setAttribute("objAtestado", objAtestado);
+			response.sendRedirect("paginas/atestado_segundo.jsp");
+
 
 		} catch(Exception ex) {
 			System.out.println(ex.getMessage());

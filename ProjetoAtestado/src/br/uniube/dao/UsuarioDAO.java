@@ -9,9 +9,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 import br.uniube.model.Usuario;
-import br.uniube.model.Usuario;
-import br.uniube.model.Usuario;
-import br.uniube.model.Usuario;
 /**
  * Classe de acesso ao banco de dados
  * 

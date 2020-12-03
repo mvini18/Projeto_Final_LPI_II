@@ -4,6 +4,27 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	id="WebApp_ID" version="2.5">
 	<display-name>ProjetoAtestado</display-name>
+	
+	<servlet>
+		<servlet-name>segundoAtestado</servlet-name>
+		<servlet-class>br.uniube.controller.SegundoAtestadoServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>segundoAtestado</servlet-name>
+		<url-pattern>/segundoAtestado</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>primeiroAtestado</servlet-name>
+		<servlet-class>br.uniube.controller.PrimeiroAtestadoServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>primeiroAtestado</servlet-name>
+		<url-pattern>/primeiroAtestado</url-pattern>
+	</servlet-mapping>
+	
 	<servlet>
 		<servlet-name>cadastraUsuario</servlet-name>
 		<servlet-class>br.uniube.controller.CadastrarUsuarioServlet</servlet-class>
