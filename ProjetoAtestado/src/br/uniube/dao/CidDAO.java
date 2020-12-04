@@ -28,7 +28,7 @@ public class CidDAO {
 	
 	public List consultarCid() throws Exception{
 		conecta();
-		List lista = this.session.createQuery("from br.uniube.model.Cid").list();
+		List lista = this.session.createQuery("from br.uniube.model.Cid order by nome_cid").list();
 		desconecta();
 		return lista;
 	}
