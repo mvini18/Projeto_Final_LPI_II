@@ -13,7 +13,7 @@ public class Usuario {
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	
-	private String cpf, nome, email, telefone, senha, estilo_usuario ;
+	private String cpf, nome, email, telefone, senha, estilo_usuario;
 	
 	public int getId() {
 		return id;

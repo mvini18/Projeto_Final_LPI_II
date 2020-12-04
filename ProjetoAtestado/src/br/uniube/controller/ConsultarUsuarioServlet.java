@@ -50,9 +50,4 @@ public class ConsultarUsuarioServlet extends HttpServlet {
 		}
 			
 	}
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-	throws ServletException, IOException {
-		request.getSession().setAttribute("listaUsuarios", null);
-		response.sendRedirect("paginas/primeira_pagina.jsp");
-	}
 }

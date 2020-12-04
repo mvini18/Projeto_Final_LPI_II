@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	id="WebApp_ID" version="2.5">
 	<display-name>ProjetoAtestado</display-name>
-	
+
 	<servlet>
 		<servlet-name>segundoAtestado</servlet-name>
 		<servlet-class>br.uniube.controller.SegundoAtestadoServlet</servlet-class>
@@ -14,7 +15,7 @@
 		<servlet-name>segundoAtestado</servlet-name>
 		<url-pattern>/segundoAtestado</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>primeiroAtestado</servlet-name>
 		<servlet-class>br.uniube.controller.PrimeiroAtestadoServlet</servlet-class>
@@ -24,7 +25,7 @@
 		<servlet-name>primeiroAtestado</servlet-name>
 		<url-pattern>/primeiroAtestado</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>cadastraUsuario</servlet-name>
 		<servlet-class>br.uniube.controller.CadastrarUsuarioServlet</servlet-class>
@@ -34,7 +35,7 @@
 		<servlet-name>cadastraUsuario</servlet-name>
 		<url-pattern>/novoUsuario</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>alterarUsuario</servlet-name>
 		<servlet-class>br.uniube.controller.AlterarUsuarioServlet</servlet-class>
@@ -44,7 +45,7 @@
 		<servlet-name>alterarUsuario</servlet-name>
 		<url-pattern>/alterarUsuario</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>loginUsuario</servlet-name>
 		<servlet-class>br.uniube.controller.LoginUsuarioServlet</servlet-class>
@@ -54,7 +55,7 @@
 		<servlet-name>loginUsuario</servlet-name>
 		<url-pattern>/loginUsuario</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>consultarCid</servlet-name>
 		<servlet-class>br.uniube.controller.ConsultarCidServlet</servlet-class>
@@ -64,7 +65,7 @@
 		<servlet-name>consultarCid</servlet-name>
 		<url-pattern>/atestado</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>alterarSenha</servlet-name>
 		<servlet-class>br.uniube.controller.AlterarSenhaServlet</servlet-class>
@@ -74,7 +75,7 @@
 		<servlet-name>alterarSenha</servlet-name>
 		<url-pattern>/alterarSenha</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>deslogar</servlet-name>
 		<servlet-class>br.uniube.controller.DeslogarUsuarioServlet</servlet-class>
@@ -84,8 +85,18 @@
 		<servlet-name>deslogar</servlet-name>
 		<url-pattern>/deslogar</url-pattern>
 	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>consultarAtestados</servlet-name>
+		<servlet-class>br.uniube.controller.ConsultarAtestadosServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>consultarAtestados</servlet-name>
+		<url-pattern>/consultarAtestados</url-pattern>
+	</servlet-mapping>
 	<welcome-file-list>
-	
+
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
 </web-app>
