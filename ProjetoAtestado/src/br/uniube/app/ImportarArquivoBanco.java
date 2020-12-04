@@ -26,7 +26,7 @@ public class ImportarArquivoBanco {
 			// Após estabelecermos a conexão com o banco de dados
 			// Método createStatement para criar o Statement 
 			Statement stm = con.createStatement();
-			BufferedReader leitor = new BufferedReader(new FileReader("C:\\Users\\ianco\\eclipse-workspace\\CIDs.txt"));
+			BufferedReader leitor = new BufferedReader(new FileReader("C:\\Users\\marco\\Documents\\github\\Projeto_Final_LPI_II\\ProjetoAtestado\\src\\CIDs.txt"));
 
 			String linha = leitor.readLine();
 
