@@ -11,7 +11,7 @@ public class AcessoBancoDAO {
 	private final String HOSTNAME = "localhost";
 	private final String PORTA = "3306";
 	private final String USER = "root";
-	private final String PASSWORD = "123";
+	private final String PASSWORD = "root";
 	private Connection conexao;
 
 	public Connection getConexao() {

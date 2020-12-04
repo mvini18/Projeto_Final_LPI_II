@@ -46,7 +46,7 @@
 			<br>
 			<br>
 			<% if(objUsuario.getEstilo_usuario().equals("medico")){ %>
-			<li><a href="pagina_medico.jsp">Solicitações</a></li>
+			<li><a href="../consultarAtestados">Solicitações</a></li>
 			<% } %>
 			<% if(objUsuario.getEstilo_usuario().equals("paciente")){ %>
 			<li><a href="../atestado">Atestado</a></li>

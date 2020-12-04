@@ -3,6 +3,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
 	Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuarioCompleto");
+	
 %>
 <%
 	if (objUsuario == null) {
