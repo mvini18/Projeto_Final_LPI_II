@@ -6,7 +6,7 @@
 %>
 <%
 	if (objUsuario == null) {
-		response.sendRedirect("login.jsp");
+		response.sendRedirect("index.html");
 	}
 	else {
 %>
