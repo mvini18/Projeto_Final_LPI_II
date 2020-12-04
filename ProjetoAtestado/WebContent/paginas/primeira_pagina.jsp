@@ -4,6 +4,12 @@
 <%
 	Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuarioCompleto");
 %>
+<%
+	if(objUsuario.getEmail() == null || objUsuario.getEmail().equals(null))
+	{
+		response.sendRedirect("paginas/login.jsp");
+	}
+%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
     "http://www.w3.org/TR/html4/loose.dtd" >
 <html>
