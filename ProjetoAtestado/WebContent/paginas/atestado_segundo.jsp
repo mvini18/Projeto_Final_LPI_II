@@ -96,11 +96,7 @@
 					<span class="sr-only">Próximo</span>
 				</a>
 			</div>
-			<textarea required title="Informações" maxlength="500"
-				placeholder="Exemplo: Dor forte como uma faixa apertando a cabeça."
-				class="fadeIn five" id="sintomas" name="txtSintomas" rows="2"
-				cols="33">
-			</textarea>
+			<textarea required title="Informações" maxlength="500" placeholder="Exemplo: Dor forte como uma faixa apertando a cabeça." class="fadeIn five" id="sintomas" name="txtSintomas" rows="2" cols="33"></textarea>
 			<input type="submit"
 				class="btn btn-primary js-scroll-trigger fadeIn six" value="Confirmar">
 		</form>

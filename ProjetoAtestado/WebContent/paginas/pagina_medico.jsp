@@ -1,8 +1,10 @@
 <%@page import="br.uniube.model.Usuario,br.uniube.dao.UsuarioDAO"%>
+<%@page import="br.uniube.model.Atestado,br.uniube.dao.AtestadoDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
 	Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuarioCompleto");
+	Atestado objAtestado = (Atestado) request.getSession().getAttribute("objAtestado");
 	
 %>
 <%
@@ -20,7 +22,6 @@
 	rel="stylesheet" id="bootstrap-css">
 <link href="../css/pagina_medico.css" type="text/css" rel="stylesheet" />
 <link rel="icon" href="../assets/img/lupus_icone.png" />
-<!------ Include the above in your HEAD tag ---------->
 <title>Lupus</title>
 <div class="wrapper fadeInDown">
 	<div id="formContent">
@@ -28,7 +29,7 @@
 		<br>
 		<form method="post">
 
-			<!-- Stack the columns on mobile by making one full-width and the other half-width -->
+			<
 			<div class="row">
 				<div class="col-4 col-md-5 fadeIn first">
 					<img src="../assets/img/user.png" />
@@ -37,13 +38,13 @@
 					<p>
 					<p>
 					<h6 title="Nome">Arthur Carvalho Victorino</h6>
-					<h6 title="Cpf">136.381.316-10</h6>
+					<h6 title="Cpf"><%= objAtestado.getCpf_usuario() %></h6>
 					<h6 title="Nascimento">13/10/1999</h6>
 				</div>
 
 			</div>
 			<br>
-			<!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+			
 			<div class="row">
 				<div class="col-1 col-md-1 fadeIn third">
 				</div>
@@ -55,21 +56,16 @@
 					<h5>Período:</h5>
 				</div>
 				<div class="col-1 col-md-8 fadeIn third">
-					<p>04/12/2020</p>
-					<p>Masculino</p>
-					<p>A19</p>
-					<p>Ausência de Atividade (Escola/Universidade/Não Laboral)</p>
-					<p>2 dias</p>
+					<p><%= objAtestado.getNascimento() %></p>
+					<p><%= objAtestado.getSexo() %></p>
+					<p><%= objAtestado.getCid10() %></p>
+					<p><%= objAtestado.getFinalidade() %></p>
+					<p><%= objAtestado.getPeriodo() %></p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-10 col-md-12 fadeIn fourth">
-					<textarea readonly required title="Mensagem do paciente"
-						maxlength="500"
-						placeholder="Exemplo: Dor forte como uma faixa apertando a cabeça."
-						class="fadeIn five" id="sintomas" name="txtSintomas" rows="5"
-						cols="33">
-					</textarea>
+					<textarea readonly title="Mensagem do paciente" maxlength="500" class="fadeIn five" id="sintomas" name="txtSintomas" rows="4"cols="33"><%= objAtestado.getTexto_paciente()%></textarea>
 				</div>
 			</div>
 

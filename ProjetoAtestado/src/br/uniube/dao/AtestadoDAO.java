@@ -44,7 +44,7 @@ public class AtestadoDAO extends AcessoBancoDAO {
 		try {
 			ResultSet rs;
 			conectar();
-			String query = "select cid10, cpf_usuario, dia_atual, finalidade, nacimento, periodo, sexo, status, texto_paciente"
+			String query = "select cid10, cpf_usuario, dia_atual, finalidade, nascimento, periodo, sexo, status, texto_paciente"
 					+ " from tb_atestado where status='" + statusAtestado + "'";
 
 			Statement instrucao = getConexao().createStatement();
