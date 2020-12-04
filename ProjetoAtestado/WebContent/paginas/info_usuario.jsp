@@ -1,3 +1,12 @@
+<%
+	Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuarioCompleto");
+%>
+<%
+	if (objUsuario == null) {
+		response.sendRedirect("index.jsp");
+	}
+	else {
+%>
 <%@page import="br.uniube.model.Usuario,br.uniube.dao.UsuarioDAO"%>
 <!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,6 +15,11 @@
 <link href="../css/info_usuario.css" type="text/css" rel="stylesheet"/>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+
+<script type="text/javascript">$("#telefone").mask("(00) 00000-0000");</script>
+<script type="text/javascript">$("#cpf").mask("000.000.000-00");</script>
 <link rel="icon" href="../assets/img/lupus_icone.png" />
 <!------ Include the above in your HEAD tag ---------->
 <title>Lupus</title>
@@ -16,7 +30,7 @@
       <img src="../assets/img/pranchetas.png" />
     </div><br>
 
-    <% Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuarioCompleto"); %>     
+    
     <form method="post" action="../alterarUsuario">
       <input type="text" id="nome" class="fadeIn second" title="Nome" name="txtNome" maxlength="30" autocomplete="off" required value="<%= objUsuario.getNome()%>"> 
       <input type="email" id="email" class="fadeIn third" title="Email" name="txtEmail" maxlength="30" required value="<%= objUsuario.getEmail()%>">
@@ -31,3 +45,4 @@
 
   </div>
 </div>
+<% }%>

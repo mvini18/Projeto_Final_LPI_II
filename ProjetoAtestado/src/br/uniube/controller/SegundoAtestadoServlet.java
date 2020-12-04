@@ -37,19 +37,7 @@ public class SegundoAtestadoServlet extends HttpServlet {
 
 
 		} catch(Exception ex) {
-			System.out.println(ex.getMessage());
-			// Monta um HTML de resposta contendo a mensagem de erro
-			PrintWriter resposta = response.getWriter();
-			//gera o texto HTML
-			resposta.write("<html>");
-			resposta.write("<head><title>Erro na Aplicação</title><head/>");
-			resposta.write("<body>");
-			resposta.write("<div class='estiloTexto'>");
-			resposta.write("Erro na aplicação, entre em contato com o Administrador do sistema. Mensagem de erro:" + ex.getMessage());
-			resposta.write("</div>");
-			resposta.write("</body>");
-			resposta.write("</html>");
-			resposta.flush();
+			response.sendRedirect("paginas/index.html");
 		}
 
 	}
