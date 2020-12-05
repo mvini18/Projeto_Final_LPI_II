@@ -36,7 +36,11 @@
 				</div>
 				<div class="col-1 col-md-7 fadeIn second">
 					<p>O atestado está em processo de avaliação, caso seja confirmado aguarde o contato do médico.</p>
+					<% if(objAtestado.getStatus() == null){ %>
+					<h6>Nenhum atestado encontrado.</h6>
+					<% }else{ %>
 					<h6><%= objAtestado.getStatus() %></h6>
+					<% } %>
 				</div>
 			</div>
 		</form>
