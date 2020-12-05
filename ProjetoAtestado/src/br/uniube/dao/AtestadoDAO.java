@@ -81,5 +81,31 @@ public class AtestadoDAO extends AcessoBancoDAO {
 		}
 		return objAtestado;
 	}
+	public Atestado mostrarStatusUsuario(String cpf) throws Exception {
+		Atestado objAtestado = new Atestado();
+		try {
+			ResultSet rs;
+			conectar();
+			String query = "select status from tb_atestado where cpf_usuario= '" + cpf + "'";
+
+			Statement instrucao = getConexao().createStatement();
+			rs = instrucao.executeQuery(query);
+
+			if(rs.next()) {
+				String status = rs.getString(1);
+			
+				objAtestado.setStatus(status);
+				
+			}
+
+		} catch (SQLException ex) {
+			throw new SQLException(ex);
+		} catch(Exception ex) {
+			throw new Exception(ex);
+		} finally{
+			desconectar();
+		}
+		return objAtestado;
+	}
 
 }

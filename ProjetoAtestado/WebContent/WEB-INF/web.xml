@@ -65,6 +65,16 @@
 		<servlet-name>consultarCid</servlet-name>
 		<url-pattern>/atestado</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>consultarStatus</servlet-name>
+		<servlet-class>br.uniube.controller.ConsultarStatusServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>consultarStatus</servlet-name>
+		<url-pattern>/consultarStatus</url-pattern>
+	</servlet-mapping>
 
 	<servlet>
 		<servlet-name>alterarSenha</servlet-name>
@@ -97,6 +107,6 @@
 	</servlet-mapping>
 	<welcome-file-list>
 
-		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
 </web-app>

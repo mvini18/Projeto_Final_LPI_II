@@ -47,11 +47,15 @@
 			<br>
 			<% if(objUsuario.getEstilo_usuario().equals("medico")){ %>
 			<li><a href="../consultarAtestados">Solicitações</a></li>
+			<li><a href=";ajuda_medico.jsp">Ajuda</a></li>
+			
 			<% } %>
 			<% if(objUsuario.getEstilo_usuario().equals("paciente")){ %>
 			<li><a href="../atestado">Atestado</a></li>
+			<li><a href="ajuda_paciente.jsp">Ajuda</a></li>
+			<li><a href="../consultarStatus">Central</a></li>
 			<% } %>
-			<li><a href="ajuda.jsp">Ajuda</a></li>
+			
 			<li><a href="info_usuario.jsp">Informações do usuário</a></li>
 			<li><a href="objetivo.jsp">Objetivo</a></li>
 			<li><a href="mudar_senha.jsp">Senha</a></li>

@@ -29,7 +29,7 @@
 		<br>
 		<form method="post">
 
-			<
+			
 			<div class="row">
 				<div class="col-4 col-md-5 fadeIn first">
 					<img src="../assets/img/user.png" />
