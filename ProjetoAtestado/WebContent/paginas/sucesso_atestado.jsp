@@ -17,7 +17,7 @@
 	  <div class="row">
 	    <div class="col fadeIn second"><h5>Concluído!</h5></div>
 	    <div class="w-100"></div>
-	    <div class="col fadeIn third"><p>Espere algum médico entrar em contato.</p></div>
+	    <div class="col fadeIn third"><p>Verifique sua central para mais informações.</p></div>
 	  </div>
 	</div>
     <div id="formFooter">

@@ -75,6 +75,26 @@
 		<servlet-name>consultarStatus</servlet-name>
 		<url-pattern>/consultarStatus</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>confirmarAtestado</servlet-name>
+		<servlet-class>br.uniube.controller.ConfirmarAtestadoServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>confirmarAtestado</servlet-name>
+		<url-pattern>/confirmarAtestado</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>rejeitarAtestado</servlet-name>
+		<servlet-class>br.uniube.controller.RejeitarAtestadoServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>rejeitarAtestado</servlet-name>
+		<url-pattern>/rejeitarAtestado</url-pattern>
+	</servlet-mapping>
 
 	<servlet>
 		<servlet-name>alterarSenha</servlet-name>

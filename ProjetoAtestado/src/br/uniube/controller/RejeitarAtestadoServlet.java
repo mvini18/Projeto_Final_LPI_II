@@ -9,26 +9,24 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import br.uniube.dao.AtestadoDAO;
-import br.uniube.dao.UsuarioDAO;
-import br.uniube.model.Usuario;
 import br.uniube.model.Atestado;
 
-public class ConsultarAtestadosServlet extends HttpServlet {
+public class RejeitarAtestadoServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		try {
-//			Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuarioCompleto");
-			String statusAtestado = "Pendente";
-
+			Atestado objAtestado = (Atestado) request.getSession().getAttribute("objAtestado");
+			
+			String cpf = objAtestado.getCpf_usuario();
+			
 			AtestadoDAO dao = new AtestadoDAO();
-			Atestado objAtestado = dao.consultarAtestadoByStatus(statusAtestado);
+			dao.rejeitarAtestado(cpf);
 			
-			request.getSession().setAttribute("objAtestado", objAtestado);
-			response.sendRedirect("paginas/pagina_medico.jsp");
-			
+			response.sendRedirect("paginas/primeira_pagina.jsp");	
+
 		} catch(Exception ex) {
 			System.out.println(ex.getMessage());
 
@@ -38,7 +36,7 @@ public class ConsultarAtestadosServlet extends HttpServlet {
 			resposta.write("<head><title>Erro na Aplicação</title><head/>");
 			resposta.write("<body>");
 			resposta.write("<div class='estiloTexto'>");
-			resposta.write("Deu erro na P Servlet" + ex.getMessage());
+			resposta.write("erro na rejeitar atestado" + ex.getMessage());
 			resposta.write("</div>");
 			resposta.write("</body>");
 			resposta.write("</html>");

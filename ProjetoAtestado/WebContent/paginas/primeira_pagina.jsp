@@ -52,8 +52,8 @@
 			<% } %>
 			<% if(objUsuario.getEstilo_usuario().equals("paciente")){ %>
 			<li><a href="../atestado">Atestado</a></li>
-			<li><a href="ajuda_paciente.jsp">Ajuda</a></li>
 			<li><a href="../consultarStatus">Central</a></li>
+			<li><a href="ajuda_paciente.jsp">Ajuda</a></li>
 			<% } %>
 			
 			<li><a href="info_usuario.jsp">Informações do usuário</a></li>

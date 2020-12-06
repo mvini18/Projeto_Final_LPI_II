@@ -1,10 +1,14 @@
-function validatePassword() {
-	var password = document.getElementById("senha"), confirm_password = document.getElementById("confirmar_senha");
-	if(password.value != confirm_password.value) {
-		confirm_password.setCustomValidity("Senhas diferentes!");
-		return false;
-	} else {
-		confirm_password.setCustomValidity('');
-		return true;
-	}
+function validarSenha(name1, name2)
+{
+    var senha1 = document.getElementById(name1).value;
+    var senha2 = document.getElementById(name2).value;
+		
+    if (senha1 != "" && senha2 != "" && senha1 === senha2)
+    {
+    	alert('senha iguais');
+    }
+    else
+    {
+      	alert('senhas diferentes');
+    }
 }

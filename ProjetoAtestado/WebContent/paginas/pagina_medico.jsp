@@ -29,7 +29,18 @@
 		<br>
 		<form method="post">
 
-			
+			<% if(objAtestado.getCpf_usuario() == null){ %>
+			<div class="row">
+				<div class="col-4 col-md-4 fadeIn first">
+					<img src="../assets/img/sala-de-espera.png" />
+				</div>
+				<div class="col-1 col-md-7 fadeIn second">
+					<h6>Nenhuma solicitação!</h6><br>
+					<p>Está silencioso por aqui, espere algum paciente cadastrar suas informações.</p>
+					
+				</div>
+			</div>
+			<%}else{ %>
 			<div class="row">
 				<div class="col-4 col-md-5 fadeIn first">
 					<img src="../assets/img/user.png" />
@@ -70,16 +81,18 @@
 			</div>
 
 
-			<input type="submit"
+			<a href="../confirmarAtestado"><input type="button"
 				class="btn btn-primary js-scroll-trigger fadeIn five" id="aceitar"
-				value="Aceitar"> <input type="submit"
+				value="Aceitar"> </a>
+			<a href="rejeitar_atestado.jsp"><input type="button"
 				class="btn btn-primary js-scroll-trigger fadeIn five" id="rejeitar"
-				value="Rejeitar"> <a href=""><img class="fadeIn third"
-				id="img" title="Proximo" src="../assets/img/seta-direita.png" /></a>
+				value="Rejeitar"></a>
+			<!-- <a href=""><img class="fadeIn third"
+				id="img" title="Proximo" src="../assets/img/seta-direita.png" /></a> -->
 
 
 		</form>
-
+		<% } %>
 		<div id="formFooter">
 			<a href="primeira_pagina.jsp"><img
 				src="../assets/img/retorna.png"></a>
