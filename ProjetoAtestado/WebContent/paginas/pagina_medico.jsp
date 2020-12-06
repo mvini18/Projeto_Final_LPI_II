@@ -36,10 +36,10 @@
 				</div>
 				<div class="col-1 col-md-7 fadeIn second">
 					<h6>Nenhuma solicitação!</h6><br>
-					<p>Está silencioso por aqui, espere algum paciente cadastrar suas informações.</p>
+					<m>Está silencioso por aqui, espere algum paciente cadastrar suas informações.</m>
 					
 				</div>
-			</div>
+			</div><br>
 			<%}else{ %>
 			<div class="row">
 				<div class="col-4 col-md-5 fadeIn first">

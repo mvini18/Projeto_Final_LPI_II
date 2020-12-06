@@ -40,6 +40,15 @@ p {
 	color: #999;
 }
 
+m {
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	font-size: 0.8em;
+	font-weight: 300;
+	line-height: 1.3em;
+	color: #999;
+}
+
 a {
   color: #92badd;
   display:inline-block;
