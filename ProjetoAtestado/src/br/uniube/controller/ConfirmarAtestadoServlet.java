@@ -26,7 +26,7 @@ public class ConfirmarAtestadoServlet extends HttpServlet {
 			AtestadoDAO dao = new AtestadoDAO();
 			dao.confirmarAtestado(cpf);
 
-			response.sendRedirect("paginas/central_medico.jsp");
+			response.sendRedirect("consultarAtestados");
 						
 
 		} catch(Exception ex) {

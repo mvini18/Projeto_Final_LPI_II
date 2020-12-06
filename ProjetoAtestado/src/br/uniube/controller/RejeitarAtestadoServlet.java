@@ -25,7 +25,7 @@ public class RejeitarAtestadoServlet extends HttpServlet {
 			AtestadoDAO dao = new AtestadoDAO();
 			dao.rejeitarAtestado(cpf);
 			
-			response.sendRedirect("paginas/primeira_pagina.jsp");	
+			response.sendRedirect("consultarAtestados");	
 
 		} catch(Exception ex) {
 			System.out.println(ex.getMessage());

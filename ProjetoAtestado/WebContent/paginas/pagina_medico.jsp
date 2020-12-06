@@ -81,7 +81,7 @@
 			</div>
 
 
-			<a href="../confirmarAtestado"><input type="button"
+			<a href="confirmar_atestado.jsp"><input type="button"
 				class="btn btn-primary js-scroll-trigger fadeIn five" id="aceitar"
 				value="Aceitar"> </a>
 			<a href="rejeitar_atestado.jsp"><input type="button"
