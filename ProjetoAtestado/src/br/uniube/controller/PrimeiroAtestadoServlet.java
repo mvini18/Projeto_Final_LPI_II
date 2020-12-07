@@ -1,10 +1,7 @@
 package br.uniube.controller;
 
 import java.io.IOException;
-<<<<<<< HEAD
-=======
 import java.text.SimpleDateFormat;
->>>>>>> a9781599d645f94eefe658942498249560811610
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -29,28 +26,15 @@ public class PrimeiroAtestadoServlet extends HttpServlet {
 			Usuario objUsuarioCompleto = (Usuario) request.getSession().getAttribute("objUsuarioCompleto");
 			
 			LocalDateTime now = LocalDateTime.now();
-<<<<<<< HEAD
-
-	        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-
-	        String diaAtualUsuario = now.format(formatter);
-
-			String nascimentoUsuario = request.getParameter("txtNascimento");
-=======
 			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
 			String nascimentoUsuario = request.getParameter("txtNascimento");
 			String diaAtualUsuario = now.format(formatter);
->>>>>>> a9781599d645f94eefe658942498249560811610
 			String sexoUsuario = request.getParameter("selectSexo");
 			String finalidadeUsuario = request.getParameter("selectFinalidade");
 			String cid10Usuario = request.getParameter("selectCid10");
 			String periodoUsuario = request.getParameter("txtPeriodo");
-<<<<<<< HEAD
-
-=======
 			
->>>>>>> a9781599d645f94eefe658942498249560811610
 			Atestado objAtestado = new Atestado();
 			objAtestado.setNascimento(nascimentoUsuario);
 			objAtestado.setDia_atual(diaAtualUsuario);

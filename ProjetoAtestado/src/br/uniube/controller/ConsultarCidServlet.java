@@ -2,8 +2,6 @@ package br.uniube.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -12,15 +10,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import br.uniube.dao.CidDAO;
-<<<<<<< HEAD
-import br.uniube.model.Atestado;
-=======
 import br.uniube.dao.UsuarioDAO;
 import br.uniube.dao.AtestadoDAO;
 import br.uniube.model.Atestado;
 import br.uniube.model.Cid;
 import br.uniube.model.Usuario;
->>>>>>> a9781599d645f94eefe658942498249560811610
 
 public class ConsultarCidServlet extends HttpServlet{
 	
@@ -28,11 +22,7 @@ public class ConsultarCidServlet extends HttpServlet{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-<<<<<<< HEAD
-	
-=======
 
->>>>>>> a9781599d645f94eefe658942498249560811610
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		try {
