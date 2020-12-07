@@ -68,7 +68,7 @@
 					<h5>Período:</h5>
 				</div>
 				<div class="col-1 col-md-8 fadeIn third">
-					<p><%= objAtestado.getNascimento() %></p>
+					<p><%= objAtestado.getDia_atual() %></p>
 					<p><%= objAtestado.getSexo() %></p>
 					<p><%= objAtestado.getCid10() %></p>
 					<p><%= objAtestado.getFinalidade() %></p>

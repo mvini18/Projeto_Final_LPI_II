@@ -1,10 +1,11 @@
-<!DOCTYPE html>
 <%@page import = "java.util.List, br.uniube.model.Cid"%>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <link href="../css/atestado.css" type="text/css" rel="stylesheet"/>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <link rel="icon" href="../assets/img/lupus_icone.png" />
+
+<!DOCTYPE html>
 <!------ Include the above in your HEAD tag ---------->
 <title>Lupus</title>
 <div class="wrapper fadeInDown">
@@ -17,10 +18,7 @@
     
     <form method="post" action="../primeiroAtestado">
     
-      <input required placeholder="nascimento" maxlength="10" title="Data de nascimento" name="txtNascimento" class="textbox-n fadeIn second" type="text" onfocus="(this.type='date')" id="nascimento" />
-      
-      <input required placeholder="data atual" maxlength="10" title="Dia atual" name="txtDiaAtual" class="textbox-n fadeIn third" type="text" onfocus="(this.type='date')" id="data_atual" />
-      
+      <input required placeholder="nascimento" maxlength="10" title="Data de nascimento" name="txtNascimento" class="textbox-n fadeIn second" type="text" onfocus="(this.type='date')" id="nascimento" />      
 
       <select class="fadeIn fourth" title="Sexo" name="selectSexo" required>
 		  <option value="" disabled selected hidden>sexo</option> 
