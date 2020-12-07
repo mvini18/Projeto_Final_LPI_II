@@ -21,9 +21,10 @@ public class RejeitarAtestadoServlet extends HttpServlet {
 			Atestado objAtestado = (Atestado) request.getSession().getAttribute("objAtestado");
 			
 			String cpf = objAtestado.getCpf_usuario();
+			int id = objAtestado.getId();
 			
 			AtestadoDAO dao = new AtestadoDAO();
-			dao.rejeitarAtestado(cpf);
+			dao.rejeitarAtestado(cpf,id);
 			
 			response.sendRedirect("consultarAtestados");	
 

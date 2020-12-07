@@ -12,7 +12,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import br.uniube.dao.CidDAO;
+<<<<<<< HEAD
 import br.uniube.model.Atestado;
+=======
+import br.uniube.dao.UsuarioDAO;
+import br.uniube.dao.AtestadoDAO;
+import br.uniube.model.Atestado;
+import br.uniube.model.Cid;
+import br.uniube.model.Usuario;
+>>>>>>> a9781599d645f94eefe658942498249560811610
 
 public class ConsultarCidServlet extends HttpServlet{
 	
@@ -20,15 +28,31 @@ public class ConsultarCidServlet extends HttpServlet{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> a9781599d645f94eefe658942498249560811610
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		try {
+			Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuarioCompleto");
+			
+			AtestadoDAO dao = new AtestadoDAO();
+			boolean verificar = dao.usuarioAtestadoPendente(objUsuario.getCpf());
+			
+			
+			if(verificar == false)
+			{
 				CidDAO cid = new CidDAO();
 				List listaCid = cid.consultarCid();
 				request.getSession().setAttribute("listaCid", listaCid);
-
 				response.sendRedirect("paginas/atestado.jsp");
+			}
+			else
+			{
+				response.sendRedirect("paginas/erro_cadastro_atestado.jsp");
+			}
 	
 		} catch(Exception ex) {
 		
@@ -47,4 +71,5 @@ public class ConsultarCidServlet extends HttpServlet{
 		resposta.flush();
 	}
 	}
+
 }

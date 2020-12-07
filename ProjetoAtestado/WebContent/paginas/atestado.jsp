@@ -4,6 +4,11 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <link rel="icon" href="../assets/img/lupus_icone.png" />
+<<<<<<< HEAD
+=======
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+<script type="text/javascript">$("#nascimento").mask("00/00/0000");</script>
+>>>>>>> a9781599d645f94eefe658942498249560811610
 
 <!DOCTYPE html>
 <!------ Include the above in your HEAD tag ---------->
@@ -18,7 +23,11 @@
     
     <form method="post" action="../primeiroAtestado">
     
+<<<<<<< HEAD
       <input required placeholder="nascimento" maxlength="10" title="Data de nascimento" name="txtNascimento" class="textbox-n fadeIn second" type="text" onfocus="(this.type='date')" id="nascimento" />      
+=======
+      <input required placeholder="nascimento" maxlength="10" title="Data de nascimento" name="txtNascimento" class="textbox-n fadeIn second" type="text" id="nascimento" />      
+>>>>>>> a9781599d645f94eefe658942498249560811610
 
       <select class="fadeIn fourth" title="Sexo" name="selectSexo" required>
 		  <option value="" disabled selected hidden>sexo</option> 

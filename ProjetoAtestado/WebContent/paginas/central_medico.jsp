@@ -32,7 +32,7 @@
 			<div class="row">
 				<div class="col-4 col-md-4 fadeIn first">
 					<img src="../assets/img/arquivo.png" />
-				</div><h6>boa sorte no pdf</h6>
+				</div><h6>em desenvolvimento</h6>
 			</div>
 		</form>
 		<br>
