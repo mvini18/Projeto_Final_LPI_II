@@ -36,6 +36,8 @@
 		  <option value="Comparecimento em Consulta">Comparecimento em Consulta</option>
 		  <option value="Ausência do Trabalho">Ausência do Trabalho</option>
 	  </select>
+	  
+	   <input type="search" id="texto" title="cid 10" list="cid10" name="txtCid10" class="textbox-n fadeIn six" placeholder="cid 10" required>
 		
 		<%List listaCid = (List)request.getSession().getAttribute("listaCid");
 			
@@ -43,7 +45,7 @@
 			{
 		%>
 
-				  <select class="fadeIn six" title="Cid 10" name="selectCid10" required>
+				  <datalist id="cid10" title="Cid 10" name="selectCid10" required>
 				  <option value="" disabled selected hidden>cid10</option> 
 				  <% for(int i = 0; i<listaCid.size(); i++)
 					 {	
@@ -52,7 +54,7 @@
 					  <option value="<%= objCid.getCodigo_cid()%>"><%= objCid.getNome_cid()%></option>
 				  <% } %>
 			
-				  </select>
+				  </datalist>
 		<% } %>
 	         
 	  <input placeholder="período" class="textbox-n fadeIn seven" name="txtPeriodo" title="Período" type="text" id="período" required>

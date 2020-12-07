@@ -32,7 +32,7 @@ public class PrimeiroAtestadoServlet extends HttpServlet {
 			String diaAtualUsuario = now.format(formatter);
 			String sexoUsuario = request.getParameter("selectSexo");
 			String finalidadeUsuario = request.getParameter("selectFinalidade");
-			String cid10Usuario = request.getParameter("selectCid10");
+			String cid10Usuario = request.getParameter("txtCid10");
 			String periodoUsuario = request.getParameter("txtPeriodo");
 			
 			Atestado objAtestado = new Atestado();
