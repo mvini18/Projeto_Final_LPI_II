@@ -74,7 +74,7 @@
 		<div id="content" class="fadeIn third">
 			<br> <br>
 			<p>
-				<img src="../assets/img/user.png">
+			<input type="file" name="file" id="arquivos"><label for="arquivos"></label>
 			</p>
 			<h2>
 				Bem vindo(a), <%= objUsuario.getNome() %>
