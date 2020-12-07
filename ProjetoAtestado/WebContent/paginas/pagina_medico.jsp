@@ -4,7 +4,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
 	Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuarioCompleto");
-	Usuario objNomeUsuario = (Usuario) request.getSession().getAttribute("objNomeUsuario");
+	Usuario objUsuarioAtestado = (Usuario) request.getSession().getAttribute("objNomeUsuario");
 	Atestado objAtestado = (Atestado) request.getSession().getAttribute("objAtestado");
 	
 %>
@@ -49,9 +49,11 @@
 				<div class="col-1 col-md-4 fadeIn second">
 					<p>
 					<p>
-					<h6 title="Nome"><%= objNomeUsuario.getNome() %></h6>
+					<h6 title="Nome"><%= objUsuarioAtestado.getNome() %></h6>
 					<h6 title="Cpf"><%= objAtestado.getCpf_usuario() %></h6>
+					<h6 title="Telefone"><%= objUsuarioAtestado.getTelefone() %></h6>					
 					<h6 title="Nascimento"><%= objAtestado.getNascimento() %></h6>
+					
 				</div>
 
 			</div>
@@ -68,7 +70,7 @@
 					<h5>Período:</h5>
 				</div>
 				<div class="col-1 col-md-8 fadeIn third">
-					<p><%= objAtestado.getNascimento() %></p>
+					<p><%= objAtestado.getDia_atual() %></p>
 					<p><%= objAtestado.getSexo() %></p>
 					<p><%= objAtestado.getCid10() %></p>
 					<p><%= objAtestado.getFinalidade() %></p>
@@ -88,8 +90,6 @@
 			<a href="rejeitar_atestado.jsp"><input type="button"
 				class="btn btn-primary js-scroll-trigger fadeIn five" id="rejeitar"
 				value="Rejeitar"></a>
-			<!-- <a href=""><img class="fadeIn third"
-				id="img" title="Proximo" src="../assets/img/seta-direita.png" /></a> -->
 
 
 		</form>

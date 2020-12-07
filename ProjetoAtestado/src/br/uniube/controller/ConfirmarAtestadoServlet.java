@@ -21,10 +21,10 @@ public class ConfirmarAtestadoServlet extends HttpServlet {
 			Atestado objAtestado = (Atestado) request.getSession().getAttribute("objAtestado");
 			
 			String cpf = objAtestado.getCpf_usuario();
-			
+			int id = objAtestado.getId();			
 			
 			AtestadoDAO dao = new AtestadoDAO();
-			dao.confirmarAtestado(cpf);
+			dao.confirmarAtestado(cpf,id);
 
 			response.sendRedirect("consultarAtestados");
 						

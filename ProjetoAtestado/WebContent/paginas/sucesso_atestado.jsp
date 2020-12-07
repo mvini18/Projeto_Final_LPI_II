@@ -1,3 +1,19 @@
+<%@page import="br.uniube.model.Usuario,br.uniube.dao.UsuarioDAO"%>
+<%@page import="br.uniube.model.Atestado,br.uniube.dao.AtestadoDAO"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%
+	Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuarioCompleto");
+	Usuario objUsuarioAtestado = (Usuario) request.getSession().getAttribute("objNomeUsuario");
+	Atestado objAtestado = (Atestado) request.getSession().getAttribute("objAtestado");
+	
+%>
+<%
+	if (objUsuario == null) {
+		response.sendRedirect("index.html");
+	}
+	else {
+%>
 <!DOCTYPE html>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <link href="../css/sucesso_atestado.css" type="text/css" rel="stylesheet"/>
@@ -15,9 +31,9 @@
 
 	<div class="container">
 	  <div class="row">
-	    <div class="col fadeIn second"><h5>Concluído!</h5></div>
+	    <div class="col fadeIn second"><h5>ConcluÃ­do!</h5></div>
 	    <div class="w-100"></div>
-	    <div class="col fadeIn third"><p>Verifique sua central para mais informações.</p></div>
+	    <div class="col fadeIn third"><p>Verifique sua central para mais informaÃ§Ãµes.</p></div>
 	  </div>
 	</div>
     <div id="formFooter">
@@ -26,3 +42,4 @@
 
   </div>
 </div>
+<% } %>

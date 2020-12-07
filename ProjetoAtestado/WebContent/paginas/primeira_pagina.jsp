@@ -17,6 +17,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <link rel="icon" href="../assets/img/lupus_icone.png" />
 <title>Lupus</title>
 
@@ -38,7 +39,7 @@
 		<nav id="sidebar">
 
 		<div class="sidebar-header fadeIn first">
-			<a href="index.html"><h3>
+			<a href="index.html">
 					<img title="menu" src="../assets/img/lupus_icone.png">Lupus
 				</h3></a>
 		</div>

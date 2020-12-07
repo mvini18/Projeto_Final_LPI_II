@@ -1,3 +1,19 @@
+<%@page import="br.uniube.model.Usuario,br.uniube.dao.UsuarioDAO"%>
+<%@page import="br.uniube.model.Atestado,br.uniube.dao.AtestadoDAO"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%
+	Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuarioCompleto");
+	Usuario objUsuarioAtestado = (Usuario) request.getSession().getAttribute("objNomeUsuario");
+	Atestado objAtestado = (Atestado) request.getSession().getAttribute("objAtestado");
+	
+%>
+<%
+	if (objUsuario == null) {
+		response.sendRedirect("index.html");
+	}
+	else {
+%>
 <!DOCTYPE html>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -14,9 +30,9 @@
 		</div>
 		<br>
 		<form method="post" action="../segundoAtestado">
-			<p class="fadeIn third">Escreva abaixo o que vocÍ est· sentindo,
-				conte-nos com o m·ximo de detalhes que puder respeitando o limite de
-				500 caracteres. Procure dar respostas ‡s perguntas abaixo.</p>
+			<p class="fadeIn third">Escreva abaixo o que voc√™ est√° sentindo,
+				conte-nos com o m√°ximo de detalhes que puder respeitando o limite de
+				500 caracteres. Procure dar respostas √†s perguntas abaixo.</p>
 			<div id="carouselSlider" class="carousel slide fadeIn fourth" data-ride="carousel">
 				<ol class="carousel-indicators">
 					<li data-target="#carouselSlider" data-slide-to="0" class="active"></li>
@@ -40,7 +56,7 @@
 						<img src="../assets/img/carousel.png" class="img-fluid d-block"
 							alt="perguntas">
 						<div class="carousel-caption d-none d-md-block">
-							<h5>Tem n·usea?</h5>
+							<h5>Tem n√°usea?</h5>
 						</div>
 					</div>
 					<div class="carousel-item">
@@ -75,14 +91,14 @@
 						<img src="../assets/img/carousel.png" class="img-fluid d-block"
 							alt="perguntas">
 						<div class="carousel-caption d-none d-md-block">
-							<h5>Problemas na vis„o?</h5>
+							<h5>Problemas na vis√£o?</h5>
 						</div>
 					</div>
 					<div class="carousel-item">
 						<img src="../assets/img/carousel.png" class="img-fluid d-block"
 							alt="perguntas">
 						<div class="carousel-caption d-none d-md-block">
-							<h5>InchaÁo em alguma parte do corpo?</h5>
+							<h5>Incha√ßo em alguma parte do corpo?</h5>
 						</div>
 					</div>
 				</div>
@@ -93,10 +109,10 @@
 				</a> <a class="carousel-control-next"
 					href="#carouselSlider" role="button"
 					data-slide="next"> <span class="carousel-control-next-icon"></span>
-					<span class="sr-only">PrÛximo</span>
+					<span class="sr-only">Pr√≥ximo</span>
 				</a>
 			</div>
-			<textarea required title="InformaÁıes" maxlength="500" placeholder="Exemplo: Dor forte como uma faixa apertando a cabeÁa." class="fadeIn five" id="sintomas" name="txtSintomas" rows="2" cols="33"></textarea>
+			<textarea required title="Informa√ß√µes" maxlength="500" placeholder="Exemplo: Dor forte como uma faixa apertando a cabe√ßa." class="fadeIn five" id="sintomas" name="txtSintomas" rows="2" cols="33"></textarea>
 			<input type="submit"
 				class="btn btn-primary js-scroll-trigger fadeIn six" value="Confirmar">
 		</form>
@@ -107,3 +123,4 @@
 
 	</div>
 </div>
+<% } %>

@@ -1,3 +1,19 @@
+<%@page import="br.uniube.model.Usuario,br.uniube.dao.UsuarioDAO"%>
+<%@page import="br.uniube.model.Atestado,br.uniube.dao.AtestadoDAO"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%
+	Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuarioCompleto");
+	Usuario objUsuarioAtestado = (Usuario) request.getSession().getAttribute("objNomeUsuario");
+	Atestado objAtestado = (Atestado) request.getSession().getAttribute("objAtestado");
+	
+%>
+<%
+	if (objUsuario == null) {
+		response.sendRedirect("index.html");
+	}
+	else {
+%>
 <!DOCTYPE html>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <script
@@ -32,8 +48,8 @@
 					<img src="../assets/img/carousel.png" class="img-fluid d-block"
 						title="ajuda">
 					<div class="carousel-caption d-none d-md-block">
-						<h5>Mudança de senha</h5>
-						<p>Parar criar uma nova senha é necessário confirmar a antiga.</p>
+						<h5>MudanÃ§a de senha</h5>
+						<p>Parar criar uma nova senha Ã© necessÃ¡rio confirmar a antiga.</p>
 					</div>
 				</div>
 				<div class="carousel-item">
@@ -41,7 +57,7 @@
 						title="perguntas">
 					<div class="carousel-caption d-none d-md-block">
 						<h5>Validar atestado</h5>
-						<p>Para validar ou rejeitar um atestado acesse "solicitações" no menu.</p>
+						<p>Para validar ou rejeitar um atestado acesse "solicitaÃ§Ãµes" no menu.</p>
 					</div>
 				</div>
 				<div class="carousel-item">
@@ -56,17 +72,17 @@
 					<img src="../assets/img/carousel.png" class="img-fluid d-block"
 						title="ajuda">
 					<div class="carousel-caption d-none d-md-block">
-						<h5>Quanto custa para utilizar os nossos serviços?</h5>
-						<p>Você não precisa pagar nada! Todos os serviços disponibilizados no site
-						são totalmente gratuitos.</p>
+						<h5>Quanto custa para utilizar os nossos serviÃ§os?</h5>
+						<p>VocÃª nÃ£o precisa pagar nada! Todos os serviÃ§os disponibilizados no site
+						sÃ£o totalmente gratuitos.</p>
 					</div>
 				</div>
 				<div class="carousel-item">
 					<img src="../assets/img/carousel.png" class="img-fluid d-block"
 						title="ajuda">
 					<div class="carousel-caption d-none d-md-block">
-						<h5>Alteração das informações do perfil</h5>
-						<p>Acesse Informações do usuário no menu para realizar a alteração dos seus dados pessoais.</p>
+						<h5>AlteraÃ§Ã£o das informaÃ§Ãµes do perfil</h5>
+						<p>Acesse InformaÃ§Ãµes do usuÃ¡rio no menu para realizar a alteraÃ§Ã£o dos seus dados pessoais.</p>
 					</div>
 				</div>
 				<div class="carousel-item">
@@ -74,7 +90,7 @@
 						title="ajuda">
 					<div class="carousel-caption d-none d-md-block">
 						<h5>Autenticidade do atestado</h5>
-						<p>O atestado apenas será considerado válido caso o médico responsável assine o documento.</p>
+						<p>O atestado apenas serÃ¡ considerado vÃ¡lido caso o mÃ©dico responsÃ¡vel assine o documento.</p>
 					</div>
 				</div>
 			</div>
@@ -83,7 +99,7 @@
 				<span class="sr-only">Anterior</span>
 			</a> <a class="carousel-control-next" href="#carouselSlider"
 				role="button" data-slide="next"> <span
-				class="carousel-control-next-icon"></span> <span class="sr-only">Próximo</span>
+				class="carousel-control-next-icon"></span> <span class="sr-only">PrÃ³ximo</span>
 			</a>
 		</div>
 
@@ -93,3 +109,4 @@
 
 	</div>
 </div>
+<% } %>
