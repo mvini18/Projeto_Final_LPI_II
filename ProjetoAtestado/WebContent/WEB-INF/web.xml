@@ -65,7 +65,7 @@
 		<servlet-name>consultarCid</servlet-name>
 		<url-pattern>/atestado</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>consultarStatus</servlet-name>
 		<servlet-class>br.uniube.controller.ConsultarStatusServlet</servlet-class>
@@ -75,7 +75,7 @@
 		<servlet-name>consultarStatus</servlet-name>
 		<url-pattern>/consultarStatus</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>confirmarAtestado</servlet-name>
 		<servlet-class>br.uniube.controller.ConfirmarAtestadoServlet</servlet-class>
@@ -85,7 +85,7 @@
 		<servlet-name>confirmarAtestado</servlet-name>
 		<url-pattern>/confirmarAtestado</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>rejeitarAtestado</servlet-name>
 		<servlet-class>br.uniube.controller.RejeitarAtestadoServlet</servlet-class>
@@ -124,6 +124,16 @@
 	<servlet-mapping>
 		<servlet-name>consultarAtestados</servlet-name>
 		<url-pattern>/consultarAtestados</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>upload</servlet-name>
+		<servlet-class>br.uniube.controller.UploadImagemServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>upload</servlet-name>
+		<url-pattern>/upload</url-pattern>
 	</servlet-mapping>
 	<welcome-file-list>
 

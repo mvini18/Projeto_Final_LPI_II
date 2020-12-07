@@ -65,8 +65,7 @@
 			<br>
 			<br>
 			<br>
-			<li><a href="../deslogar"><img title="Sair"
-					src="../assets/img/opcao-de-sair.png"></a></li>
+			<li><a href="../deslogar"><img title="Sair" src="../assets/img/opcao-de-sair.png"></a></li>
 		</ul>
 		</nav>
 
@@ -74,7 +73,7 @@
 		<div id="content" class="fadeIn third">
 			<br> <br>
 			<p>
-			<input type="file" name="file" id="arquivos"><label for="arquivos"></label>
+			<a href="upload_avatar.jsp"><label for="arquivos"></label></a>
 			</p>
 			<h2>
 				Bem vindo(a), <%= objUsuario.getNome() %>

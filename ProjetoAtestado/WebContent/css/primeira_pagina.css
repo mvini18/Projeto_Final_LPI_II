@@ -32,7 +32,8 @@ label {
 }
 
 label:hover {
-	box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
+	opacity: 0.8;
+	box-shadow: 1px 3px 7px rgba(240, 230, 140, 0.4);
 }
 
 body {
