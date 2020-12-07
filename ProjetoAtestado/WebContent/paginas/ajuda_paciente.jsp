@@ -48,8 +48,9 @@
 					<img src="../assets/img/carousel.png" class="img-fluid d-block"
 						title="ajuda">
 					<div class="carousel-caption d-none d-md-block">
-						<h5>Mudança de senha</h5>
-						<p>Parar criar uma nova senha é necessário confirmar a antiga.</p>
+						<h5>Cid 10</h5>
+						<p>É necessário informar o código da cid, basta pesquisar no campo
+						   informado.</p>
 					</div>
 				</div>
 				<div class="carousel-item">

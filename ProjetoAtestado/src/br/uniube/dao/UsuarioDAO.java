@@ -212,4 +212,30 @@ public class UsuarioDAO extends AcessoBancoDAO {
 		}
 		return usuario;
 	}
+	
+	public boolean verificarCpfEmail(String cpf, String email) throws Exception {
+		try {
+			ResultSet rs;
+			conectar();
+			String query = "select * from tb_login where email='" + email +"' or cpf = '" + cpf + "'";
+			Statement instrucao = getConexao().createStatement();
+			rs = instrucao.executeQuery(query);
+
+			if(rs.next()) 
+			{
+				return true;
+			} 
+			else 
+			{
+				return false;
+			}
+		} catch (SQLException ex) {
+			throw new SQLException(ex);
+		} catch(Exception ex) {
+			throw new Exception(ex);
+		} finally{
+			desconectar();
+		}
+
+	}
 }

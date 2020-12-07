@@ -27,19 +27,24 @@ public class CadastrarUsuarioServlet extends HttpServlet {
 			String telefoneUsuario = request.getParameter("txtTelefone");
 			String senhaUsuario = request.getParameter("txtSenha");
 
-
-			// cria o model Usuario
 			Usuario objUsuario = new Usuario();
 			objUsuario.setCpf(cpfUsuario);
 			objUsuario.setNome(nomeUsuario);
 			objUsuario.setEmail(emailUsuario);
 			objUsuario.setTelefone(telefoneUsuario);
 			objUsuario.setSenha(senhaUsuario);
-			// chama o DAO para para fazer a inserção
+			
 			UsuarioDAO dao = new UsuarioDAO();
-			dao.inserirUsuario(objUsuario);
-
-			response.sendRedirect("paginas/sucesso_login.jsp");
+			if(dao.verificarCpfEmail(cpfUsuario, emailUsuario) == false)
+			{
+				dao.inserirUsuario(objUsuario);
+				response.sendRedirect("paginas/sucesso_login.jsp");
+			}
+			else
+			{
+				response.sendRedirect("paginas/registro.jsp");
+			}
+			
 
 		} catch(Exception ex) {
 			System.out.println(ex.getMessage());
