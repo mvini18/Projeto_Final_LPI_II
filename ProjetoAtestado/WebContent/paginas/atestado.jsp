@@ -37,7 +37,7 @@
 		  <option value="Ausência do Trabalho">Ausência do Trabalho</option>
 	  </select>
 	  
-	   <input type="search" id="texto" title="cid 10" list="cid10" name="txtCid10" class="textbox-n fadeIn six" placeholder="cid 10" required>
+	   <input type="search" id="texto" title="cid 10" list="cid10" name="txtCid10" maxlength="40" class="textbox-n fadeIn six" placeholder="cid 10" required>
 		
 		<%List listaCid = (List)request.getSession().getAttribute("listaCid");
 			
