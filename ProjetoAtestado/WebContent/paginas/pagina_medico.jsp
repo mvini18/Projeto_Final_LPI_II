@@ -4,6 +4,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
 	Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuarioCompleto");
+	Usuario objNomeUsuario = (Usuario) request.getSession().getAttribute("objNomeUsuario");
 	Atestado objAtestado = (Atestado) request.getSession().getAttribute("objAtestado");
 	
 %>
@@ -48,9 +49,9 @@
 				<div class="col-1 col-md-4 fadeIn second">
 					<p>
 					<p>
-					<h6 title="Nome">Arthur Carvalho Victorino</h6>
+					<h6 title="Nome"><%= objNomeUsuario.getNome() %></h6>
 					<h6 title="Cpf"><%= objAtestado.getCpf_usuario() %></h6>
-					<h6 title="Nascimento">13/10/1999</h6>
+					<h6 title="Nascimento"><%= objAtestado.getNascimento() %></h6>
 				</div>
 
 			</div>

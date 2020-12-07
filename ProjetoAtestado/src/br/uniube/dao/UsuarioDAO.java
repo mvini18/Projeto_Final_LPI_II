@@ -175,4 +175,41 @@ public class UsuarioDAO extends AcessoBancoDAO {
 			desconectar();
 		}
 	}
+	
+	public Usuario consultarNomeAtestado(String cpfUsuario) throws Exception {
+		Usuario usuario = new Usuario();
+		try {
+			ResultSet rs;
+			conectar();
+			String query = "select cpf,email,telefone,senha,estilo_usuario,nome"
+					+ " from tb_atestado,tb_login where cpf ='" + cpfUsuario + "'";
+
+			Statement instrucao = getConexao().createStatement();
+			rs = instrucao.executeQuery(query);
+
+			if(rs.next()) {
+				String cpf = rs.getString(1);
+				String email = rs.getString(2);
+				String telefone = rs.getString(3);
+				String senha = rs.getString(4);
+				String estilo_usuario = rs.getString(5);
+				String nome = rs.getString(6);
+
+				usuario.setNome(nome);
+				usuario.setCpf(cpf);
+				usuario.setEmail(email);
+				usuario.setSenha(senha);
+				usuario.setEstilo_usuario(estilo_usuario);
+				usuario.setTelefone(telefone);
+			}
+
+		} catch (SQLException ex) {
+			throw new SQLException(ex);
+		} catch(Exception ex) {
+			throw new Exception(ex);
+		} finally{
+			desconectar();
+		}
+		return usuario;
+	}
 }

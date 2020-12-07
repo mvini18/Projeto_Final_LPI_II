@@ -24,9 +24,12 @@ public class ConsultarAtestadosServlet extends HttpServlet {
 			String statusAtestado = "Pendente";
 
 			AtestadoDAO dao = new AtestadoDAO();
+			UsuarioDAO user = new UsuarioDAO();
 			Atestado objAtestado = dao.consultarAtestadoByStatus(statusAtestado);
+			Usuario objNomeUsuario = user.consultarNomeAtestado(objAtestado.getCpf_usuario());
 			
 			request.getSession().setAttribute("objAtestado", objAtestado);
+			request.getSession().setAttribute("objNomeUsuario", objNomeUsuario);
 			response.sendRedirect("paginas/pagina_medico.jsp");
 			
 		} catch(Exception ex) {
