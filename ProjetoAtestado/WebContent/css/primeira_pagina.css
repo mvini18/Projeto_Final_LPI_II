@@ -15,6 +15,26 @@ h5 {
 	color: #5c8cb4;
 }
 
+input[type=file] {
+	display: none;
+}
+
+label {
+	background-image: url('../assets/img/user.png');
+	width: 130px;
+	align-content: stretch;
+	margin-left: auto;
+	margin-right: auto;
+	height: 130px;
+	border-radius: 95px 95px 95px 95px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+label:hover {
+	box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
 body {
 	font-family: 'Poppins', sans-serif;
 	background: #272b43;
