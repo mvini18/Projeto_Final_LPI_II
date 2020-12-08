@@ -31,16 +31,24 @@ public class AtestadoPdfServlet extends HttpServlet {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		try {
+			
 			Usuario objUsuarioCompleto = (Usuario) request.getSession().getAttribute("objUsuarioCompleto");
+			
+			String id = request.getParameter("id");
+			
+			AtestadoDAO daoAtt = new AtestadoDAO();
+			UsuarioDAO daoUser = new UsuarioDAO();
+			
+			Usuario objPaciente = daoUser.consultarUsuarioById(id);
+			Atestado objPacienteAtt = daoAtt.consultarAtestadoById(id);
 			
 			Document doc = new Document();
 			
-			SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
 			
-			PdfWriter.getInstance(doc, new FileOutputStream(nomPac+".pdf"));
+			PdfWriter.getInstance(doc, new FileOutputStream(objPaciente.getNome()+".pdf"));
 			
 			doc.open();
 			Paragraph paragraph = new Paragraph();
@@ -52,8 +60,8 @@ public class AtestadoPdfServlet extends HttpServlet {
 			
 			Paragraph dados = new Paragraph();
 			
-			dados.add("\n       Dr " + nomMed
-					+ "\n       CRM " + CRM + "\n       RQE " + RQE + " - " + especialidade );
+			dados.add("\n       Dr " + objUsuarioCompleto.getNome()
+					+ "\n       CRM " + "CRM" + "\n       RQE " + "RQE" + " - " + "especialidade" );
 					 
 			
 			dados.setAlignment(Element.ALIGN_LEFT);
@@ -74,38 +82,22 @@ public class AtestadoPdfServlet extends HttpServlet {
 			
 			Paragraph principal = new Paragraph();
 			
-			principal.add("\n\n\n        Nome: " + nomPac + "\n\n        Código da Finalidade: ");
+			principal.add("\n\n\n        Nome: " + objPaciente.getNome() + "\n\n        Código da Finalidade: ");
 			principal.setAlignment(Element.ALIGN_LEFT);
 			
 			Paragraph finali = new Paragraph();
-			
-			if(finalidade == 1) {
 				
-				finali.add(" \n (01) Ausência de Atividade (Escola/ Universidade/ Não Laboral)" );
-				
-			} else if(finalidade == 2) {
-				
-				finali.add(" \n (02) Acompanhante em Consulta)" );
-				
-			} else if(finalidade == 3) {
-				
-				finali.add(" \n (03) Comparecimento em Consulta" );
-			
-			} else if(finalidade == 4) {
-				
-				finali.add(" \n (04) Ausência do Trabalho" );
-				
-			}
+			finali.add(" \n " + objPacienteAtt.getFinalidade() + "");
 			
 			finali.setAlignment(Element.ALIGN_CENTER);
 			
-			principal.add("\n\n        Período: " + periodo + "\n\n        CID 10: " + cid);
+			principal.add("\n\n        Período: " + objPacienteAtt.getPeriodo() + "\n\n        CID 10: " + objPacienteAtt.getCid10());
 			
 			doc.add(principal);	
 				
 			doc.add(finali);
 			
-            Paragraph p4 = new Paragraph("\n        Data: "+formatador.format(data1));
+            Paragraph p4 = new Paragraph("\n        Data: "+ objPacienteAtt.getDia_atual());
             p4.setAlignment(Element.ALIGN_LEFT);
             p4.setSpacingAfter(10);
             doc.add(p4);
@@ -113,8 +105,8 @@ public class AtestadoPdfServlet extends HttpServlet {
             
 			Paragraph rodape = new Paragraph();
 			
-			rodape.add("\n       Dr " + nomMed
-					+ "\n       CRM " + CRM + "\n       RQE " + RQE + " - " + especialidade );
+			rodape.add("\n       Dr " + objUsuarioCompleto.getNome()
+					+ "\n       CRM " + "CRM" + "\n       RQE " + "RQE" + " - " + "especialidade" );
 			
 
 			rodape.setAlignment(Element.ALIGN_RIGHT);
@@ -124,14 +116,26 @@ public class AtestadoPdfServlet extends HttpServlet {
 			
 			doc.close();
 
-			
+			daoAtt.atestadoImpresso(objPacienteAtt.getCpf_usuario(), objPacienteAtt.getId());
 			
 			request.getSession().setAttribute("objUsuarioCompleto", objUsuarioCompleto);
 			response.sendRedirect("paginas/sucesso_atestado.jsp");
 
 
 		} catch(Exception ex) {
-			response.sendRedirect("paginas/index.html");
+			System.out.println(ex.getMessage());
+			// Monta um HTML de resposta contendo a mensagem de erro
+			PrintWriter resposta = response.getWriter();
+			//gera o texto HTML
+			resposta.write("<html>");
+			resposta.write("<head><title>Erro na Aplicação</title><head/>");
+			resposta.write("<body>");
+			resposta.write("<div class='estiloTexto'>");
+			resposta.write("Erro na aplicação, entre em contato com o Administrador do sistema. Mensagem de erro:" + ex.getMessage());
+			resposta.write("</div>");
+			resposta.write("</body>");
+			resposta.write("</html>");
+			resposta.flush();
 		}
 
 	}
