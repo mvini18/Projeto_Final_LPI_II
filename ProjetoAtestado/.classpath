@@ -13,5 +13,6 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/ar thur/Downloads/iText7-Core-7.1.3.zip"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

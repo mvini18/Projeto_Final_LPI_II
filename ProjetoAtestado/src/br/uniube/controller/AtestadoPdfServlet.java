@@ -1,5 +1,6 @@
 package br.uniube.controller;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -8,21 +9,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.uniube.model.Usuario;
-import br.uniube.model.Atestado;
-import br.uniube.dao.AtestadoDAO;
-import br.uniube.dao.UsuarioDAO;
-
-import java.io.FileOutputStream;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import com.itextpdf.text.Document;
 import com.itextpdf.text.Element;
 import com.itextpdf.text.Font;
 import com.itextpdf.text.Font.FontFamily;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfWriter;
+
+import br.uniube.dao.AtestadoDAO;
+import br.uniube.dao.UsuarioDAO;
+import br.uniube.model.Atestado;
+import br.uniube.model.Usuario;
 
 public class AtestadoPdfServlet extends HttpServlet {
 
@@ -44,8 +41,6 @@ public class AtestadoPdfServlet extends HttpServlet {
 			
 			Usuario objPaciente = daoUser.consultarUsuarioById(id);
 			Atestado objPacienteAtt = daoAtt.consultarAtestadoById(id);
-			try {
-				
 			
 			Document doc = new Document();
 			
@@ -117,9 +112,7 @@ public class AtestadoPdfServlet extends HttpServlet {
 			
 			
 			doc.close();
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
+			
 			daoAtt.atestadoImpresso(objPacienteAtt.getCpf_usuario(), objPacienteAtt.getId());
 			
 			response.sendRedirect("paginas/sucesso_pdf.jsp");
