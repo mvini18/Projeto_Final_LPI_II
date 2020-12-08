@@ -43,7 +43,7 @@ Atestado objAtestado = (Atestado) request.getSession().getAttribute("objAtestado
 				</div>
 			</div>
 			<a href="../rejeitarAtestado"><input type="submit"
-				class="btn btn-primary js-scroll-trigger fadeIn five" id="salvar"
+				class="btn btn-primary js-scroll-trigger fadeIn third" id="salvar"
 				value="Salvar"></a>
 		</form>
 		<div id="formFooter">

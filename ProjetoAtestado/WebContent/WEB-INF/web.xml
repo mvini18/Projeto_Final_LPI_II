@@ -5,6 +5,26 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	id="WebApp_ID" version="2.5">
 	<display-name>ProjetoAtestado</display-name>
+		
+	<servlet>
+		<servlet-name>consultaUsuarioConfirmado</servlet-name>
+		<servlet-class>br.uniube.controller.ConsultarAtestadoConfirmadoServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>consultaUsuarioConfirmado</servlet-name>
+		<url-pattern>/consultaUsuarioConfirmado</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>consultaUsuarioConfirmadoNome</servlet-name>
+		<servlet-class>br.uniube.controller.ConsultarAtestadoConfirmadoNomeServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>consultaUsuarioConfirmadoNome</servlet-name>
+		<url-pattern>/consultaUsuarioConfirmadoNome</url-pattern>
+	</servlet-mapping>
 
 	<servlet>
 		<servlet-name>segundoAtestado</servlet-name>

@@ -9,29 +9,29 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 import br.uniube.model.Usuario;
+import br.uniube.model.Usuario;
+
 /**
  * Classe de acesso ao banco de dados
  * 
  */
 public class UsuarioDAO extends AcessoBancoDAO {
-	public void inserirUsuario(Usuario objUsuario) throws Exception{
+	public void inserirUsuario(Usuario objUsuario) throws Exception {
 		try {
 			conectar();
 
-			String query = "Insert INTO tb_login (cpf,nome,email,telefone,senha,estilo_usuario) "
-					+ "VALUES ('"+ objUsuario.getCpf() + "','"+ objUsuario.getNome() +"',"
-					+ "'"+ objUsuario.getEmail() + "', '"+ objUsuario.getTelefone() + "',"
-					+ "'"+ objUsuario.getSenha() + "','paciente')";
+			String query = "Insert INTO tb_login (cpf,nome,email,telefone,senha,estilo_usuario) " + "VALUES ('"
+					+ objUsuario.getCpf() + "','" + objUsuario.getNome() + "'," + "'" + objUsuario.getEmail() + "', '"
+					+ objUsuario.getTelefone() + "'," + "'" + objUsuario.getSenha() + "','paciente')";
 			System.out.println(query);
 			Statement instrucao = getConexao().createStatement();
 			instrucao.executeUpdate(query);
 
-
 		} catch (SQLException ex) {
 			throw new SQLException(ex);
-		} catch(Exception ex) {
+		} catch (Exception ex) {
 			throw new Exception(ex);
-		} finally{
+		} finally {
 			desconectar();
 		}
 	}
@@ -41,13 +41,13 @@ public class UsuarioDAO extends AcessoBancoDAO {
 		try {
 			ResultSet rs;
 			conectar();
-			String query = "select id,cpf,email,telefone,senha,estilo_usuario,nome"
-					+ " from tb_login where email='" + emailUsuario + "'";
+			String query = "select id,cpf,email,telefone,senha,estilo_usuario,nome" + " from tb_login where email='"
+					+ emailUsuario + "'";
 
 			Statement instrucao = getConexao().createStatement();
 			rs = instrucao.executeQuery(query);
 
-			if(rs.next()) {
+			if (rs.next()) {
 				int id = rs.getInt(1);
 				String cpf = rs.getString(2);
 				String email = rs.getString(3);
@@ -67,9 +67,9 @@ public class UsuarioDAO extends AcessoBancoDAO {
 
 		} catch (SQLException ex) {
 			throw new SQLException(ex);
-		} catch(Exception ex) {
+		} catch (Exception ex) {
 			throw new Exception(ex);
-		} finally{
+		} finally {
 			desconectar();
 		}
 		return usuario;
@@ -79,16 +79,16 @@ public class UsuarioDAO extends AcessoBancoDAO {
 		try {
 			conectar();
 
-			String query = "update tb_login set senha='"+ objUsuario.getSenha() + "' where email = '"+ objUsuario.getEmail() +"'";
+			String query = "update tb_login set senha='" + objUsuario.getSenha() + "' where email = '"
+					+ objUsuario.getEmail() + "'";
 			Statement instrucao = getConexao().createStatement();
 			instrucao.executeUpdate(query);
 
-
 		} catch (SQLException ex) {
 			throw new SQLException(ex);
-		} catch(Exception ex) {
+		} catch (Exception ex) {
 			throw new Exception(ex);
-		} finally{
+		} finally {
 			desconectar();
 		}
 	}
@@ -97,50 +97,43 @@ public class UsuarioDAO extends AcessoBancoDAO {
 		try {
 			ResultSet rs;
 			conectar();
-			String query = "select senha from tb_login where email='" + objUsuario.getEmail() +"'";
+			String query = "select senha from tb_login where email='" + objUsuario.getEmail() + "'";
 			Statement instrucao = getConexao().createStatement();
 			rs = instrucao.executeQuery(query);
 
-			if(rs.next()) 
-			{
+			if (rs.next()) {
 				String senha = rs.getString(1);
-				if (senhaAntiga == senha)
-				{
+				if (senhaAntiga == senha) {
 					return true;
-				} 
-				else 
-				{
+				} else {
 					return false;
 				}
-			} 
-			else 
-			{
+			} else {
 				return false;
 			}
 
 		} catch (SQLException ex) {
 			throw new SQLException(ex);
-		} catch(Exception ex) {
+		} catch (Exception ex) {
 			throw new Exception(ex);
-		} finally{
+		} finally {
 			desconectar();
 		}
 
 	}
 
-	public boolean loginUsuario(Usuario objUsuario) throws Exception{
+	public boolean loginUsuario(Usuario objUsuario) throws Exception {
 		try {
 			ResultSet rs;
 			conectar();
 
-			String query = "select * from tb_login where email =  '"+ objUsuario.getEmail() + "' "
-					+ "and senha = '"+ objUsuario.getSenha() + "'";
+			String query = "select * from tb_login where email =  '" + objUsuario.getEmail() + "' " + "and senha = '"
+					+ objUsuario.getSenha() + "'";
 
 			Statement instrucao = getConexao().createStatement();
 			rs = instrucao.executeQuery(query);
 
-
-			if(rs.next()) {
+			if (rs.next()) {
 				return true;
 			} else {
 				return false;
@@ -148,34 +141,107 @@ public class UsuarioDAO extends AcessoBancoDAO {
 
 		} catch (SQLException ex) {
 			throw new SQLException(ex);
-		} catch(Exception ex) {
+		} catch (Exception ex) {
 			throw new Exception(ex);
-		} finally{
+		} finally {
 			desconectar();
 		}
 	}
+
 	public void atualizarUsuario(String objUsuarioEmail, Usuario objUsuario) throws Exception {
 		try {
 			conectar();
-			
-			String query = "UPDATE tb_login set nome='"+ objUsuario.getNome() + "',"
-					+ ""+ "cpf='"+ objUsuario.getCpf() + "',"
-					+ " telefone = '"+ objUsuario.getTelefone() + "',"
-					+ "  email = '"+ objUsuario.getEmail() +
-					"' where email = '"+ objUsuarioEmail +"'";
+
+			String query = "UPDATE tb_login set nome='" + objUsuario.getNome() + "'," + "" + "cpf='"
+					+ objUsuario.getCpf() + "'," + " telefone = '" + objUsuario.getTelefone() + "'," + "  email = '"
+					+ objUsuario.getEmail() + "' where email = '" + objUsuarioEmail + "'";
 			Statement instrucao = getConexao().createStatement();
 			instrucao.executeUpdate(query);
-			
-	
+
 		} catch (SQLException ex) {
 			throw new SQLException(ex);
-		} catch(Exception ex) {
+		} catch (Exception ex) {
 			throw new Exception(ex);
-		} finally{
+		} finally {
 			desconectar();
 		}
 	}
+
+	public ArrayList<Usuario> consultarUsuarioConfirmado() throws Exception {
+		ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();
+		try {
+			ResultSet rs;
+			conectar();
+
+			String query = "select nome,cpf,telefone from tb_atestado,tb_login "
+					+ "where status = 'Confirmado'"
+					+ "and cpf = cpf_usuario limit 4";
+			Statement instrucao = getConexao().createStatement();
+			rs = instrucao.executeQuery(query);
+
+			while (rs.next()) {
+
+				String nome = rs.getString(1);
+				String cpf = rs.getString(2);
+				String telefone = rs.getString(3);
+
+				Usuario Usuario = new Usuario();
+				Usuario.setNome(nome);
+				Usuario.setCpf(cpf);
+				Usuario.setTelefone(telefone);
+
+				listaUsuarios.add(Usuario);
+			}
+
+		} catch (SQLException ex) {
+			throw new SQLException(ex);
+		} catch (Exception ex) {
+			throw new Exception(ex);
+		} finally {
+			desconectar();
+		}
+		return listaUsuarios;
+	}
 	
+	public ArrayList<Usuario> consultarUsuarioConfirmadoNome(String nomeUsuario) throws Exception {
+		ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();
+		try {
+			ResultSet rs;
+			conectar();
+
+			String query = "select nome,cpf,telefone from tb_atestado,tb_login "
+					+ "where ucase(nome) like '" + nomeUsuario.toUpperCase() + "%'"
+					+ "and status = 'Confirmado'"
+					+ "and cpf = cpf_usuario limit 4"; 
+			Statement instrucao = getConexao().createStatement();
+			rs = instrucao.executeQuery(query);
+
+			while (rs.next()) {
+
+				String nome = rs.getString(1);
+				String cpf = rs.getString(2);
+				String telefone = rs.getString(3);
+
+				Usuario Usuario = new Usuario();
+				Usuario.setNome(nome);
+				Usuario.setCpf(cpf);
+				Usuario.setTelefone(telefone);
+
+				listaUsuarios.add(Usuario);
+			}
+
+		} catch (SQLException ex) {
+			throw new SQLException(ex);
+		} catch (Exception ex) {
+			throw new Exception(ex);
+		} finally {
+			desconectar();
+		}
+		return listaUsuarios;
+	}
+
+
+
 	public Usuario consultarNomeAtestado(String cpfUsuario) throws Exception {
 		Usuario usuario = new Usuario();
 		try {
@@ -187,7 +253,7 @@ public class UsuarioDAO extends AcessoBancoDAO {
 			Statement instrucao = getConexao().createStatement();
 			rs = instrucao.executeQuery(query);
 
-			if(rs.next()) {
+			if (rs.next()) {
 				String cpf = rs.getString(1);
 				String email = rs.getString(2);
 				String telefone = rs.getString(3);
@@ -205,35 +271,32 @@ public class UsuarioDAO extends AcessoBancoDAO {
 
 		} catch (SQLException ex) {
 			throw new SQLException(ex);
-		} catch(Exception ex) {
+		} catch (Exception ex) {
 			throw new Exception(ex);
-		} finally{
+		} finally {
 			desconectar();
 		}
 		return usuario;
 	}
-	
+
 	public boolean verificarCpfEmail(String cpf, String email) throws Exception {
 		try {
 			ResultSet rs;
 			conectar();
-			String query = "select * from tb_login where email='" + email +"' or cpf = '" + cpf + "'";
+			String query = "select * from tb_login where email='" + email + "' or cpf = '" + cpf + "'";
 			Statement instrucao = getConexao().createStatement();
 			rs = instrucao.executeQuery(query);
 
-			if(rs.next()) 
-			{
+			if (rs.next()) {
 				return true;
-			} 
-			else 
-			{
+			} else {
 				return false;
 			}
 		} catch (SQLException ex) {
 			throw new SQLException(ex);
-		} catch(Exception ex) {
+		} catch (Exception ex) {
 			throw new Exception(ex);
-		} finally{
+		} finally {
 			desconectar();
 		}
 
