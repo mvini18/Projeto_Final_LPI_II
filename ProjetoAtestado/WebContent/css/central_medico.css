@@ -4,11 +4,51 @@
 html {
   background-color: rgb(92, 140, 180);
 }
+tbody:hover{
+	background-color: #4b5483;
+}
 
+table{
+	font-family: "Poppins", sans-serif;
+	border-radius: 12px 12px 12px 12px;
+	
+	
+}
 body {
 	background-color: rgb(92, 140, 180);
-  font-family: "Poppins", sans-serif;
-  height: 100vh;
+ 	 font-family: "Poppins", sans-serif;
+ 	 height: 100vh;
+}
+
+
+
+h6 {
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.1em;
+	font-weight: 250;
+	line-height: 1.7em;
+	color: #F0E68C;
+}
+h5 {
+	text-align: left;
+	font-family: 'Poppins', sans-serif;
+	font-size: 0.8em;
+	font-weight: 300;
+	line-height: 1.8em;
+	color: #5c8cb4;
+}
+carousel{
+	font-size: 7pt;
+}
+
+p {
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	font-size: 1em;
+	font-weight: 300;
+	line-height: 1.3em;
+	color: #999;
 }
 
 a {
@@ -26,6 +66,22 @@ h2 {
   display:inline-block;
   margin: 40px 8px 10px 8px; 
   color: #cccccc;
+}
+#p{
+	text-align: left;
+	font-family: 'Poppins', sans-serif;
+	font-size: 12px;
+	font-weight: 300;
+	line-height: 2.6em;
+	color: #999;
+}
+#h5{
+	text-align: left;
+	font-family: 'Poppins', sans-serif;
+	font-size: 0.8em;
+	font-weight: 300;
+	line-height: 2.6em;
+	color: #5c8cb4;
 }
 
 
@@ -46,9 +102,9 @@ h2 {
   -webkit-border-radius: 10px 10px 10px 10px;
   border-radius: 12px 12px 12px 12px;
   background: #272b43;
-  padding: 30px;
-  width: 90%;
-  max-width: 450px;
+  padding: 60px;
+  width: 100%;
+  max-width: 800px;
   position: relative;
   padding: 0px;
   -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
@@ -65,6 +121,12 @@ h2 {
   border-radius: 0 0 10px 10px;
 }
 
+#img {
+	position: absolute; 
+	left: 480px; /* posiciona a 90px para a esquerda */ 
+	top: 2px; /* posiciona a 70px para baixo */
+	}
+
 
 
 /* TABS */
@@ -77,10 +139,6 @@ h2.active {
   color: #0d0d0d;
   border-bottom: 2px solid #5fbae9;
 }
-
-
-
-/* FORM TYPOGRAPHY*/
 
 input[type=button], input[type=submit], input[type=reset]  {
   background-color: rgb(64, 88, 135);
@@ -108,14 +166,14 @@ input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
   background-color: rgb(176,196,222);
 }
 
-input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
-  -moz-transform: scale(0.95);
-  -webkit-transform: scale(0.95);
-  -o-transform: scale(0.95);
-  -ms-transform: scale(0.95);
-  transform: scale(0.95);
+input[type=text]:focus,[type=tel]:focus,[type=email]:focus,[type=password]:focus {
+  background-color: #fff;
+  border-bottom: 2px solid rgb(81, 206, 118);
 }
 
+input[type=text]:placeholder,input[type=tel]:placeholder {
+  color: #cccccc;
+}
 input[type=text],input[type=email],input[type=tel],input[date] {
   background-color: rgb(198,195,189);
   border: none;
@@ -137,35 +195,6 @@ input[type=text],input[type=email],input[type=tel],input[date] {
   border-radius: 5px 5px 5px 5px;
 }
 
-input[type=password]{
-  background-color: rgb(198,195,189);
-  border: none;
-  color: #0d0d0d;
-  padding: 15px 62px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 5px;
-  width: 45%;
-  border: 2px solid #272b43;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  -webkit-border-radius: 5px 5px 5px 5px;
-  border-radius: 5px 5px 5px 5px;
-}
-
-input[type=text]:focus,[type=tel]:focus,[type=email]:focus,[type=password]:focus {
-  background-color: #fff;
-  border-bottom: 2px solid rgb(81, 206, 118);
-}
-
-input[type=text]:placeholder,input[type=tel]:placeholder {
-  color: #cccccc;
-}
 
 
 /* ANIMATIONS */
@@ -259,11 +288,6 @@ input[type=text]:placeholder,input[type=tel]:placeholder {
   -moz-animation-delay: 1.4s;
   animation-delay: 1.4s;
 }
-.fadeIn.six {
-  -webkit-animation-delay: 1.4s;
-  -moz-animation-delay: 1.4s;
-  animation-delay: 1.4s;
-}
 .fadeIn.seven {
   -webkit-animation-delay: 1.6s;
   -moz-animation-delay: 1.6s;
@@ -288,10 +312,6 @@ input[type=text]:placeholder,input[type=tel]:placeholder {
 
 .underlineHover:hover:after{
   width: 100%;
-}
-
-h1{
-    color:'black';
 }
 
 /* OTHERS */

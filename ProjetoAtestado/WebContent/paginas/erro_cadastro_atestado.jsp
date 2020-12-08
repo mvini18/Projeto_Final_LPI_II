@@ -35,7 +35,7 @@
 	    <div class="col fadeIn second"><h6>Calma aí!</h6></div>
 	    <div class="w-100"></div>
 	    <div class="col fadeIn third"><p>Parece que você possui um atestado pendente. Aguarde
-	    								 a avaliação em sua central.</p></div>
+	    								 ele ser impresso ou rejeitado.</p></div>
 	  </div>
 	</div>
     <div id="formFooter">
