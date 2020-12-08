@@ -33,11 +33,11 @@
 	  <div class="row">
 	    <div class="col fadeIn second"><h5>Concluído!</h5></div>
 	    <div class="w-100"></div>
-	    <div class="col fadeIn third"><p>Verifique sua central para mais informações.</p></div>
+	    <div class="col fadeIn third"><p>Pdf gerado com exito.</p></div>
 	  </div>
 	</div>
     <div id="formFooter">
-    <a href="primeira_pagina.jsp"><img src="../assets/img/retorna.png"></a>
+    <a href="../consultaUsuarioConfirmado"><img src="../assets/img/retorna.png"></a>
     </div>
 
   </div>

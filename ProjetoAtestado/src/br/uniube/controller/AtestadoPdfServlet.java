@@ -44,6 +44,8 @@ public class AtestadoPdfServlet extends HttpServlet {
 			
 			Usuario objPaciente = daoUser.consultarUsuarioById(id);
 			Atestado objPacienteAtt = daoAtt.consultarAtestadoById(id);
+			try {
+				
 			
 			Document doc = new Document();
 			
@@ -115,11 +117,12 @@ public class AtestadoPdfServlet extends HttpServlet {
 			
 			
 			doc.close();
-
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 			daoAtt.atestadoImpresso(objPacienteAtt.getCpf_usuario(), objPacienteAtt.getId());
 			
-			request.getSession().setAttribute("objUsuarioCompleto", objUsuarioCompleto);
-			response.sendRedirect("paginas/sucesso_atestado.jsp");
+			response.sendRedirect("paginas/sucesso_pdf.jsp");
 
 
 		} catch(Exception ex) {

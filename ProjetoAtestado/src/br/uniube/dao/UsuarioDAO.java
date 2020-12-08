@@ -187,8 +187,7 @@ public class UsuarioDAO extends AcessoBancoDAO {
 				String telefone = rs.getString(4);
 
 				Usuario usuario = new Usuario();
-				Atestado att = new Atestado();
-				att.setId(id);
+				usuario.setId(id);
 				usuario.setNome(nome);
 				usuario.setCpf(cpf);
 				usuario.setTelefone(telefone);

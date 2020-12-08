@@ -200,7 +200,8 @@ public class AtestadoDAO extends AcessoBancoDAO {
 		try {
 			ResultSet rs;
 			conectar();
-			String query = "select * from tb_atestado where cpf_usuario ='" + cpf +"' and status = 'Pendente'";
+			String query = "select * from tb_atestado where cpf_usuario ='" + cpf +"'"
+					+ "and status = 'Pendente'";
 			Statement instrucao = getConexao().createStatement();
 			rs = instrucao.executeQuery(query);
 
@@ -248,7 +249,7 @@ public class AtestadoDAO extends AcessoBancoDAO {
 		try {
 			ResultSet rs;
 			conectar();
-			String query = "select cid10, cpf_usuario, dia_atual, finalidade, nascimento, periodo, sexo, status, texto_paciente"
+			String query = "select cid10, cpf_usuario, dia_atual, finalidade, nascimento, periodo, sexo, status, texto_paciente, tb_atestado.id"
 					+ " from tb_atestado, tb_login where tb_atestado.id='" + idAtestado + "' and cpf = cpf_usuario";
 
 			Statement instrucao = getConexao().createStatement();
@@ -264,6 +265,7 @@ public class AtestadoDAO extends AcessoBancoDAO {
 				String sexo = rs.getString(7);
 				String status = rs.getString(8);
 				String texto_paciente = rs.getString(9);
+				int id = rs.getInt(10);
 				
 				objPacienteAtt.setCid10(cid10);
 				objPacienteAtt.setCpf_usuario(cpf_usuario);
@@ -274,6 +276,7 @@ public class AtestadoDAO extends AcessoBancoDAO {
 				objPacienteAtt.setSexo(sexo);
 				objPacienteAtt.setStatus(status);
 				objPacienteAtt.setTexto_paciente(texto_paciente);
+				objPacienteAtt.setId(id);
 			}
 
 		} catch (SQLException ex) {
