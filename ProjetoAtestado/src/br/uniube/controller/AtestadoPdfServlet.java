@@ -35,9 +35,8 @@ public class AtestadoPdfServlet extends HttpServlet {
 			throws ServletException, IOException {
 		try {
 			Usuario objUsuarioCompleto = (Usuario) request.getSession().getAttribute("objUsuarioCompleto");
-			Atestado objAtestado = (Atestado) request.getSession().getAttribute("objAtestado");
 			
-Document doc = new Document();
+			Document doc = new Document();
 			
 			SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/yyyy");
 			
