@@ -8,7 +8,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import br.uniube.model.Usuario;
+import br.uniube.model.Atestado;
 import br.uniube.model.Usuario;
 
 /**
@@ -173,24 +173,27 @@ public class UsuarioDAO extends AcessoBancoDAO {
 			ResultSet rs;
 			conectar();
 
-			String query = "select nome,cpf,telefone from tb_atestado,tb_login "
-					+ "where status = 'Confirmado'"
+			String query = "select tb_atestado.id,nome,cpf,telefone from tb_atestado,tb_login "
+					+ "where status = 'Confirmado' "
 					+ "and cpf = cpf_usuario limit 4";
 			Statement instrucao = getConexao().createStatement();
 			rs = instrucao.executeQuery(query);
 
 			while (rs.next()) {
 
-				String nome = rs.getString(1);
-				String cpf = rs.getString(2);
-				String telefone = rs.getString(3);
+				int id = rs.getInt(1);
+				String nome = rs.getString(2);
+				String cpf = rs.getString(3);
+				String telefone = rs.getString(4);
 
-				Usuario Usuario = new Usuario();
-				Usuario.setNome(nome);
-				Usuario.setCpf(cpf);
-				Usuario.setTelefone(telefone);
+				Usuario usuario = new Usuario();
+				Atestado att = new Atestado();
+				att.setId(id);
+				usuario.setNome(nome);
+				usuario.setCpf(cpf);
+				usuario.setTelefone(telefone);
 
-				listaUsuarios.add(Usuario);
+				listaUsuarios.add(usuario);
 			}
 
 		} catch (SQLException ex) {
@@ -202,32 +205,35 @@ public class UsuarioDAO extends AcessoBancoDAO {
 		}
 		return listaUsuarios;
 	}
-	
+
 	public ArrayList<Usuario> consultarUsuarioConfirmadoNome(String nomeUsuario) throws Exception {
 		ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();
 		try {
 			ResultSet rs;
 			conectar();
 
-			String query = "select nome,cpf,telefone from tb_atestado,tb_login "
+			String query = "select tb_atestado.id,nome,cpf,telefone from tb_atestado,tb_login "
 					+ "where ucase(nome) like '" + nomeUsuario.toUpperCase() + "%'"
-					+ "and status = 'Confirmado'"
+					+ "and status = 'Confirmado' "
 					+ "and cpf = cpf_usuario limit 4"; 
 			Statement instrucao = getConexao().createStatement();
 			rs = instrucao.executeQuery(query);
 
 			while (rs.next()) {
 
-				String nome = rs.getString(1);
-				String cpf = rs.getString(2);
-				String telefone = rs.getString(3);
+				int id = rs.getInt(1);
+				String nome = rs.getString(2);
+				String cpf = rs.getString(3);
+				String telefone = rs.getString(4);
 
-				Usuario Usuario = new Usuario();
-				Usuario.setNome(nome);
-				Usuario.setCpf(cpf);
-				Usuario.setTelefone(telefone);
+				Usuario usuario = new Usuario();
+				Atestado att = new Atestado();
+				att.setId(id);
+				usuario.setNome(nome);
+				usuario.setCpf(cpf);
+				usuario.setTelefone(telefone);
 
-				listaUsuarios.add(Usuario);
+				listaUsuarios.add(usuario);
 			}
 
 		} catch (SQLException ex) {
@@ -301,4 +307,30 @@ public class UsuarioDAO extends AcessoBancoDAO {
 		}
 
 	}
+	public Usuario consultarUsuarioById(String idAtestado) throws Exception {
+		Usuario objPaciente = new Usuario();
+		try {
+			ResultSet rs;
+			conectar();
+			String query = "select nome from tb_login,tb_atestado where tb_atestado.id='" + idAtestado + "' and cpf = cpf_usuario";
+
+			Statement instrucao = getConexao().createStatement();
+			rs = instrucao.executeQuery(query);
+
+			if(rs.next()) {
+				
+				String nome = rs.getString(1);
+				objPaciente.setNome(nome);
+			}
+
+		} catch (SQLException ex) {
+			throw new SQLException(ex);
+		} catch(Exception ex) {
+			throw new Exception(ex);
+		} finally{
+			desconectar();
+		}
+		return objPaciente;
+	}
+
 }
