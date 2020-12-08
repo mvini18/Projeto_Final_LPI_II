@@ -37,7 +37,11 @@
 	  </div>
 	</div>
     <div id="formFooter">
-      <a href="primeira_pagina.jsp"><img src="../assets/img/retorna.png"></a>
+    <% if (objUsuario.getEstilo_usuario() == "medico") { %>
+    <a href="central_medico.jsp"><img src="../assets/img/retorna.png"></a>
+    <% } else { %>
+    <a href="primeira_pagina.jsp"><img src="../assets/img/retorna.png"></a>
+    <% } %>
     </div>
 
   </div>

@@ -46,7 +46,7 @@
 		      <th scope="row"><p><%=objUsuarioAtestado.getNome()%></p></th>
 		      <td><p><%=objUsuarioAtestado.getCpf()%></p></td>
 		      <td><p><%=objUsuarioAtestado.getTelefone()%></p></td>
-		      <td><a href=""><img src="../assets/img/file.png" /></a></td>
+		      <td><a href="../atestadoPdf?id=<%=objUsuarioAtestado.getId()%>"><img src="../assets/img/file.png" /></a></td>
 		    </tr>
 		  </tbody>
 		  <% } %>
