@@ -4,7 +4,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
 	Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuarioCompleto");
-Atestado objAtestado = (Atestado) request.getSession().getAttribute("objAtestado");
+    Atestado objAtestado = (Atestado) request.getSession().getAttribute("objAtestado");
 %>
 <%
 	if (objUsuario == null) {
@@ -26,8 +26,8 @@ Atestado objAtestado = (Atestado) request.getSession().getAttribute("objAtestado
 		<!-- Icon -->
 		<form action="../upload">
 			<div class="fadeIn first">
-				<br> <input type="file" name="file" id="arquivos"><label
-					for="arquivos"></label>
+				<br> <input type="file" name="file" id="file"><label
+					for="file"></label>
 			</div>
 			<br>
 
@@ -42,9 +42,9 @@ Atestado objAtestado = (Atestado) request.getSession().getAttribute("objAtestado
 					</div>
 				</div>
 			</div>
-			<a href="../rejeitarAtestado"><input type="submit"
+			<input type="submit"
 				class="btn btn-primary js-scroll-trigger fadeIn third" id="salvar"
-				value="Salvar"></a>
+				value="Salvar">
 		</form>
 		<div id="formFooter">
 			<a href="primeira_pagina.jsp"><img
@@ -52,4 +52,6 @@ Atestado objAtestado = (Atestado) request.getSession().getAttribute("objAtestado
 		</div>
 	</div>
 </div>
-<% }%>
+<%
+	}
+%>
