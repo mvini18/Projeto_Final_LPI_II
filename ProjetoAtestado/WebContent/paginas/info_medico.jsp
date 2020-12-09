@@ -21,20 +21,22 @@
     </div><br>
 
       <form action="../infoMedico" method="post">
-      <div class="conteiner">
-      <div class="row">
-      <div class="col"><input type="text" id="estado" title="Estado" class="fadeIn second" name="txtEstado" placeholder="estado" maxlength="20" autocomplete="off" required></div>
-	  <div class="col"><input type="text" title="Cidade" id="cidade" class="fadeIn third" name="txtCidade" placeholder="cidade" maxlength="35" autocomplete="off" required></div>
-	  <div class="col"><input type="text" title="Cep" id="cep" class="fadeIn fourth" name="txtCep" placeholder="cep" maxlength="30" autocomplete="off" oninvalid="this.setCustomValidity('Informe o CEP')" onchange="try{setCustomValidity('')}catch(e){}" required> </div>
-	  <div class="w-100"> </div>
-	  <div class="col"><input type="text" title="Endereço" id="endereco" class="fadeIn five" name="txtEndereco" placeholder="endereço" maxlength="40" autocomplete="off" required></div>
+	      <div class="conteiner">
+		      <div class="row">
+		      <div class="col"><input type="text" id="estado" title="Estado" class="fadeIn second" name="txtEstado" placeholder="estado" maxlength="20" autocomplete="off" required></div>
+			  <div class="col"><input type="text" title="Cidade" id="cidade" class="fadeIn third" name="txtCidade" placeholder="cidade" maxlength="35" autocomplete="off" required></div>
+			  </div>
+			  <div class="col"><input type="text" title="Cep" id="cep" class="fadeIn fourth" name="txtCep" placeholder="cep" maxlength="30" autocomplete="off" oninvalid="this.setCustomValidity('Informe o CEP')" onchange="try{setCustomValidity('')}catch(e){}" required> </div>
+			  <div class="w-100"></div>
+			  <div class="col"><input type="text" title="Endereço" id="endereco" class="fadeIn five" name="txtEndereco" placeholder="endereço" maxlength="40" autocomplete="off" required></div>
 	  <div class="col"><input type="text" title="CRM" id="crm" class="fadeIn six" name="txtCrm" placeholder="CRM" maxlength="9" autocomplete="off" required></div>
 	  <div class="col"><input type="text" id="rqe" title="RQE" class="fadeIn seven" name="txtRqe" placeholder="RQE" maxlength="6" autocomplete="off" required></div>
 	  <input type="text" id="especialidade" title="Especialidade" class="fadeIn eight" name="txtEspecialidade" placeholder="especialidade" maxlength="20" autocomplete="off" size="15" required>
-	  <input type="submit" class="btn btn-primary js-scroll-trigger fadeIn nine" value="Confirmar">
-	      <div class="help-block with-errors"></div>
-	  </div>
-	      </div>
+			  
+			  <input type="submit" class="btn btn-primary js-scroll-trigger fadeIn nine" value="Confirmar">
+			      <div class="help-block with-errors"></div>
+			  
+		  </div>
       </form>
 
     

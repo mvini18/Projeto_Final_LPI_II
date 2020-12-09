@@ -18,15 +18,6 @@ a {
   font-weight: 400;
 }
 
-h6 {
-	text-align: center;
-	font-family: 'Poppins', sans-serif;
-	font-size: 20pt;
-	font-weight: 250;
-	line-height: 1.7em;
-	color: #F0E68C;
-}
-
 h2 {
   text-align: center;
   font-size: 16px;
@@ -57,10 +48,9 @@ h2 {
   background: #272b43;
   padding: 30px;
   width: 90%;
-  max-width: 1000px;
-  height: 90%;
-  max-height: 400px;
+  max-width: 850px;
   position: relative;
+  padding: 0px;
   -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
   box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
   text-align: center;
@@ -279,20 +269,6 @@ input[type=text]:placeholder,input[type=tel]:placeholder {
   -moz-animation-delay: 1.6s;
   animation-delay: 1.6s;
 }
-.fadeIn.eight {
-  -webkit-animation-delay: 1.8s;
-  -moz-animation-delay: 1.8s;
-  animation-delay: 1.8s;
-}
-.fadeIn.nine {
-  -webkit-animation-delay: 2s;
-  -moz-animation-delay: 2s;
-  animation-delay: 2s;
-}
-
-#crm {
-	text-transform: uppercase;
-}
 
 /* Simple CSS3 Fade-in Animation */
 .underlineHover:after {
@@ -316,6 +292,15 @@ input[type=text]:placeholder,input[type=tel]:placeholder {
 
 h1{
     color:'black';
+}
+
+h6 {
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.2em;
+	font-weight: 250;
+	line-height: 1.7em;
+	color: #F0E68C;
 }
 
 /* OTHERS */
