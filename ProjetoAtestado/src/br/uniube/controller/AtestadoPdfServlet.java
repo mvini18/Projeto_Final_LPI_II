@@ -44,7 +44,7 @@ public class AtestadoPdfServlet extends HttpServlet {
 			
 			Document doc = new Document();
 			
-			PdfWriter.getInstance(doc, new FileOutputStream("C:\\Users\\ar thur\\Documents\\github\\projeto_atestado\\Projeto_Final_LPI_II\\ProjetoAtestado\\WebContent\\pdfs\\"+objPaciente.getNome()+".pdf"));
+			PdfWriter.getInstance(doc, new FileOutputStream("Downloads\\"+objPaciente.getNome()+".pdf"));
 			
 			doc.open();
 			Paragraph paragraph = new Paragraph();
