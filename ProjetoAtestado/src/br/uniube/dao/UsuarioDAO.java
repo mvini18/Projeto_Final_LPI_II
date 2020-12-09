@@ -4,11 +4,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-
-import br.uniube.model.Atestado;
 import br.uniube.model.Usuario;
 
 /**
@@ -226,8 +221,7 @@ public class UsuarioDAO extends AcessoBancoDAO {
 				String telefone = rs.getString(4);
 
 				Usuario usuario = new Usuario();
-				Atestado att = new Atestado();
-				att.setId(id);
+				usuario.setId(id);
 				usuario.setNome(nome);
 				usuario.setCpf(cpf);
 				usuario.setTelefone(telefone);
