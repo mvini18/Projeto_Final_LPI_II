@@ -31,9 +31,7 @@
 	  <div class="row">
 	    <div class="col fadeIn second"><h5>Concluído!</h5></div>
 	    <div class="w-100"></div>
-	    <div class="col fadeIn third">
-	  	  <a href="../pdfs/<%=objUsuario.getNome()%>.pdf" target="_blank"><input type="submit" class="btn btn-primary js-scroll-trigger fadeIn third" value="Visualizar"></a>
-	    </div>
+	    <div class="col fadeIn third"><p>Pdf gerado com sucesso.</p></div>
 	  </div>
 	</div>
     <div id="formFooter">
