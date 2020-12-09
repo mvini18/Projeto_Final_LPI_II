@@ -114,11 +114,11 @@ h2 {
 
 #formFooter {
   background-color: rgb(100, 101, 112);
-  border-top: 2px solid #272b43;
-  padding: 5px;
+  border-top: 0 solid #272b43;
+  padding: 2px;
   text-align: center;
-  -webkit-border-radius: 0 0 10px 10px;
-  border-radius: 0 0 10px 10px;
+  -webkit-border-radius: 10px 10px 0 10;
+  border-radius: 10px 10px 0 0;
 }
 
 #img {

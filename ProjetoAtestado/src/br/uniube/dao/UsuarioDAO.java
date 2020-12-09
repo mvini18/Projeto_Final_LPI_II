@@ -175,7 +175,7 @@ public class UsuarioDAO extends AcessoBancoDAO {
 
 			String query = "select tb_atestado.id,nome,cpf,telefone from tb_atestado,tb_login "
 					+ "where status = 'Confirmado' "
-					+ "and cpf = cpf_usuario limit 4";
+					+ "and cpf = cpf_usuario";
 			Statement instrucao = getConexao().createStatement();
 			rs = instrucao.executeQuery(query);
 
@@ -214,7 +214,7 @@ public class UsuarioDAO extends AcessoBancoDAO {
 			String query = "select tb_atestado.id,nome,cpf,telefone from tb_atestado,tb_login "
 					+ "where ucase(nome) like '" + nomeUsuario.toUpperCase() + "%'"
 					+ "and status = 'Confirmado' "
-					+ "and cpf = cpf_usuario limit 4"; 
+					+ "and cpf = cpf_usuario"; 
 			Statement instrucao = getConexao().createStatement();
 			rs = instrucao.executeQuery(query);
 

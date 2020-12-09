@@ -3,9 +3,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
-	Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuarioCompleto");
-	Usuario objUsuarioAtestado = (Usuario) request.getSession().getAttribute("objNomeUsuario");
-	Atestado objAtestado = (Atestado) request.getSession().getAttribute("objAtestado");
+	Usuario objUsuario = (Usuario) request.getSession().getAttribute("objPaciente");
 	
 %>
 <%
@@ -33,7 +31,9 @@
 	  <div class="row">
 	    <div class="col fadeIn second"><h5>Concluído!</h5></div>
 	    <div class="w-100"></div>
-	    <div class="col fadeIn third"><p>Pdf gerado com exito.</p></div>
+	    <div class="col fadeIn third">
+	  	  <a href="../pdfs/<%=objUsuario.getNome()%>.pdf" target="_blank"><input type="submit" class="btn btn-primary js-scroll-trigger fadeIn third" value="Visualizar"></a>
+	    </div>
 	  </div>
 	</div>
     <div id="formFooter">
