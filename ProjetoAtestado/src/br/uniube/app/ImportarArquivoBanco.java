@@ -38,9 +38,9 @@ public class ImportarArquivoBanco {
 				{
 					String codigo = linha.split(" ")[0];
 					String nome = linha.substring(codigo.length(), linha.length()-1);
-					System.out.println("Codigo: " + codigo + " Nome: " + nome);
+					System.out.println("Codigo: " + nome + " Nome: " + estado);
 					
-					String sqlCadastro = " INSERT INTO tb_cid (codigo_cid, nome_cid) VALUES ('" + codigo + "', '" + nome + "')";
+					String sqlCadastro = " INSERT INTO tb_cidades (nome, estado) VALUES ('" + nome + "', '" + estado + "')";
 					stm.executeUpdate(sqlCadastro);
 				}
 			}
