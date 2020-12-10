@@ -147,8 +147,7 @@ public class UsuarioDAO extends AcessoBancoDAO {
 		try {
 			conectar();
 
-			String query = "UPDATE tb_login set nome='" + objUsuario.getNome() + "'," + "" + "cpf='"
-					+ objUsuario.getCpf() + "'," + " telefone = '" + objUsuario.getTelefone() + "'," + "  email = '"
+			String query = "UPDATE tb_login set nome='" + objUsuario.getNome() + "'," + " telefone = '" + objUsuario.getTelefone() + "'," + "  email = '"
 					+ objUsuario.getEmail() + "' where email = '" + objUsuarioEmail + "'";
 			Statement instrucao = getConexao().createStatement();
 			instrucao.executeUpdate(query);
@@ -324,6 +323,24 @@ public class UsuarioDAO extends AcessoBancoDAO {
 			desconectar();
 		}
 		return objPaciente;
+	}
+	
+	public void atualizarUsuarioMedico(Usuario objUsuario) throws Exception {
+		try {
+			conectar();
+
+			String query = "UPDATE tb_login set estilo_usuario = 'medico' "
+					+ "where cpf= '" + objUsuario.getCpf() + "'";
+			Statement instrucao = getConexao().createStatement();
+			instrucao.executeUpdate(query);
+
+		} catch (SQLException ex) {
+			throw new SQLException(ex);
+		} catch (Exception ex) {
+			throw new Exception(ex);
+		} finally {
+			desconectar();
+		}
 	}
 
 }

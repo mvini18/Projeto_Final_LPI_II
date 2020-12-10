@@ -9,7 +9,7 @@
 	
 %>
 <%
-	if (objUsuario == null) {
+	if (objUsuario == null || objUsuario.getEstilo_usuario().equals("paciente") || objUsuario.getEstilo_usuario().equals("medico_pendente")) {
 		response.sendRedirect("index.html");
 	}
 	else {

@@ -6,6 +6,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.validator.Max;
+
 @Entity 
 @Table(name="tb_atestado")
 public class Atestado {

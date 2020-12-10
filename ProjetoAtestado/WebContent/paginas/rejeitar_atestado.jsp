@@ -8,7 +8,7 @@
 	
 %>
 <%
-	if (objUsuario == null) {
+	if (objUsuario == null || objUsuario.getEstilo_usuario().equals("paciente")) {
 		response.sendRedirect("index.html");
 	}
 	else {
@@ -38,7 +38,7 @@
 	  </div>
 	</div>
 	<a href="../rejeitarAtestado"><input type="button"
-				class="btn btn-primary js-scroll-trigger fadeIn five" id="rejeitar"
+				class="btn btn-primary js-scroll-trigger fadeIn fourth" id="rejeitar"
 				value="Confirmar"></a>
     <div id="formFooter">
       <a href="pagina_medico.jsp"><img src="../assets/img/retorna.png"></a>

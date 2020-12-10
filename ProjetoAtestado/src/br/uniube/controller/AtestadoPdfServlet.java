@@ -17,8 +17,10 @@ import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfWriter;
 
 import br.uniube.dao.AtestadoDAO;
+import br.uniube.dao.MedicoDAO;
 import br.uniube.dao.UsuarioDAO;
 import br.uniube.model.Atestado;
+import br.uniube.model.Medico;
 import br.uniube.model.Usuario;
 
 public class AtestadoPdfServlet extends HttpServlet {
@@ -38,13 +40,15 @@ public class AtestadoPdfServlet extends HttpServlet {
 			
 			AtestadoDAO daoAtt = new AtestadoDAO();
 			UsuarioDAO daoUser = new UsuarioDAO();
+			MedicoDAO daoMed = new MedicoDAO();
 			
-			Usuario objPaciente = daoUser.consultarUsuarioById(id);
 			Atestado objPacienteAtt = daoAtt.consultarAtestadoById(id);
+			Usuario objPaciente = daoUser.consultarUsuarioById(id);
+			Medico objMedico = daoMed.consultarMedicoByCpf(objUsuarioCompleto.getCpf());
 			
 			Document doc = new Document();
 			
-			PdfWriter.getInstance(doc, new FileOutputStream("C:\\Users\\ar thur\\Downloads\\"+objPaciente.getNome()+".pdf"));
+			PdfWriter.getInstance(doc, new FileOutputStream("C:\\Users\\marco\\Downloads\\"+objPaciente.getNome()+".pdf"));
 			
 			doc.open();
 			Paragraph paragraph = new Paragraph();
@@ -56,15 +60,15 @@ public class AtestadoPdfServlet extends HttpServlet {
 			
 			Paragraph dados = new Paragraph();
 			
-			dados.add("\n       Dr " + objUsuarioCompleto.getNome()
-					+ "\n       CRM " + "CRM" + "\n       RQE " + "RQE" + " - " + "especialidade" );
+			dados.add("\n       Dr(a) " + objUsuarioCompleto.getNome()
+					+ "\n       CRM " + objMedico.getCrm() + "\n       RQE " + objMedico.getRqe() + " - " + objMedico.getEspecialidade() );
 					 
 			
 			dados.setAlignment(Element.ALIGN_LEFT);
 			
 			Paragraph endereco = new Paragraph();
 			
-			endereco.add("\n Rua Martinesia 113, N. S. Aparecida \n CEP: 38400-606 \n Uberlândia - Minas Gerais" + "\n______________________________________________________________________________");
+			endereco.add("\n "+ objMedico.getEndereco()+" \n CEP: "+ objMedico.getCep()+" \n "+ objMedico.getCidade()+" - " +objMedico.getEstado() +"" + "\n______________________________________________________________________________");
 			endereco.setAlignment(Element.ALIGN_RIGHT);
 			
 			doc.add(dados);
@@ -100,8 +104,8 @@ public class AtestadoPdfServlet extends HttpServlet {
             
 			Paragraph rodape = new Paragraph();
 			
-			rodape.add("\n       Dr " + objUsuarioCompleto.getNome()
-					+ "\n       CRM " + "CRM" + "\n       RQE " + "RQE" + " - " + "especialidade" );
+			rodape.add("\n       Dr(a) " + objUsuarioCompleto.getNome()
+					+ "\n       CRM " + objMedico.getCrm() + "\n       RQE " + objMedico.getRqe() + " - " + objMedico.getEspecialidade() );
 			
 
 			rodape.setAlignment(Element.ALIGN_RIGHT);

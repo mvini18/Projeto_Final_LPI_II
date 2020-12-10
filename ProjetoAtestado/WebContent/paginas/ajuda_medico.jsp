@@ -9,7 +9,7 @@
 	
 %>
 <%
-	if (objUsuario == null) {
+	if (objUsuario == null || objUsuario.getEstilo_usuario().equals("paciente")) {
 		response.sendRedirect("index.html");
 	}
 	else {
@@ -89,8 +89,9 @@
 					<img src="../assets/img/carousel.png" class="img-fluid d-block"
 						title="ajuda">
 					<div class="carousel-caption d-none d-md-block">
-						<h5>Autenticidade do atestado</h5>
-						<p>O atestado apenas será considerado válido caso o médico responsável assine o documento.</p>
+						<h5>Validar perfil</h5>
+						<p>Para iniciar as solicitações, é necessário completar
+							o cadastro de médico.</p>
 					</div>
 				</div>
 			</div>
