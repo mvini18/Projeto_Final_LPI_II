@@ -14,8 +14,8 @@ public class GeraTabelas {
 		AnnotationConfiguration cfg = new AnnotationConfiguration();
 		
 //		cfg.addAnnotatedClass(Cid.class);
-//		cfg.addAnnotatedClass(Usuario.class);
-//		cfg.addAnnotatedClass(Atestado.class);
+		cfg.addAnnotatedClass(Usuario.class);
+		cfg.addAnnotatedClass(Atestado.class);
 		cfg.addAnnotatedClass(Medico.class);
 		new SchemaExport(cfg).create(true,true);
 	}

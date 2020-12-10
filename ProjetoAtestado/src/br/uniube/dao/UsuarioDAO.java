@@ -147,8 +147,7 @@ public class UsuarioDAO extends AcessoBancoDAO {
 		try {
 			conectar();
 
-			String query = "UPDATE tb_login set nome='" + objUsuario.getNome() + "'," + "" + "cpf='"
-					+ objUsuario.getCpf() + "'," + " telefone = '" + objUsuario.getTelefone() + "'," + "  email = '"
+			String query = "UPDATE tb_login set nome='" + objUsuario.getNome() + "'," + " telefone = '" + objUsuario.getTelefone() + "'," + "  email = '"
 					+ objUsuario.getEmail() + "' where email = '" + objUsuarioEmail + "'";
 			Statement instrucao = getConexao().createStatement();
 			instrucao.executeUpdate(query);

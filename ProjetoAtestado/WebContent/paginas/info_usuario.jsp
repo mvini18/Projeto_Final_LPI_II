@@ -20,7 +20,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
 
 <script type="text/javascript">$("#telefone").mask("(00) 00000-0000");</script>
-<script type="text/javascript">$("#cpf").mask("000.000.000-00");</script>
 <link rel="icon" href="../assets/img/lupus_icone.png" />
 <!------ Include the above in your HEAD tag ---------->
 <title>Lupus</title>
@@ -35,9 +34,8 @@
     <form method="post" action="../alterarUsuario">
       <input type="text" id="nome" class="fadeIn second" title="Nome" name="txtNome" maxlength="30" autocomplete="off" required value="<%= objUsuario.getNome()%>"> 
       <input type="email" id="email" class="fadeIn third" title="Email" name="txtEmail" maxlength="30" required value="<%= objUsuario.getEmail()%>">
-      <input type="text" id="cpf" class="fadeIn fourth" title="Cpf" name="txtCpf" minlength="11" maxlength="11" pattern="^[0-9]{3}.?[0-9]{3}.?[0-9]{3}-?[0-9]{2}" required value="<%= objUsuario.getCpf()%>">
-      <input type="text" id="telefone" class="fadeIn five" title="Telefone" name="txtTelefone" maxlength="15" maxlength="30" autocomplete="off" pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{4})-([0-9]{4})" required value="<%= objUsuario.getTelefone()%>">
-      <input type="submit" class="btn btn-primary js-scroll-trigger fadeIn six" value="Editar">
+      <input type="text" id="telefone" class="fadeIn fourth" title="Telefone" name="txtTelefone" maxlength="15" maxlength="30" autocomplete="off" pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{4})-([0-9]{4})" required value="<%= objUsuario.getTelefone()%>">
+      <input type="submit" class="btn btn-primary js-scroll-trigger fadeIn five" value="Editar">
     </form>
 
     <div id="formFooter">

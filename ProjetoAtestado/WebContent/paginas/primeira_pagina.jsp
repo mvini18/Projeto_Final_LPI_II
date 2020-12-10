@@ -6,9 +6,8 @@
 %>
 <%
 	if (objUsuario == null) {
-		response.sendRedirect("index.html");
-	}
-	else {
+	response.sendRedirect("index.html");
+} else {
 %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
     "http://www.w3.org/TR/html4/loose.dtd" >
@@ -17,7 +16,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="icon" href="../assets/img/lupus_icone.png" />
 <title>Lupus</title>
 
@@ -39,30 +38,44 @@
 		<nav id="sidebar">
 
 		<div class="sidebar-header fadeIn first">
-			<a href="index.html">
-					<img title="menu" src="../assets/img/lupus_icone.png">Lupus
+			<a href="index.html"> <img title="menu"
+				src="../assets/img/lupus_icone.png">Lupus
 				</h3></a>
 		</div>
 		<ul class="list-unstyled components fadeIn second">
 			<br>
 			<br>
-			
-			<% if(objUsuario.getEstilo_usuario().equals("medico_pendente")){ %>
+
+			<%
+				if (objUsuario.getEstilo_usuario().equals("medico_pendente")) {
+			%>
 			<li><a href="info_medico.jsp">Cadastro do médico</a></li>
-			<% } %>
-		
-			<% if(objUsuario.getEstilo_usuario().equals("medico")){ %>
+			<li><a href="ajuda_medico.jsp">Ajuda</a></li>
+			<%
+				}
+			%>
+
+			<%
+				if (objUsuario.getEstilo_usuario().equals("medico")) {
+			%>
 			<li><a href="../consultarAtestados">Solicitações</a></li>
 			<li><a href="../consultaUsuarioConfirmado">Central</a></li>
+			<li><a href="../consultarInfoMedico">Informações do médico</a></li>
 			<li><a href="ajuda_medico.jsp">Ajuda</a></li>
-			
-			<% } %>
-			<% if(objUsuario.getEstilo_usuario().equals("paciente")){ %>
+
+			<%
+				}
+			%>
+			<%
+				if (objUsuario.getEstilo_usuario().equals("paciente")) {
+			%>
 			<li><a href="../atestado">Atestado</a></li>
 			<li><a href="../consultarStatus">Central</a></li>
 			<li><a href="ajuda_paciente.jsp">Ajuda</a></li>
-			<% } %>
-			
+			<%
+				}
+			%>
+
 			<li><a href="info_usuario.jsp">Informações do usuário</a></li>
 			<li><a href="objetivo.jsp">Objetivo</a></li>
 			<li><a href="mudar_senha.jsp">Senha</a></li>
@@ -70,7 +83,8 @@
 			<br>
 			<br>
 			<br>
-			<li><a href="../deslogar"><img title="Sair" src="../assets/img/opcao-de-sair.png"></a></li>
+			<li><a href="../deslogar"><img title="Sair"
+					src="../assets/img/opcao-de-sair.png"></a></li>
 		</ul>
 		</nav>
 
@@ -78,20 +92,42 @@
 		<div id="content" class="fadeIn third">
 			<br> <br>
 			<p>
-			<a href="upload_avatar.jsp"><label for="arquivos"></label></a>
+				<a href="upload_avatar.jsp"><label for="arquivos"></label></a>
 			</p>
 			<h2>
-				Bem vindo(a), <%= objUsuario.getNome() %>
+				Bem vindo(a),
+				<%=objUsuario.getNome()%>
 			</h2>
 			<br> <br>
 			<div align="center">
 				<div class="conteiner fadeIn fourth">
 					<h5>Vamos começar!</h5>
 					<div>
+						<%
+							if (objUsuario.getEstilo_usuario().equals("paciente")) {
+						%>
 						<p>Acesse o menu na esquerda para conseguir um atestado
 							respondendo ao questionário, obter mais informações sobre as
 							funcionalidades, gerenciar seu perfil, conhecer melhor o projeto
 							ou realizar a mudança da senha.</p>
+
+						<%
+							} else if (objUsuario.getEstilo_usuario().equals("medico")) {
+						%>
+						<p>Acesse o menu na esquerda para validar as solicitações de
+							atestados, gerar o arquivo do atestado para imprimir, obter mais
+							informações sobre as funcionalidades, gerenciar seu perfil,
+							conhecer melhor o projeto ou realizar a mudança da senha.</p>
+
+						<%
+							} else if (objUsuario.getEstilo_usuario().equals("medico_pendente")) {
+						%>
+						<p>Acesse o menu na esquerda para completar o seu cadastro,
+							obter mais informações sobre as funcionalidades, gerenciar seu
+							perfil, conhecer melhor o projeto ou realizar a mudança da senha.</p>
+						<%
+							}
+						%>
 					</div>
 				</div>
 			</div>
@@ -110,4 +146,6 @@
 		crossorigin="anonymous"></script>
 </body>
 </html>
-<% } %>
+<%
+	}
+%>

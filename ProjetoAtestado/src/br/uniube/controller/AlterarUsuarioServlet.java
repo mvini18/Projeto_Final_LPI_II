@@ -22,13 +22,11 @@ public class AlterarUsuarioServlet extends HttpServlet {
 
 			String nomeUsuario = request.getParameter("txtNome");
 			String telefoneUsuario = request.getParameter("txtTelefone");
-			String cpfUsuario = request.getParameter("txtCpf");
 			String emailUsuario = request.getParameter("txtEmail");
 
 			Usuario objUsuario = new Usuario();
 			objUsuario.setNome(nomeUsuario);
 			objUsuario.setTelefone(telefoneUsuario);
-			objUsuario.setCpf(cpfUsuario);
 			objUsuario.setEmail(emailUsuario);
 
 

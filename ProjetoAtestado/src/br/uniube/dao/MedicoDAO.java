@@ -7,14 +7,39 @@ import java.sql.Statement;
 import br.uniube.model.Medico;
 
 public class MedicoDAO extends AcessoBancoDAO {
+	public void atualizarInfoMedico(Medico objMedico,String cpfMedico) throws Exception {
+		try {
+			conectar();
+			String crmMedico = objMedico.getCrm().toUpperCase();
+			String query = "UPDATE tb_medico set cep='" + objMedico.getCep() + "'," + " cidade = '" + objMedico.getCidade() + "'"
+					+ "," + "  crm = '" + crmMedico + "'"
+					+ "," + " endereco = '" + objMedico.getEndereco() + "'"
+							+ "," + " especialidade = '" + objMedico.getEspecialidade() + "'"
+									+ "," + " estado = '" + objMedico.getEstado() + "'"
+											+ "," + " rqe = '" + objMedico.getRqe() + "'"
+							+ " where cpf_medico = '" + cpfMedico + "'";
+					System.out.println(query);
+			Statement instrucao = getConexao().createStatement();
+			instrucao.executeUpdate(query);
+
+		} catch (SQLException ex) {
+			throw new SQLException(ex);
+		} catch (Exception ex) {
+			throw new Exception(ex);
+		} finally {
+			desconectar();
+		}
+	}
+
 	public void inserirInfoMedico(Medico objMedico,String cpfMedico) throws Exception {
 		try {
 			conectar();
+			String crmMedico = objMedico.getCrm().toUpperCase();
 			String query = "Insert INTO tb_medico (cep,cidade,cpf_medico,crm,endereco,especialidade,estado,rqe) "
-			        + "VALUES ('" +objMedico.getCep() + "','" + objMedico.getCidade() + "'"
-			        + ",'" + cpfMedico + "','" + objMedico.getCrm() + "'"
-			        + ", '"+ objMedico.getEndereco() + "','" + objMedico.getEspecialidade() + "'"
-			        + ", '" + objMedico.getEstado() + "','" + objMedico.getRqe() + "' )";
+					+ "VALUES ('" +objMedico.getCep() + "','" + objMedico.getCidade() + "'"
+					+ ",'" + cpfMedico + "','" + crmMedico + "'"
+					+ ", '"+ objMedico.getEndereco() + "','" + objMedico.getEspecialidade() + "'"
+					+ ", '" + objMedico.getEstado() + "','" + objMedico.getRqe() + "' )";
 			System.out.println(query);
 			Statement instrucao = getConexao().createStatement();
 			instrucao.executeUpdate(query);
@@ -27,14 +52,14 @@ public class MedicoDAO extends AcessoBancoDAO {
 			desconectar();
 		}
 	}
-	
+
 	public Medico consultarMedicoByCpf(String cpfMedico) throws Exception {
 		Medico objMedico = new Medico();
 		try {
 			ResultSet rs;
 			conectar();
 			String query = "select id,cep,cidade,cpf_medico,crm,endereco,especialidade,estado,rqe "
-						 + "from tb_medico where cpf_medico = 'cpfMedico'";
+					+ "from tb_medico where cpf_medico = '" +  cpfMedico + "'";
 
 			Statement instrucao = getConexao().createStatement();
 			rs = instrucao.executeQuery(query);

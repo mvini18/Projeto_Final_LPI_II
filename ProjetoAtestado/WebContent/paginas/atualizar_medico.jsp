@@ -1,13 +1,14 @@
-<%@page import="br.uniube.model.Usuario,br.uniube.dao.UsuarioDAO"%>
+<%@page import="br.uniube.model.Usuario,br.uniube.dao.UsuarioDAO,br.uniube.model.Medico"%>
 <%@page language="java" contentType="text/html; charset=ISO-8859-1"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
 	Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuarioCompleto");
 	Usuario objUsuarioAtestado = (Usuario) request.getSession().getAttribute("objNomeUsuario");
+	Medico objMedico = (Medico) request.getSession().getAttribute("objMedico");
 	
 %>
 <%
-	if (objUsuario == null || objUsuario.getEstilo_usuario().equals("paciente") || objUsuario.getEstilo_usuario().equals("medico")) {
+	if (objUsuario == null || objUsuario.getEstilo_usuario().equals("paciente") || objUsuario.getEstilo_usuario().equals("medico_pendente")) {
 		response.sendRedirect("index.html");
 	}
 	else {
@@ -38,19 +39,19 @@
       </div><br>
     
 
-      <form method="post" action="../novoMedico">
+      <form method="post" action="../atualizarMedico">
 	      <div class="conteiner">
 	      <div class="row">
-	      	<div class="col"><input type="text" id="estado" title="Estado" class="fadeIn second" name="txtEstado" placeholder="estado" maxlength="20" autocomplete="off" required></div>
-		  	<div class="col"><input type="text" title="Cidade" id="cidade" class="fadeIn second" name="txtCidade" placeholder="cidade" maxlength="35" autocomplete="off" required></div>
+	      	<div class="col"><input type="text" value="<%=objMedico.getEstado() %>" id="estado" title="Estado" class="fadeIn second" name="txtEstado" placeholder="estado" maxlength="20" autocomplete="off" required></div>
+		  	<div class="col"><input type="text" value="<%=objMedico.getCidade() %>" title="Cidade" id="cidade" class="fadeIn second" name="txtCidade" placeholder="cidade" maxlength="35" autocomplete="off" required></div>
 		  </div>
 		  <div class="row">
-		 	 <div class="col"><input type="text" title="Cep" id="cep" class="fadeIn third" name="txtCep" placeholder="cep" maxlength="30" autocomplete="off" required> </div>
-		 	 <div class="col"><input type="text" title="Endereço" id="endereco" class="fadeIn third" name="txtEndereco" placeholder="endereço" maxlength="40" autocomplete="off" required></div>
+		 	 <div class="col"><input type="text" value="<%=objMedico.getCep() %>" title="Cep" id="cep" class="fadeIn third" name="txtCep" placeholder="cep" maxlength="30" autocomplete="off" required> </div>
+		 	 <div class="col"><input type="text" value="<%=objMedico.getEndereco() %>" title="Endereço" id="endereco" class="fadeIn third" name="txtEndereco" placeholder="endereço" maxlength="40" autocomplete="off" required></div>
 		  </div>
 		  <div class="row">
-			  <div class="col"><input type="text" title="CRM" id="crm" class="fadeIn fourth" name="txtCrm" placeholder="CRM" maxlength="9" autocomplete="off" required></div>
-			  <div class="col"><input type="text" id="rqe" title="RQE" class="fadeIn fourth" name="txtRqe" placeholder="RQE" maxlength="6" autocomplete="off" required></div>
+			  <div class="col"><input type="text" value="<%=objMedico.getCrm() %>" title="CRM" id="crm" class="fadeIn fourth" name="txtCrm" placeholder="CRM" maxlength="9" autocomplete="off" required></div>
+			  <div class="col"><input type="text" value="<%=objMedico.getRqe() %>" id="rqe" title="RQE" class="fadeIn fourth" name="txtRqe" placeholder="RQE" maxlength="6" autocomplete="off" required></div>
 		  </div>
 		  
 		  </div>
