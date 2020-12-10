@@ -5,6 +5,7 @@ import org.hibernate.tool.hbm2ddl.SchemaExport;
 
 import br.uniube.model.Atestado;
 import br.uniube.model.Cid;
+import br.uniube.model.Medico;
 import br.uniube.model.Usuario;
 import br.uniube.model.Atestado;
 
@@ -12,9 +13,10 @@ public class GeraTabelas {
 	public static void main(String[] args) {
 		AnnotationConfiguration cfg = new AnnotationConfiguration();
 		
-		//cfg.addAnnotatedClass(Cid.class);
-		cfg.addAnnotatedClass(Usuario.class);
-		cfg.addAnnotatedClass(Atestado.class);
+//		cfg.addAnnotatedClass(Cid.class);
+//		cfg.addAnnotatedClass(Usuario.class);
+//		cfg.addAnnotatedClass(Atestado.class);
+		cfg.addAnnotatedClass(Medico.class);
 		new SchemaExport(cfg).create(true,true);
 	}
 }

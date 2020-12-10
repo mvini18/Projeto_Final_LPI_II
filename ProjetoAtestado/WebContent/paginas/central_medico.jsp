@@ -26,8 +26,22 @@
 <title>Lupus</title>
 <div class="wrapper fadeInDown">
   <div id="formContent">
+    <div id="formFooter">
+      <a href="primeira_pagina.jsp"><img src="../assets/img/retorna.png"></a>
+    </div>
+    </br>
+  
+  	<div>
+      <h6 class="fadeIn first">Pesquise pelo nome do paciente.</h6>
       
-    <div class="fadeIn first"><br>
+      <form class="fadeIn third" action="../consultaUsuarioConfirmadoNome" class="fadeInd second" method="post">
+	      <input type="text" title="Nome" id="nome" class="fadeIn fourth" name="txtNome" placeholder="nome" maxlength="30"><br> 
+	      <input type="submit" class="btn btn-primary js-scroll-trigger fadeIn five" value="Pesquisar">
+	      <div class="help-block with-errors"></div>
+      </form>
+    </div>
+      
+    <div class="fadeIn six"><br>
       <% ArrayList listaUsuarios = (ArrayList) request.getSession().getAttribute("listaUsuarios"); %>
 			<% if ((listaUsuarios != null) && (listaUsuarios.size() > 0))  { %>
       <table class="table">
@@ -54,19 +68,6 @@
 		<% } else { %>
 		<p>Nenhum paciente na fila de espera.</p>
 		<% } %>
-    </div>
-    <div>
-      <h6 class="fadeIn second">Pesquise pelo nome do paciente.</h6>
-      
-      <form class="fadeIn third" action="../consultaUsuarioConfirmadoNome" class="fadeInd third" method="post">
-	      <input type="text" title="Nome" id="nome" class="fadeIn second" name="txtNome" placeholder="nome" maxlength="30"><br> 
-	      <input type="submit" class="btn btn-primary js-scroll-trigger fadeIn fourth" value="Pesquisar">
-	      <div class="help-block with-errors"></div>
-      </form>
-    </div>
-     
-    <div id="formFooter">
-      <a href="primeira_pagina.jsp"><img src="../assets/img/retorna.png"></a>
     </div>
 
   </div>

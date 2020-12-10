@@ -44,8 +44,7 @@ public class AtestadoPdfServlet extends HttpServlet {
 			
 			Document doc = new Document();
 			
-			
-			PdfWriter.getInstance(doc, new FileOutputStream(objPaciente.getNome()+".pdf"));
+			PdfWriter.getInstance(doc, new FileOutputStream("C:\\Users\\ar thur\\Downloads\\"+objPaciente.getNome()+".pdf"));
 			
 			doc.open();
 			Paragraph paragraph = new Paragraph();
@@ -79,12 +78,11 @@ public class AtestadoPdfServlet extends HttpServlet {
 			
 			Paragraph principal = new Paragraph();
 			
-			principal.add("\n\n\n        Nome: " + objPaciente.getNome() + "\n\n        Código da Finalidade: ");
+			principal.add("\n\n\n        Nome: " + objPaciente.getNome() + "\n\n        Código da Finalidade: " + objPacienteAtt.getFinalidade());
 			principal.setAlignment(Element.ALIGN_LEFT);
 			
 			Paragraph finali = new Paragraph();
 				
-			finali.add(" \n " + objPacienteAtt.getFinalidade() + "");
 			
 			finali.setAlignment(Element.ALIGN_CENTER);
 			
@@ -107,14 +105,13 @@ public class AtestadoPdfServlet extends HttpServlet {
 			
 
 			rodape.setAlignment(Element.ALIGN_RIGHT);
+			 
 			
 			doc.add(rodape);
-			
-			
 			doc.close();
-			
 			daoAtt.atestadoImpresso(objPacienteAtt.getCpf_usuario(), objPacienteAtt.getId());
 			
+			request.getSession().setAttribute("objPaciente", objPaciente);
 			response.sendRedirect("paginas/sucesso_pdf.jsp");
 
 

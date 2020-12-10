@@ -13,6 +13,10 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
+<<<<<<< HEAD
 	<classpathentry kind="lib" path="C:/Users/ianco/Documents/RepGIT/Projeto_Final_LPI_II/ProjetoAtestado/WebContent/WEB-INF/lib/iText7-Core-7.1.3.zip"/>
+=======
+	<classpathentry kind="lib" path="C:/Users/marco/Documents/github/Projeto_Final_LPI_II/ProjetoAtestado/WebContent/WEB-INF/lib/iText7-Core-7.1.3.zip"/>
+>>>>>>> 0053ab634e363138c4df7bce56c15bcb1068bf86
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
