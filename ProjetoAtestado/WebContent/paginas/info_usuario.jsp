@@ -8,6 +8,7 @@
 	else {
 %>
 <%@page import="br.uniube.model.Usuario,br.uniube.dao.UsuarioDAO"%>
+<%@page language="java" contentType="text/html; charset=ISO-8859-1"%>
 <!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">

@@ -26,8 +26,8 @@ public class ConsultarAtestadoConfirmadoNomeServlet extends HttpServlet {
 			throws ServletException, IOException {
 		try {
 			
-			String nomeUsuario = request.getParameter("txtNome");
 			UsuarioDAO dao = new UsuarioDAO();
+			String nomeUsuario = request.getParameter("txtNome");
 			ArrayList<Usuario> listaUsuarios = dao.consultarUsuarioConfirmadoNome(nomeUsuario);
 			
 			request.getSession().setAttribute("listaUsuarios", listaUsuarios);

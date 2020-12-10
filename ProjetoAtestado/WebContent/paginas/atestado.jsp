@@ -1,4 +1,18 @@
+<%@page import="br.uniube.model.Usuario,br.uniube.dao.UsuarioDAO"%>
 <%@page import = "java.util.List, br.uniube.model.Cid"%>
+<%@page language="java" contentType="text/html; charset=ISO-8859-1"%>
+
+<%
+	Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuarioCompleto");
+	
+	
+%>
+<%
+	if (objUsuario == null) {
+		response.sendRedirect("index.html");
+	}
+	else {
+%>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <link href="../css/atestado.css" type="text/css" rel="stylesheet"/>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -70,3 +84,4 @@
 
   </div>
 </div>
+<% }%>

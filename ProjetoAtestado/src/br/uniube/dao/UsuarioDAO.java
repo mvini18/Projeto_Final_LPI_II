@@ -325,5 +325,23 @@ public class UsuarioDAO extends AcessoBancoDAO {
 		}
 		return objPaciente;
 	}
+	
+	public void atualizarUsuarioMedico(Usuario objUsuario) throws Exception {
+		try {
+			conectar();
+
+			String query = "UPDATE tb_login set estilo_usuario = 'medico' "
+					+ "where cpf= '" + objUsuario.getCpf() + "'";
+			Statement instrucao = getConexao().createStatement();
+			instrucao.executeUpdate(query);
+
+		} catch (SQLException ex) {
+			throw new SQLException(ex);
+		} catch (Exception ex) {
+			throw new Exception(ex);
+		} finally {
+			desconectar();
+		}
+	}
 
 }

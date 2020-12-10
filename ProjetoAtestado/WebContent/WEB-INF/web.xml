@@ -7,6 +7,16 @@
 	<display-name>ProjetoAtestado</display-name>
 	
 	<servlet>
+		<servlet-name>novoMedico</servlet-name>
+		<servlet-class>br.uniube.controller.CadastrarMedicoServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>novoMedico</servlet-name>
+		<url-pattern>/novoMedico</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
 		<servlet-name>atestadoPdf</servlet-name>
 		<servlet-class>br.uniube.controller.AtestadoPdfServlet</servlet-class>
 		<load-on-startup>0</load-on-startup>
@@ -15,7 +25,7 @@
 		<servlet-name>atestadoPdf</servlet-name>
 		<url-pattern>/atestadoPdf</url-pattern>
 	</servlet-mapping>
-		
+	
 	<servlet>
 		<servlet-name>consultaUsuarioConfirmado</servlet-name>
 		<servlet-class>br.uniube.controller.ConsultarAtestadoConfirmadoServlet</servlet-class>

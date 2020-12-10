@@ -1,3 +1,4 @@
+<%@page language="java" contentType="text/html; charset=ISO-8859-1"%>
 <!DOCTYPE html>
 <head>
 <script src="../js/senha_registro.js"></script>

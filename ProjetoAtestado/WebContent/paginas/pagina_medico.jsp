@@ -1,6 +1,6 @@
 <%@page import="br.uniube.model.Usuario,br.uniube.dao.UsuarioDAO"%>
 <%@page import="br.uniube.model.Atestado,br.uniube.dao.AtestadoDAO"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page language="java" contentType="text/html; charset=ISO-8859-1"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
 	Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuarioCompleto");
@@ -9,7 +9,7 @@
 	
 %>
 <%
-	if (objUsuario == null) {
+	if (objUsuario == null || objUsuario.getEstilo_usuario().equals("paciente")) {
 		response.sendRedirect("index.html");
 	}
 	else {
@@ -36,8 +36,8 @@
 					<img src="../assets/img/sala-de-espera.png" />
 				</div>
 				<div class="col-1 col-md-7 fadeIn second">
-					<h6>Nenhuma solicitaÃ§Ã£o!</h6><br>
-					<m>EstÃ¡ silencioso por aqui, espere algum paciente cadastrar suas informaÃ§Ãµes.</m>
+					<h6>Nenhuma solicitação!</h6><br>
+					<m>Está silencioso por aqui, espere algum paciente cadastrar suas informações.</m>
 					
 				</div>
 			</div><br>
@@ -67,7 +67,7 @@
 					<h5>Sexo:</h5>
 					<h5>Cid10:</h5>
 					<h5>Finalidade:</h5>
-					<h5>PerÃ­odo:</h5>
+					<h5>Período:</h5>
 				</div>
 				<div class="col-1 col-md-8 fadeIn third">
 					<p><%= objAtestado.getDia_atual() %></p>
