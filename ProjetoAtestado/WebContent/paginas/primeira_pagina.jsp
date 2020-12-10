@@ -49,8 +49,9 @@
 			<%
 				if (objUsuario.getEstilo_usuario().equals("medico_pendente")) {
 			%>
-			<li><a href="info_medico.jsp">Cadastro do médico</a></li>
 			<li><a href="ajuda_medico.jsp">Ajuda</a></li>
+			<li><a href="info_medico.jsp">Cadastro de médico</a></li>
+			
 			<%
 				}
 			%>
@@ -58,10 +59,10 @@
 			<%
 				if (objUsuario.getEstilo_usuario().equals("medico")) {
 			%>
+			<li><a href="ajuda_medico.jsp">Ajuda</a></li>
 			<li><a href="../consultarAtestados">Solicitações</a></li>
 			<li><a href="../consultaUsuarioConfirmado">Central</a></li>
-			<li><a href="../consultarInfoMedico">Informações do médico</a></li>
-			<li><a href="ajuda_medico.jsp">Ajuda</a></li>
+			<li><a href="../consultarInfoMedico">Informações de médico</a></li>
 
 			<%
 				}
@@ -76,7 +77,7 @@
 				}
 			%>
 
-			<li><a href="info_usuario.jsp">Informações do usuário</a></li>
+			<li><a href="info_usuario.jsp">Informações de usuário</a></li>
 			<li><a href="objetivo.jsp">Objetivo</a></li>
 			<li><a href="mudar_senha.jsp">Senha</a></li>
 			<br>

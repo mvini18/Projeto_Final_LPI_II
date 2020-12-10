@@ -22,8 +22,8 @@ public class ConsultarMedicoServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		try {
-			Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuario");
-			String cpfMedico = request.getParameter(objUsuario.getCpf());
+			Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuarioCompleto");
+			String cpfMedico = objUsuario.getCpf();
 		
 			MedicoDAO dao = new MedicoDAO();
 			Medico objMedico = dao.consultarMedicoByCpf(cpfMedico);

@@ -3,7 +3,6 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
 	Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuarioCompleto");
-	Usuario objUsuarioAtestado = (Usuario) request.getSession().getAttribute("objNomeUsuario");
 	Medico objMedico = (Medico) request.getSession().getAttribute("objMedico");
 	
 %>
@@ -31,14 +30,9 @@
   <div id="formContent">
     
       <div class="fadeIn first"><br>
-      		<img src="../assets/img/certificado.png" />
-      </div>
-      
-      <div class="fadeIn first"><br>
-      	<h6>Informações do(a) Médico(a)</h6>
+      		<img src="../assets/img/atualizar.png" />
       </div><br>
-    
-
+      
       <form method="post" action="../atualizarMedico">
 	      <div class="conteiner">
 	      <div class="row">
@@ -46,16 +40,16 @@
 		  	<div class="col"><input type="text" value="<%=objMedico.getCidade() %>" title="Cidade" id="cidade" class="fadeIn second" name="txtCidade" placeholder="cidade" maxlength="35" autocomplete="off" required></div>
 		  </div>
 		  <div class="row">
-		 	 <div class="col"><input type="text" value="<%=objMedico.getCep() %>" title="Cep" id="cep" class="fadeIn third" name="txtCep" placeholder="cep" maxlength="30" autocomplete="off" required> </div>
+		 	 <div class="col"><input type="text" value="<%=objMedico.getCep() %>" title="Cep" id="cep" class="fadeIn third" name="txtCep" placeholder="cep" minlength="9" autocomplete="off" required> </div>
 		 	 <div class="col"><input type="text" value="<%=objMedico.getEndereco() %>" title="Endereço" id="endereco" class="fadeIn third" name="txtEndereco" placeholder="endereço" maxlength="40" autocomplete="off" required></div>
 		  </div>
 		  <div class="row">
-			  <div class="col"><input type="text" value="<%=objMedico.getCrm() %>" title="CRM" id="crm" class="fadeIn fourth" name="txtCrm" placeholder="CRM" maxlength="9" autocomplete="off" required></div>
-			  <div class="col"><input type="text" value="<%=objMedico.getRqe() %>" id="rqe" title="RQE" class="fadeIn fourth" name="txtRqe" placeholder="RQE" maxlength="6" autocomplete="off" required></div>
+			  <div class="col"><input type="text" value="<%=objMedico.getCrm() %>" title="CRM" id="crm" class="fadeIn fourth" name="txtCrm" placeholder="CRM" minlength="9" maxlength="9" autocomplete="off" required></div>
+			  <div class="col"><input type="text" value="<%=objMedico.getRqe() %>" id="rqe" title="RQE" class="fadeIn fourth" name="txtRqe" placeholder="RQE" minlength="6" maxlength="6" autocomplete="off" required></div>
 		  </div>
 		  
 		  </div>
-		 	 <input type="text" id="especialidade" style="width: 50%" title="Especialidade" class="fadeIn five" name="txtEspecialidade" placeholder="especialidade" maxlength="20" autocomplete="off" size="15" required><br>
+		 	 <input type="text" value="<%=objMedico.getEspecialidade() %>" id="especialidade" style="width: 50%" title="Especialidade" class="fadeIn five" name="txtEspecialidade" placeholder="especialidade" maxlength="20" autocomplete="off" size="15" required><br>
 			<input type="submit" class="btn btn-primary js-scroll-trigger fadeIn six" value="Confirmar">
 		  <div class="help-block with-errors"></div>
       </form>
