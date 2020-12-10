@@ -201,7 +201,7 @@ public class AtestadoDAO extends AcessoBancoDAO {
 			ResultSet rs;
 			conectar();
 			String query = "select * from tb_atestado where cpf_usuario ='" + cpf +"'"
-					+ "and status = 'Pendente'";
+					+ "and status in ('Pendente', 'Confirmado')";
 			Statement instrucao = getConexao().createStatement();
 			rs = instrucao.executeQuery(query);
 
