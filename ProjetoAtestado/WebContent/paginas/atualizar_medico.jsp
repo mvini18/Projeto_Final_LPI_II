@@ -36,8 +36,8 @@
       <form method="post" action="../atualizarMedico">
 	      <div class="conteiner">
 	      <div class="row">
+	      	<div class="col"><input type="text" value="<%=objMedico.getCidade() %>" title="Cidade" id="cidade" class="fadeIn second" name="txtCidade" placeholder="cidade" maxlength="35" autocomplete="off" required></div>
 	      	<div class="col"><input type="text" value="<%=objMedico.getEstado() %>" id="estado" title="Estado" class="fadeIn second" name="txtEstado" placeholder="estado" maxlength="20" autocomplete="off" required></div>
-		  	<div class="col"><input type="text" value="<%=objMedico.getCidade() %>" title="Cidade" id="cidade" class="fadeIn second" name="txtCidade" placeholder="cidade" maxlength="35" autocomplete="off" required></div>
 		  </div>
 		  <div class="row">
 		 	 <div class="col"><input type="text" value="<%=objMedico.getCep() %>" title="Cep" id="cep" class="fadeIn third" name="txtCep" placeholder="cep" minlength="9" autocomplete="off" required> </div>

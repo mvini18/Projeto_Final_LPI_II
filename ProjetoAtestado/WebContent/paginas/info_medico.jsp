@@ -1,5 +1,6 @@
 <%@page import="br.uniube.model.Usuario,br.uniube.dao.UsuarioDAO"%>
 <%@page language="java" contentType="text/html; charset=ISO-8859-1"%>
+<%@page import = "java.util.List, br.uniube.model.Cidades"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
 	Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuarioCompleto");
@@ -36,8 +37,47 @@
       <form method="post" action="../novoMedico">
 	      <div class="conteiner">
 	      <div class="row">
-	      	<div class="col"><input type="text" id="estado" title="Estado" class="fadeIn second" name="txtEstado" placeholder="estado" maxlength="20" autocomplete="off" required></div>
-		  	<div class="col"><input type="text" title="Cidade" id="cidade" class="fadeIn second" name="txtCidade" placeholder="cidade" maxlength="35" autocomplete="off" required></div>
+	      <div class="col">
+	      <input type="search" id="buscaCidade" title="cidades" list="cidades" name="txtCidade" maxlength="40" class="textbox-n fadeIn six" placeholder="cidade" required>
+				
+				<%List listaCidades = (List)request.getSession().getAttribute("listaCidades");
+					
+					if(listaCidades != null)
+					{
+				%>
+		
+						  <datalist id="cidades" title="Cidades" name="selectCidades" required>
+						  <option value="" disabled selected hidden>cidade</option> 
+						  <% for(int i = 0; i<listaCidades.size(); i++)
+							 {	
+							  	Cidades objCidades = (Cidades)listaCidades.get(i);
+							  %>
+							  <option value="<%= objCidades.getNome_cidade()%>"><%= objCidades.getEstado()%></option>
+						  <% } %>
+					
+						  </datalist>
+				<% } %>
+			</div>
+			     
+	      	<div class="col">
+	      	<input type="search" id="buscaEstado" title="Estados" list="Cidades" name="txtEstado" maxlength="40" class="textbox-n fadeIn six" placeholder="estado" required>
+	      		<%
+	      		if(listaCidades != null)
+					{
+				%>
+		
+						  <datalist id="estados" title="Estados" name="selectEstados" required>
+						  <option value="" disabled selected hidden>cid10</option> 
+						  <% for(int i = 0; i<listaCidades.size(); i++)
+							 {	
+							  	Cidades objCidades = (Cidades)listaCidades.get(i);
+							  %>
+							  <option value="<%= objCidades.getEstado()%>"></option>
+						  <% } %>
+					
+						  </datalist>
+				<% } %>
+			</div>
 		  </div>
 		  <div class="row">
 		 	 <div class="col"><input type="text" title="Cep" id="cep" class="fadeIn third" name="txtCep" placeholder="cep" minlength="9" maxlength="30" autocomplete="off" required> </div>

@@ -1,19 +1,19 @@
 package br.uniube.app;
 
 import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.io.InputStreamReader;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
 
-public class ImportarArquivoBanco {
+public class ImportCidadesBanco {
 	public static void main (String args[]) {
 		
 		List<String> linhas = new ArrayList();
@@ -26,8 +26,9 @@ public class ImportarArquivoBanco {
 			// Após estabelecermos a conexão com o banco de dados
 			// Método createStatement para criar o Statement 
 			Statement stm = con.createStatement();
-			BufferedReader leitor = new BufferedReader(new FileReader("C:\\Users\\ianco\\Documents\\RepGIT\\Projeto_Final_LPI_II\\ProjetoAtestado\\src\\CIDs.txt"));
-
+			//BufferedReader leitor = new BufferedReader(new FileReader("C:\\Users\\ianco\\Documents\\RepGIT\\Projeto_Final_LPI_II\\ProjetoAtestado\\src\\cidades.txt"));
+			BufferedReader leitor = new BufferedReader(new InputStreamReader(new FileInputStream("C:\\Users\\ianco\\Documents\\RepGIT\\Projeto_Final_LPI_II\\ProjetoAtestado\\src\\cidades.txt"), "UTF-8"));
+			
 			String linha = leitor.readLine();
 
 			while (linha != null) {
@@ -36,11 +37,11 @@ public class ImportarArquivoBanco {
 				
 				if(linha != null)
 				{
-					String codigo = linha.split(" ")[0];
-					String nome = linha.substring(codigo.length(), linha.length()-1);
-					System.out.println("Codigo: " + codigo + " Nome: " + nome);
+					String estadoCidade = linha.split(" ")[0];
+					String nome = linha.substring(estadoCidade.length(), linha.length()-1);
+					System.out.println("Estado: " + estadoCidade + " Nome da Cidade: " + nome);
 					
-					String sqlCadastro = " INSERT INTO tb_cid (codigo_cid, nome_cid) VALUES ('" + codigo + "', '" + nome + "')";
+					String sqlCadastro = " INSERT INTO tb_cidade (nome_cidade, estado) VALUES ('" + nome + "', '" + estadoCidade + "')";
 					stm.executeUpdate(sqlCadastro);
 				}
 			}
