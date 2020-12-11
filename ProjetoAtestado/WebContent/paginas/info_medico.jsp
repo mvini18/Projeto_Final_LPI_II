@@ -38,7 +38,7 @@
 	      <div class="conteiner">
 	      <div class="row">
 	      <div class="col">
-	      <input type="search" id="buscaCidade" title="cidades" list="cidades" name="txtCidade" maxlength="40" class="textbox-n fadeIn six" placeholder="cidade" required>
+	      <input type="search" id="buscaCidade" title="Cidade e estado" list="cidades" name="txtCidadeEstado" maxlength="40" class="textbox-n fadeIn second" placeholder="cidade - estado" required>
 				
 				<%List listaCidades = (List)request.getSession().getAttribute("listaCidades");
 					
@@ -52,45 +52,26 @@
 							 {	
 							  	Cidades objCidades = (Cidades)listaCidades.get(i);
 							  %>
-							  <option value="<%= objCidades.getNome_cidade()%>"><%= objCidades.getEstado()%></option>
+							  <option value=" <%= objCidades.getNome_cidade()%> - <%= objCidades.getEstado()%>"></option>
 						  <% } %>
 					
 						  </datalist>
 				<% } %>
 			</div>
 			     
-	      	<div class="col">
-	      	<input type="search" id="buscaEstado" title="Estados" list="Cidades" name="txtEstado" maxlength="40" class="textbox-n fadeIn six" placeholder="estado" required>
-	      		<%
-	      		if(listaCidades != null)
-					{
-				%>
-		
-						  <datalist id="estados" title="Estados" name="selectEstados" required>
-						  <option value="" disabled selected hidden>cid10</option> 
-						  <% for(int i = 0; i<listaCidades.size(); i++)
-							 {	
-							  	Cidades objCidades = (Cidades)listaCidades.get(i);
-							  %>
-							  <option value="<%= objCidades.getEstado()%>"></option>
-						  <% } %>
-					
-						  </datalist>
-				<% } %>
-			</div>
+	      	<div class="col"><input type="text" id="especialidade" title="Especialidade" class="fadeIn second" name="txtEspecialidade" placeholder="especialidade" maxlength="20" autocomplete="off" size="15" required></div>
 		  </div>
 		  <div class="row">
 		 	 <div class="col"><input type="text" title="Cep" id="cep" class="fadeIn third" name="txtCep" placeholder="cep" minlength="9" maxlength="30" autocomplete="off" required> </div>
-		 	 <div class="col"><input type="text" title="Endereço" id="endereco" class="fadeIn third" name="txtEndereco" placeholder="endereço" maxlength="40" autocomplete="off" required></div>
+			  <div class="col"><input type="text" title="CRM" id="crm" class="fadeIn third" name="txtCrm" placeholder="CRM" minlength="9" autocomplete="off" required></div>
 		  </div>
 		  <div class="row">
-			  <div class="col"><input type="text" title="CRM" id="crm" class="fadeIn fourth" name="txtCrm" placeholder="CRM" minlength="9" autocomplete="off" required></div>
-			  <div class="col"><input type="text" id="rqe" title="RQE" class="fadeIn fourth" name="txtRqe" placeholder="RQE" minlength="6" autocomplete="off" required></div>
+		 	 <div class="col"><input type="text" title="Endereço" id="endereco" class="fadeIn fourth" name="txtEndereco" placeholder="endereço" maxlength="40" autocomplete="off" required></div>
+			<div class="col"><input type="text" id="rqe" title="RQE" class="fadeIn fourth" name="txtRqe" placeholder="RQE" minlength="6" autocomplete="off" required></div>
 		  </div>
 		  
 		  </div>
-		 	 <input type="text" id="especialidade" style="width: 50%" title="Especialidade" class="fadeIn five" name="txtEspecialidade" placeholder="especialidade" maxlength="20" autocomplete="off" size="15" required><br>
-			<input type="submit" class="btn btn-primary js-scroll-trigger fadeIn six" value="Confirmar">
+			<input type="submit" class="btn btn-primary js-scroll-trigger fadeIn five" value="Confirmar">
 		  <div class="help-block with-errors"></div>
       </form>
 

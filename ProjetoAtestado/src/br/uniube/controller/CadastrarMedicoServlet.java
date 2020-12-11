@@ -26,8 +26,7 @@ public class CadastrarMedicoServlet extends HttpServlet {
 			Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuarioCompleto");
 			String cpfUsuario = objUsuario.getCpf();
 			
-			String estadoMedico = request.getParameter("txtEstado");
-			String cidadeMedico = request.getParameter("txtCidade");
+			String cidadeEstadoMedico = request.getParameter("txtCidadeEstado");
 			String cepMedico = request.getParameter("txtCep");
 			String enderecoMedico = request.getParameter("txtEndereco");
 			String crmMedico = request.getParameter("txtCrm");
@@ -35,8 +34,7 @@ public class CadastrarMedicoServlet extends HttpServlet {
 			String especialidadeMedico = request.getParameter("txtEspecialidade");
 
 			Medico objMedico = new Medico();
-			objMedico.setEstado(estadoMedico);
-			objMedico.setCidade(cidadeMedico);
+			objMedico.setCidade_estado(cidadeEstadoMedico);
 			objMedico.setCep(cepMedico);
 			objMedico.setEndereco(enderecoMedico);
 			objMedico.setCrm(crmMedico);

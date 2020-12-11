@@ -2,11 +2,14 @@ package br.uniube.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.uniube.dao.CidadesDAO;
 import br.uniube.dao.MedicoDAO;
 import br.uniube.dao.UsuarioDAO;
 import br.uniube.model.Medico;
@@ -27,7 +30,9 @@ public class ConsultarMedicoServlet extends HttpServlet {
 		
 			MedicoDAO dao = new MedicoDAO();
 			Medico objMedico = dao.consultarMedicoByCpf(cpfMedico);
-			
+			CidadesDAO cidades = new CidadesDAO();
+			List listaCidades = cidades.consultarCidades();
+			request.getSession().setAttribute("listaCidades", listaCidades);
 			request.getSession().setAttribute("objMedico", objMedico);
 			response.sendRedirect("paginas/atualizar_medico.jsp");
 			

@@ -193,7 +193,7 @@ select:focus{
   border-bottom: 2px solid rgb(81, 206, 118);
 }
 
-input[type=text]:placeholder {
+input[type=text]:placeholder,input[type=search] {
   color: #cccccc;
 }
 

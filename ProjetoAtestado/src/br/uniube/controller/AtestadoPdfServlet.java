@@ -68,7 +68,7 @@ public class AtestadoPdfServlet extends HttpServlet {
 			
 			Paragraph endereco = new Paragraph();
 			
-			endereco.add("\n "+ objMedico.getEndereco()+" \n CEP: "+ objMedico.getCep()+" \n "+ objMedico.getCidade()+" - " +objMedico.getEstado() +"" + "\n______________________________________________________________________________");
+			endereco.add("\n "+ objMedico.getEndereco()+" \n CEP: "+ objMedico.getCep()+" \n "+ objMedico.getCidade_estado() +"" + "\n______________________________________________________________________________");
 			endereco.setAlignment(Element.ALIGN_RIGHT);
 			
 			doc.add(dados);
