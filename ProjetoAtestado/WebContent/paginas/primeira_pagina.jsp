@@ -50,7 +50,7 @@
 				if (objUsuario.getEstilo_usuario().equals("medico_pendente")) {
 			%>
 			<li><a href="ajuda_medico.jsp">Ajuda</a></li>
-			<li><a href="info_medico.jsp">Cadastro de médico</a></li>
+			<li><a href="../consultarCidade">Cadastro de médico</a></li>
 			
 			<%
 				}
