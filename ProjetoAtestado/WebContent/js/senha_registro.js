@@ -1,14 +1,14 @@
-function validarSenha(name1, name2)
+function validarSenha()
 {
-    var senha1 = document.getElementById(name1).value;
-    var senha2 = document.getElementById(name2).value;
+    var senha1 = document.getElementById(senha).value;
+    var senha2 = document.getElementById(confirmar_senha).value;
 		
-    if (senha1 != "" && senha2 != "" && senha1 === senha2)
+    if (!senha1.equals(senha2))
     {
-    	alert('senha iguais');
+    	alert('As senhas precisam ser iguais!');
+    	return false;
     }
-    else
-    {
-      	alert('senhas diferentes');
-    }
+    else {
+		return true;
+	}
 }

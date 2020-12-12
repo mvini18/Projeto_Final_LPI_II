@@ -1,5 +1,7 @@
 package br.uniube.model;
 
+import java.awt.image.BufferedImage;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

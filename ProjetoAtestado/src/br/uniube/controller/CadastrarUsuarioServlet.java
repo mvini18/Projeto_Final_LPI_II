@@ -1,5 +1,6 @@
 package br.uniube.controller;
 
+import java.security.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -27,12 +28,17 @@ public class CadastrarUsuarioServlet extends HttpServlet {
 			String telefoneUsuario = request.getParameter("txtTelefone");
 			String senhaUsuario = request.getParameter("txtSenha");
 
+            MessageDigest algorithm = MessageDigest.getInstance("SHA-256");
+            byte messageDigest[] = algorithm.digest(senhaUsuario.getBytes("UTF-8"));
+            String senhaCriptografada  = new String(messageDigest, "UTF-8");
+            System.out.println(senhaCriptografada);
+
 			Usuario objUsuario = new Usuario();
 			objUsuario.setCpf(cpfUsuario);
 			objUsuario.setNome(nomeUsuario);
 			objUsuario.setEmail(emailUsuario);
 			objUsuario.setTelefone(telefoneUsuario);
-			objUsuario.setSenha(senhaUsuario);
+			objUsuario.setSenha(senhaCriptografada);
 			
 			UsuarioDAO dao = new UsuarioDAO();
 			if(dao.verificarCpfEmail(cpfUsuario, emailUsuario) == false)

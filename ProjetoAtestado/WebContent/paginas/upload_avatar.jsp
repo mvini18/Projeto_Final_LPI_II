@@ -24,7 +24,7 @@
 <div class="wrapper fadeInDown">
 	<div id="formContent">
 		<!-- Icon -->
-		<form action="../upload">
+		<form action="../upload" enctype="multipart/form-data" method="post">
 			<div class="fadeIn first">
 				<br> <input type="file" name="file" id="file"><label
 					for="file"></label>
