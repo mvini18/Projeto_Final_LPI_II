@@ -2,6 +2,7 @@ package br.uniube.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.security.MessageDigest;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -24,11 +25,17 @@ public class LoginUsuarioServlet extends HttpServlet {
 			String emailUsuario = request.getParameter("txtEmail");
 			String senhaUsuario = request.getParameter("txtSenha");
 
-
+            MessageDigest algorithm = MessageDigest.getInstance("SHA-256");
+            byte messageDigest[] = algorithm.digest(senhaUsuario.getBytes("UTF-8"));
+            String senhaCriptografada  = new String(messageDigest, "UTF-8");
+            
+            senhaCriptografada = senhaCriptografada.replace('\'', ' ');
+            senhaCriptografada = senhaCriptografada.replace('"', ' ');
+            
 			// cria o model Usuario
 			Usuario objUsuario = new Usuario();
 			objUsuario.setEmail(emailUsuario);
-			objUsuario.setSenha(senhaUsuario);
+			objUsuario.setSenha(senhaCriptografada);
 			// chama o DAO para para fazer a inserção
 			UsuarioDAO dao = new UsuarioDAO();
 			dao.loginUsuario(objUsuario);

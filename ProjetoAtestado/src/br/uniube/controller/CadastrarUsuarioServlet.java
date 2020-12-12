@@ -31,7 +31,9 @@ public class CadastrarUsuarioServlet extends HttpServlet {
             MessageDigest algorithm = MessageDigest.getInstance("SHA-256");
             byte messageDigest[] = algorithm.digest(senhaUsuario.getBytes("UTF-8"));
             String senhaCriptografada  = new String(messageDigest, "UTF-8");
-            System.out.println(senhaCriptografada);
+            
+            senhaCriptografada = senhaCriptografada.replace('\'', ' ');
+            senhaCriptografada = senhaCriptografada.replace('"', ' ');
 
 			Usuario objUsuario = new Usuario();
 			objUsuario.setCpf(cpfUsuario);

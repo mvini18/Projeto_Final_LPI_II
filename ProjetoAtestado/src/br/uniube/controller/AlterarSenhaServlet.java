@@ -2,6 +2,7 @@ package br.uniube.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.security.MessageDigest;
 import java.util.ArrayList;
 
 import javax.servlet.ServletException;
@@ -24,12 +25,29 @@ public class AlterarSenhaServlet extends HttpServlet {
 			String senhaNova = request.getParameter("nova_senha");
 			String senhaAntiga = request.getParameter("antiga_senha");
 			
-			UsuarioDAO dao = new UsuarioDAO();
-			Usuario objUsuarioCompleto = dao.consultarUsuarioByEmail(objUsuario.getEmail());
+            MessageDigest algorithm = MessageDigest.getInstance("SHA-256");
+            byte messageDigest[] = algorithm.digest(senhaAntiga.getBytes("UTF-8"));
+            String senhaAntigaCriptografada  = new String(messageDigest, "UTF-8");
+            
+            senhaAntigaCriptografada = senhaAntigaCriptografada.replace('\'', ' ');
+            senhaAntigaCriptografada = senhaAntigaCriptografada.replace('"', ' ');
 			
-			if(objUsuario.getSenha().equals(senhaAntiga))
+			UsuarioDAO dao = new UsuarioDAO();
+			Usuario objUsuarioSenhaAntiga = new Usuario();
+			objUsuarioSenhaAntiga.setSenha(senhaAntigaCriptografada);
+			objUsuarioSenhaAntiga.setEmail(objUsuario.getEmail());
+			Usuario objUsuarioCompleto = dao.consultarUsuarioByEmail(objUsuario.getEmail());
+			dao.loginUsuario(objUsuarioSenhaAntiga);
+			if(dao.loginUsuario(objUsuarioSenhaAntiga))
 			{
-				objUsuarioCompleto.setSenha(senhaNova);
+	            MessageDigest algorithm2 = MessageDigest.getInstance("SHA-256");
+	            byte messageDigest2[] = algorithm2.digest(senhaNova.getBytes("UTF-8"));
+	            String senhaNovaCriptografada  = new String(messageDigest2, "UTF-8");
+	            
+	            senhaNovaCriptografada = senhaNovaCriptografada.replace('\'', ' ');
+	            senhaNovaCriptografada = senhaNovaCriptografada.replace('"', ' ');
+	            
+				objUsuarioCompleto.setSenha(senhaNovaCriptografada);
 				
 				dao.alterarSenha(objUsuarioCompleto);
 				request.getSession().setAttribute("objUsuarioCompleto", objUsuarioCompleto);
