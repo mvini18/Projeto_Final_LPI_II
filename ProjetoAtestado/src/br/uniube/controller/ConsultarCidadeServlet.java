@@ -10,37 +10,27 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import br.uniube.dao.CidadesDAO;
-import br.uniube.dao.MedicoDAO;
-import br.uniube.dao.UsuarioDAO;
-import br.uniube.model.Medico;
-import br.uniube.model.Usuario;
 
-public class ConsultarMedicoServlet extends HttpServlet {
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+public class ConsultarCidadeServlet extends HttpServlet {
 	
+	private static final long serialVersionUID = 1L;
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		try {
-			Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuarioCompleto");
-			String cpfMedico = objUsuario.getCpf();
-		
-			MedicoDAO dao = new MedicoDAO();
-			Medico objMedico = dao.consultarMedicoByCpf(cpfMedico);
+			
 			CidadesDAO cidades = new CidadesDAO();
 			List listaCidades = cidades.consultarCidades();
 			request.getSession().setAttribute("listaCidades", listaCidades);
-			request.getSession().setAttribute("objMedico", objMedico);
-			response.sendRedirect("paginas/atualizar_medico.jsp");
+			response.sendRedirect("paginas/info_medico.jsp");
 			
-		} catch(Exception ex) {
-			System.out.println(ex.getMessage());
 
+			} catch(Exception ex) {
+		
+				System.out.println(ex.getMessage());
+			// Monta um HTML de resposta contendo a mensagem de erro
 			PrintWriter resposta = response.getWriter();
-
+			//gera o texto HTML
 			resposta.write("<html>");
 			resposta.write("<head><title>Erro na Aplicação</title><head/>");
 			resposta.write("<body>");
@@ -51,6 +41,5 @@ public class ConsultarMedicoServlet extends HttpServlet {
 			resposta.write("</html>");
 			resposta.flush();
 		}
-			
 	}
 }

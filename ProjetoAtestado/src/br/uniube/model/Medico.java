@@ -13,8 +13,8 @@ public class Medico {
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	
-	private String cpf_medico, crm, rqe, endereco, especialidade, cep, cidade, estado;
-	
+	private String cpf_medico, crm, rqe, endereco, especialidade, cep, cidade_estado;
+
 	public int getId() {
 		return id;
 	}
@@ -71,20 +71,14 @@ public class Medico {
 		this.cep = cep;
 	}
 
-	public String getCidade() {
-		return cidade;
+	public String getCidade_estado() {
+		return cidade_estado;
 	}
 
-	public void setCidade(String cidade) {
-		this.cidade = cidade;
+	public void setCidade_estado(String cidade_estado) {
+		this.cidade_estado = cidade_estado;
 	}
-
-	public String getEstado() {
-		return estado;
-	}
-
-	public void setEstado(String estado) {
-		this.estado = estado;
-	}
+	
+	
 	
 }

@@ -195,6 +195,16 @@
 		<servlet-name>consultarInfoMedico</servlet-name>
 		<url-pattern>/consultarInfoMedico</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>consultarCidade</servlet-name>
+		<servlet-class>br.uniube.controller.ConsultarCidadeServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>consultarCidade</servlet-name>
+		<url-pattern>/consultarCidade</url-pattern>
+	</servlet-mapping>
 
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>

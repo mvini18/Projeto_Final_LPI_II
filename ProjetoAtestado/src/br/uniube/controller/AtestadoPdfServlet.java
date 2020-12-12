@@ -48,7 +48,7 @@ public class AtestadoPdfServlet extends HttpServlet {
 			
 			Document doc = new Document();
 			
-			PdfWriter.getInstance(doc, new FileOutputStream("C:\\Users\\marco\\Downloads\\"+objPaciente.getNome()+".pdf"));
+			PdfWriter.getInstance(doc, new FileOutputStream("C:\\Users\\ar thur\\Downloads\\"+objPaciente.getNome()+".pdf"));
 			
 			doc.open();
 			Paragraph paragraph = new Paragraph();
@@ -68,7 +68,7 @@ public class AtestadoPdfServlet extends HttpServlet {
 			
 			Paragraph endereco = new Paragraph();
 			
-			endereco.add("\n "+ objMedico.getEndereco()+" \n CEP: "+ objMedico.getCep()+" \n "+ objMedico.getCidade()+" - " +objMedico.getEstado() +"" + "\n______________________________________________________________________________");
+			endereco.add("\n "+ objMedico.getEndereco()+" \n CEP: "+ objMedico.getCep()+" \n "+ objMedico.getCidade_estado() +"" + "\n______________________________________________________________________________");
 			endereco.setAlignment(Element.ALIGN_RIGHT);
 			
 			doc.add(dados);
