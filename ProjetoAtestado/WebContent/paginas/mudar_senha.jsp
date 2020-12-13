@@ -13,6 +13,8 @@
 <%@page
 	import="java.util.ArrayList,br.uniube.model.Usuario,br.uniube.dao.UsuarioDAO"%>
 <!DOCTYPE html>
+<head>
+<script src="../js/nova_senha.js"></script>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <link href="../css/mudar_senha.css" type="text/css" rel="stylesheet"/>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -20,6 +22,7 @@
 <link rel="icon" href="../assets/img/lupus_icone.png" />
 <!------ Include the above in your HEAD tag ---------->
 <title>Lupus</title>
+</head>
 <div class="wrapper fadeInDown">
   <div id="formContent">
     <!-- Icon -->
@@ -27,7 +30,7 @@
       <img src="../assets/img/senha.png" />
     </div><br>
 
-    <form method="post" action="../alterarSenha">
+    <form method="post" action="../alterarSenha" onsubmit="return validatePassword()">
       <input type="password" id="antiga_senha" title="Antiga senha" class="fadeIn second" name="antiga_senha" placeholder="senha atual" required>
       <input type="password" id="nova_senha" title="Nova senha" class="fadeIn third" name="nova_senha" minlength="6" autocomplete="off" size="15" placeholder=" senha nova" required>      
       <input type="password" id="confirmar_senha" title="Confirmar senha" class="fadeIn fourth" name="confirmar_senha" autocomplete="off" size="15" placeholder="confirmar" required>

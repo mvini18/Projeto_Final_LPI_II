@@ -21,7 +21,7 @@
       <img src="../assets/img/cadastro.png" />
     </div><br>
 
-      <form action="../novoUsuario" onsubmit= "return validarSenha()" method="post">
+      <form action="../novoUsuario" onsubmit="return validatePassword()" method="post">
 	      <input type="text" title="Nome" id="nome" class="fadeIn second" name="txtNome" placeholder="nome" maxlength="30" autocomplete="off" oninvalid="this.setCustomValidity('Digite seu nome')" onchange="try{setCustomValidity('')}catch(e){}" required> 
 	      <input type="email" title="Email" id="email" class="fadeIn third" name="txtEmail" placeholder="email" maxlength="30" autocomplete="off" required>
 	      <input type="text" title="Cpf" id="cpf" class="fadeIn fourth" name="txtCpf" placeholder="cpf" minlength="11" maxlength="11" pattern="^[0-9]{3}.?[0-9]{3}.?[0-9]{3}-?[0-9]{2}" autocomplete="off" required>

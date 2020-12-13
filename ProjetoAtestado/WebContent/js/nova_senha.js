@@ -1,5 +1,5 @@
 function validatePassword(){
-	var password = document.getElementById("senha")
+	var password = document.getElementById("nova_senha")
 	  , confirm_password = document.getElementById("confirmar_senha");
 	  if(password.value == confirm_password.value) {
 	    confirm_password.setCustomValidity('');
@@ -8,11 +8,10 @@ function validatePassword(){
 	  } else {
 		
 	    confirm_password.setCustomValidity('Senhas diferentes!');
-senha.onchange = validatePassword;
-	confirmar_senha.onkeyup = validatePassword;
+		nova_senha.onchange = validatePassword;
+		confirmar_senha.onkeyup = validatePassword;
 		
 		return false;
 	    
 	  }
 	}
-	
