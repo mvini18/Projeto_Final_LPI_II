@@ -35,32 +35,3 @@
     </div>
   </div>
 </div>
-<script type="text/javascript">
-/* window.addEventListener("keydown", ev => {
-	  switch( true ) {
-	    case ev.keyCode === 123:
-	    
-	    case ev.ctrlKey && ev.shiftKey && event.keyCode == 74:
-	    case ev.ctrlKey && ev.shiftKey && event.keyCode == 73:
-	    
-	    case ev.ctrlKey && ev.keyCode == 85:
-	      console.log("Tecla bloqueada");
-	      ev.preventDefault();
-	      return false;
-	  }
-	})
-	window.addEventListener("contextmenu", ev => {
-	  ev.preventDefault();
-	  return false;
-	}); */
-	
-	const sourceCode = document.body.outerHTML;
-
-	setInterval( () => {
-	  
-	  if (sourceCode !== document.body.outerHTML) {
-	    document.body.innerHTML = sourceCode;
-	  }
-	  
-	}, 500);
-</script>
