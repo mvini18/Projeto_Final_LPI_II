@@ -22,11 +22,11 @@ public class ImportarArquivoBanco {
 			Class.forName("com.mysql.jdbc.Driver");
 			// Registrado o driver, vamos estabelecer uma conexão
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/projeto_atestado",
-					"root", "root");
+					"root", "123");
 			// Após estabelecermos a conexão com o banco de dados
 			// Método createStatement para criar o Statement 
 			Statement stm = con.createStatement();
-			BufferedReader leitor = new BufferedReader(new FileReader("C:\\Users\\marco\\Documents\\github\\projeto_atestado\\Projeto_Final_LPI_II\\ProjetoAtestado\\src\\CIDs.txt"));
+			BufferedReader leitor = new BufferedReader(new FileReader("C:\\Users\\ar thur\\Documents\\github\\projeto_atestado\\Projeto_Final_LPI_II\\ProjetoAtestado\\src\\CIDs.txt"));
 
 			String linha = leitor.readLine();
 
