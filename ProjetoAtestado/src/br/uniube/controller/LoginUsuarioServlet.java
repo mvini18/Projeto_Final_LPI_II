@@ -38,7 +38,6 @@ public class LoginUsuarioServlet extends HttpServlet {
 			objUsuario.setSenha(senhaCriptografada);
 			// chama o DAO para para fazer a inserção
 			UsuarioDAO dao = new UsuarioDAO();
-			dao.loginUsuario(objUsuario);
 			if(dao.loginUsuario(objUsuario))
 			{
 				Usuario objUsuarioCompleto = dao.consultarUsuarioByEmail(objUsuario.getEmail());
@@ -47,7 +46,7 @@ public class LoginUsuarioServlet extends HttpServlet {
 			}
 			else
 			{
-				response.sendRedirect("paginas/login.jsp");
+				response.sendRedirect("paginas/erro_login.jsp");
 			}
 
 		} catch(Exception ex) {

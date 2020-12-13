@@ -37,7 +37,6 @@ public class AlterarSenhaServlet extends HttpServlet {
 			objUsuarioSenhaAntiga.setSenha(senhaAntigaCriptografada);
 			objUsuarioSenhaAntiga.setEmail(objUsuario.getEmail());
 			Usuario objUsuarioCompleto = dao.consultarUsuarioByEmail(objUsuario.getEmail());
-			dao.loginUsuario(objUsuarioSenhaAntiga);
 			if(dao.loginUsuario(objUsuarioSenhaAntiga))
 			{
 	            MessageDigest algorithm2 = MessageDigest.getInstance("SHA-256");
@@ -58,9 +57,6 @@ public class AlterarSenhaServlet extends HttpServlet {
 			{
 				response.sendRedirect("paginas/erro_mudar_senha.jsp");
 			}
-
-
-			
 
 		} catch(Exception ex) {
 			System.out.println(ex.getMessage());

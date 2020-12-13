@@ -1,16 +1,5 @@
-<%@page import="br.uniube.model.Usuario,br.uniube.dao.UsuarioDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%
-	Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuarioCompleto");
-	
-%>
-<%
-	if (objUsuario == null) {
-		response.sendRedirect("index.html");
-	}
-	else {
-%>
 <!DOCTYPE html>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <script
@@ -41,4 +30,3 @@
 
   </div>
 </div>
-<% }%>
