@@ -8,8 +8,8 @@ function validatePassword(){
 	  } else {
 		
 	    confirm_password.setCustomValidity('Senhas diferentes!');
-senha.onchange = validatePassword;
-	confirmar_senha.onkeyup = validatePassword;
+		senha.onchange = validatePassword;
+		confirmar_senha.onkeyup = validatePassword;
 		
 		return false;
 	    
