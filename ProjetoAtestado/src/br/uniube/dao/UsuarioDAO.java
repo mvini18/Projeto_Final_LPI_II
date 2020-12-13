@@ -299,6 +299,28 @@ public class UsuarioDAO extends AcessoBancoDAO {
 		}
 
 	}
+	public boolean verificarEmail(String email) throws Exception {
+		try {
+			ResultSet rs;
+			conectar();
+			String query = "select * from tb_login where email='" + email + "'";
+			Statement instrucao = getConexao().createStatement();
+			rs = instrucao.executeQuery(query);
+
+			if (rs.next()) {
+				return true;
+			} else {
+				return false;
+			}
+		} catch (SQLException ex) {
+			throw new SQLException(ex);
+		} catch (Exception ex) {
+			throw new Exception(ex);
+		} finally {
+			desconectar();
+		}
+
+	}
 	public Usuario consultarUsuarioById(String idAtestado) throws Exception {
 		Usuario objPaciente = new Usuario();
 		try {

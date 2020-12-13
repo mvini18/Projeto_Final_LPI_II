@@ -3,7 +3,7 @@
 %>
 <%
 	if (objUsuario == null) {
-		response.sendRedirect("index.jsp");
+		response.sendRedirect("index.html");
 	}
 	else {
 %>

@@ -29,14 +29,20 @@ public class AlterarUsuarioServlet extends HttpServlet {
 			objUsuario.setTelefone(telefoneUsuario);
 			objUsuario.setEmail(emailUsuario);
 
-
 			UsuarioDAO dao = new UsuarioDAO();
-			dao.atualizarUsuario(objUsuarioEmail.getEmail(), objUsuario);
-			Usuario objUsuarioCompleto = dao.consultarUsuarioByEmail(objUsuario.getEmail());
+			if(dao.verificarEmail(emailUsuario) == false)
+			{
+				dao.atualizarUsuario(objUsuarioEmail.getEmail(), objUsuario);
+				Usuario objUsuarioCompleto = dao.consultarUsuarioByEmail(objUsuario.getEmail());
+				request.getSession().setAttribute("objUsuarioCompleto", objUsuarioCompleto);
+				response.sendRedirect("paginas/sucesso_usuario.jsp");
+			}
+			else
+			{
+				response.sendRedirect("paginas/info_usuario.jsp");
+			}
 
 
-			request.getSession().setAttribute("objUsuarioCompleto", objUsuarioCompleto);
-			response.sendRedirect("paginas/sucesso_usuario.jsp");
 
 
 		} catch(Exception ex) {
