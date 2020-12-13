@@ -15,6 +15,7 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.io.FilenameUtils;
 
+import br.uniube.dao.UsuarioDAO;
 import br.uniube.model.Usuario;
 
 import java.util.List;
@@ -32,7 +33,9 @@ public class UploadImagemServlet extends HttpServlet {
 			throws ServletException, IOException {
 		
 		Usuario objUsuarioCompleto = (Usuario) request.getSession().getAttribute("objUsuarioCompleto");
-
+		
+		UsuarioDAO dao = new UsuarioDAO();
+		
 		HttpSession sessao = null;
 		String fileName = null;
 
@@ -78,6 +81,8 @@ public class UploadImagemServlet extends HttpServlet {
 							File saveTo = new File(dirName + fileName);
 							try {
 								fileItem.write(saveTo);
+//								dao.inserirAvatar(dirName);
+								response.sendRedirect("paginas/upload_avatar.jsp");
 							}catch (Exception e){
 							}
 						}
@@ -86,18 +91,20 @@ public class UploadImagemServlet extends HttpServlet {
 				}
 			}
 
-
-//			Class.forName("com.microsoft.jdbc.sqlserver.SQLServerDriver");
-//			con = DriverManager.getConnection("jdbc:microsoft:sqlserver://localhost:PORTA;databaseName=BANCO;","USUARIO","SENHA");
-//			stm = con.createStatement();
-//
-//			String sql = "UPDATE RESCISAO SET IMGRESCISAO= '"+optionalFileName+"' WHERE CODIGO='"+optionalFileNameid+"'";
-//			stm.executeUpdate(sql);
-//			out.println(sql);
-			//          out.println("<script>window.alert('Imagem Inserida com Sucesso')</script>");
-			//          out.println("<script>document.location.href='cadastrarescisao.jsp'</script>");
-		}catch(Exception e){
-			out.println("Falha na conexão! erro: "+e.getMessage());
+		} catch(Exception ex) {
+			System.out.println(ex.getMessage());
+			// Monta um HTML de resposta contendo a mensagem de erro
+			PrintWriter resposta = response.getWriter();
+			//gera o texto HTML
+			resposta.write("<html>");
+			resposta.write("<head><title>Erro na Aplicação</title><head/>");
+			resposta.write("<body>");
+			resposta.write("<div class='estiloTexto'>");
+			resposta.write("Erro na aplicação, entre em contato com o Administrador do sistema. Mensagem de erro:" + ex.getMessage());
+			resposta.write("</div>");
+			resposta.write("</body>");
+			resposta.write("</html>");
+			resposta.flush();
 		}
 	}
 }
