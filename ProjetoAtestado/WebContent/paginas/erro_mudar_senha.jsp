@@ -25,19 +25,18 @@
   <div id="formContent">
     <!-- Icon -->
     <div class="fadeIn first"><br>
-      <img src="../assets/img/pendente.png" />
+      <img src="../assets/img/atencao.png" />
     </div><br>
 
 	<div class="container">
 	  <div class="row">
-	    <div class="col fadeIn second"><h6>Calma aí!</h6></div>
+	    <div class="col fadeIn second"><h6>Erro ao alterar a senha!</h6></div>
 	    <div class="w-100"></div>
-	    <div class="col fadeIn third"><p>Parece que você possui um atestado pendente. Aguarde
-	    								 ele ser impresso ou rejeitado.</p></div>
+	    <div class="col fadeIn third"><p>A senha digitada não corresponde à senha atual!</p></div>
 	  </div>
 	</div>
     <div id="formFooter">
-      <a href="primeira_pagina.jsp"><img src="../assets/img/retorna.png"></a>
+      <a href="mudar_senha.jsp"><img src="../assets/img/retorna.png"></a>
     </div>
 
   </div>

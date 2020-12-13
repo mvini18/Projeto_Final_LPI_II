@@ -15,15 +15,7 @@ public class Usuario {
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	
-	private String cpf, nome, email, telefone, senha, estilo_usuario, avatar;
-	
-	public String getAvatar() {
-		return avatar;
-	}
-
-	public void setAvatar(String avatar) {
-		this.avatar = avatar;
-	}
+	private String cpf, nome, email, telefone, senha, estilo_usuario;
 
 	public int getId() {
 		return id;

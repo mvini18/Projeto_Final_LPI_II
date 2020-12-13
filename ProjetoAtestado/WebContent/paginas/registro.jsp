@@ -20,7 +20,6 @@
     <div class="fadeIn first"><br>
       <img src="../assets/img/cadastro.png" />
     </div><br>
-
       <form action="../novoUsuario" onsubmit="return validatePassword()" method="post">
 	      <input type="text" title="Nome" id="nome" class="fadeIn second" name="txtNome" placeholder="nome" maxlength="30" autocomplete="off" oninvalid="this.setCustomValidity('Digite seu nome')" onchange="try{setCustomValidity('')}catch(e){}" required> 
 	      <input type="email" title="Email" id="email" class="fadeIn third" name="txtEmail" placeholder="email" maxlength="30" autocomplete="off" required>
@@ -31,11 +30,8 @@
 	      <input type="submit" class="btn btn-primary js-scroll-trigger fadeIn seven" value="Confirmar">
 	      <div class="help-block with-errors"></div>
       </form>
-
-    
     <div id="formFooter">
       <a href="login.jsp"><img src="../assets/img/retorna.png"></a>
     </div>
-
   </div>
 </div>

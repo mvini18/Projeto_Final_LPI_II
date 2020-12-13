@@ -31,7 +31,7 @@
     </div><br>
 
     <form method="post" action="../alterarSenha" onsubmit="return validatePassword()">
-      <input type="password" id="antiga_senha" title="Antiga senha" class="fadeIn second" name="antiga_senha" placeholder="senha atual" required>
+      <input type="password" id="antiga_senha" title="Senha atual" class="fadeIn second" name="antiga_senha" placeholder="senha atual" required>
       <input type="password" id="nova_senha" title="Nova senha" class="fadeIn third" name="nova_senha" minlength="6" autocomplete="off" size="15" placeholder=" senha nova" required>      
       <input type="password" id="confirmar_senha" title="Confirmar senha" class="fadeIn fourth" name="confirmar_senha" autocomplete="off" size="15" placeholder="confirmar" required>
       <input type="submit" class="btn btn-primary js-scroll-trigger fadeIn five" value="Confirmar">

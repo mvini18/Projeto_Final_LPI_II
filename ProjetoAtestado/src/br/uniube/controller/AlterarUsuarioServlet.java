@@ -39,11 +39,8 @@ public class AlterarUsuarioServlet extends HttpServlet {
 			}
 			else
 			{
-				response.sendRedirect("paginas/info_usuario.jsp");
+				response.sendRedirect("paginas/erro_registro.jsp");
 			}
-
-
-
 
 		} catch(Exception ex) {
 			System.out.println(ex.getMessage());

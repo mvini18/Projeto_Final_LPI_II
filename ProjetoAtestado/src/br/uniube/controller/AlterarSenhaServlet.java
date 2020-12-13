@@ -56,7 +56,7 @@ public class AlterarSenhaServlet extends HttpServlet {
 			}
 			else
 			{
-				response.sendRedirect("paginas/mudar_senha.jsp");
+				response.sendRedirect("paginas/erro_mudar_senha.jsp");
 			}
 
 

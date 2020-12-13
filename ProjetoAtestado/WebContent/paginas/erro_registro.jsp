@@ -1,0 +1,64 @@
+<%@page import="br.uniube.model.Usuario,br.uniube.dao.UsuarioDAO"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%
+	Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuarioCompleto");
+%>
+<!DOCTYPE html>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script
+	src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<link
+	href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+<link href="../css/central_paciente.css" type="text/css"
+	rel="stylesheet" />
+<link rel="icon" href="../assets/img/lupus_icone.png" />
+<title>Lupus</title>
+<div class="wrapper fadeInDown">
+	<div id="formContent">
+		<!-- Icon -->
+		<div class="fadeIn first">
+			<br> <img src="../assets/img/atencao.png" />
+		</div>
+		<br>
+
+		<%
+			if (objUsuario == null) {
+		%>
+		<div class="container">
+			<div class="row">
+				<div class="col fadeIn second">
+					<h6>Erro ao registrar usuário!</h6>
+				</div>
+				<div class="w-100"></div>
+				<div class="col fadeIn third">
+					<p>CPF ou Email já cadastrados!</p>
+				</div>
+			</div>
+		</div>
+		<div id="formFooter">
+			<a href="registro.jsp"><img src="../assets/img/retorna.png"></a>
+		</div>
+		<%
+			} else {
+		%>
+		<div class="container">
+			<div class="row">
+				<div class="col fadeIn second">
+					<h6>Erro ao atualizar informações do usuário!</h6>
+				</div>
+				<div class="w-100"></div>
+				<div class="col fadeIn third">
+					<p>Email já cadastrado!</p>
+				</div>
+			</div>
+		</div>
+		<div id="formFooter">
+			<a href="info_usuario.jsp"><img src="../assets/img/retorna.png"></a>
+		</div>
+		<%
+			}
+		%>
+	</div>
+</div>

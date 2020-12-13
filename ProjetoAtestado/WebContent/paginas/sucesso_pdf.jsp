@@ -1,5 +1,4 @@
 <%@page import="br.uniube.model.Usuario,br.uniube.dao.UsuarioDAO"%>
-<%@page import="br.uniube.model.Atestado,br.uniube.dao.AtestadoDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%

@@ -6,7 +6,6 @@ html {
 }
 
 .sucesso {
-	cursor: pointer;
 	border-radius: 100px;
 	box-shadow: 0 10px 30px 0 #009d9d;
 }

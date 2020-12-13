@@ -50,7 +50,7 @@ public class CadastrarUsuarioServlet extends HttpServlet {
 			}
 			else
 			{
-				response.sendRedirect("paginas/registro.jsp");
+				response.sendRedirect("paginas/erro_registro.jsp");
 			}
 			
 

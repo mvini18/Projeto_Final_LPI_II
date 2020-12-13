@@ -1,11 +1,9 @@
 <%@page import="br.uniube.model.Usuario,br.uniube.dao.UsuarioDAO"%>
-<%@page import="br.uniube.model.Atestado,br.uniube.dao.AtestadoDAO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
 	Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuarioCompleto");
-	Atestado objAtestado = (Atestado) request.getSession().getAttribute("objAtestado");
 	
 %>
 <%

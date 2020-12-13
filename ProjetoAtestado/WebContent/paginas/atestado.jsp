@@ -5,7 +5,6 @@
 <%
 	Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuarioCompleto");
 	
-	
 %>
 <%
 	if (objUsuario == null) {
@@ -34,7 +33,7 @@
     
     <form method="post" action="../primeiroAtestado">
     
-      <input required placeholder="nascimento" maxlength="10" title="Data de nascimento" name="txtNascimento" class="textbox-n fadeIn second" type="text" id="nascimento" />      
+      <input required placeholder="nascimento" maxlength="10" pattern="^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[012])/[12][0-9]{3}$" title="Data de nascimento" name="txtNascimento" class="textbox-n fadeIn second" type="text" id="nascimento" />      
 
       <select class="fadeIn fourth" title="Sexo" name="selectSexo" required>
 		  <option value="" disabled selected hidden>sexo</option> 

@@ -4,7 +4,6 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
 	Usuario objUsuario = (Usuario) request.getSession().getAttribute("objUsuarioCompleto");
-	Usuario objUsuarioAtestado = (Usuario) request.getSession().getAttribute("objNomeUsuario");
 	Medico objMedico = (Medico) request.getSession().getAttribute("objMedico");
 	
 %>

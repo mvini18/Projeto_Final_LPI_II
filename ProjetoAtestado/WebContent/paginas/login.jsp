@@ -12,22 +12,16 @@
     <div class="fadeIn first"><br>
       <img src="../assets/img/paciente.png" />
     </div><br>
-
-   
     <form action="../loginUsuario" method="post">
     
-    
-      <input type="email" title="Email" id="email" class="fadeIn second" name="txtEmail" placeholder="email">
-    
-      
-      <input type="password" title="Senha" id="password" class="fadeIn third" name="txtSenha" placeholder="senha">
-      
+      <input type="email" title="Email" id="email" class="fadeIn second" name="txtEmail" placeholder="email"> 
+      <input type="password" title="Senha" id="password" class="fadeIn third" name="txtSenha" placeholder="senha"> 
       <input type="submit" class="btn btn-primary js-scroll-trigger fadeIn fourth" value="Entrar">
       <a href="registro.jsp"><input type="button" class="btn btn-primary js-scroll-trigger fadeIn fourth" value="Registrar"></a>
+      
     </form>
     <div id="formFooter">
       <a href="index.html"><img src="../assets/img/retorna.png"></a>
     </div>
-
   </div>
 </div>
