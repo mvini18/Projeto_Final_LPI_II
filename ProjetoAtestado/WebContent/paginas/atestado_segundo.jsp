@@ -30,7 +30,7 @@
 			<p class="fadeIn third">Escreva abaixo o que você está sentindo,
 				conte-nos com o máximo de detalhes que puder respeitando o limite de
 				500 caracteres. Procure dar respostas às perguntas abaixo. Caso seja um atestado de acompanhante, 
-				informe o nome da pessoa acompanhada, o número da identidade dela.</p>
+				informe o nome da pessoa acompanhada e o número da identidade dela.</p>
 			<div id="carouselSlider" class="carousel slide fadeIn fourth" data-ride="carousel">
 				<ol class="carousel-indicators">
 					<li data-target="#carouselSlider" data-slide-to="0" class="active"></li>
