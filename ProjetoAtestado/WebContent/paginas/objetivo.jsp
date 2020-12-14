@@ -37,18 +37,9 @@
 				</div>
 				<div class="w-100"></div>
 				<div class="col fadeIn third">
-			<%
-				if (objUsuario.getEstilo_usuario().equals("medico") || (objUsuario.getEstilo_usuario().equals("medico_pendente"))) {
-			%>
-					<p>Os pacientes precisam de um tratamento rápido e, por
-						isso, queremos os ajudar a conseguir um atestado para adiantar a
-						sua vida e a dos pacientes para que tenha a melhor recuperação possível.</p>
-			<% } else { %>
-					<p>Nós sabemos que você precisa de um tratamento rápido e, por
-						isso, queremos te ajudar a conseguir um atestado para adiantar a
-						sua vida e a do seu médico para que a sua recuperação possa ser a
-						melhor possível.</p>
-			<% } %>
+					<p>No mundo de hoje precisamos de respostas rápidas, não há tempo a perder. Por isso, o Projeto Lupus 
+					é uma iniciativa que tem como propósito adiantar o processo de obtenção de atestados, onde a única 
+					preocupação do médico é a de assinar o documento e, a do paciente, de preenchê-lo e ir buscá-lo.</p>
 				</div>
 			</div>
 		</div>
