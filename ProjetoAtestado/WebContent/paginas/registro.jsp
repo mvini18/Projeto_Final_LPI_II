@@ -1,5 +1,8 @@
 <%@page language="java" contentType="text/html; charset=ISO-8859-1"%>
 <!DOCTYPE html>
+<% 
+	session.invalidate();
+%>
 <head>
 <script src="../js/senha_registro.js"></script>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">

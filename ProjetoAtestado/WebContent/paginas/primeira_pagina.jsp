@@ -93,7 +93,7 @@
 		<div id="content" class="fadeIn third">
 			<br> <br>
 			<p>
-				<a href="upload_avatar.jsp"><label for="arquivos"></label></a>
+				<label for="arquivos"></label>
 			</p>
 			<h2>
 				Bem vindo(a),

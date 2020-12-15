@@ -30,7 +30,7 @@ public class AlterarUsuarioServlet extends HttpServlet {
 			objUsuario.setEmail(emailUsuario);
 
 			UsuarioDAO dao = new UsuarioDAO();
-			if(dao.verificarEmail(emailUsuario) == false)
+			if(dao.verificarEmail(emailUsuario) == false || emailUsuario.equals(objUsuarioEmail.getEmail()))
 			{
 				dao.atualizarUsuario(objUsuarioEmail.getEmail(), objUsuario);
 				Usuario objUsuarioCompleto = dao.consultarUsuarioByEmail(objUsuario.getEmail());
