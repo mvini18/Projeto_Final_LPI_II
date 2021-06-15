@@ -14,8 +14,8 @@ public class GeraTabelas {
 		
 //		cfg.addAnnotatedClass(Cid.class);
 		cfg.addAnnotatedClass(Usuario.class);
-//		cfg.addAnnotatedClass(Atestado.class);
-//		cfg.addAnnotatedClass(Medico.class);
+		cfg.addAnnotatedClass(Atestado.class);
+		cfg.addAnnotatedClass(Medico.class);
 //		cfg.addAnnotatedClass(Cidades.class);
 		new SchemaExport(cfg).create(true,true);
 	}

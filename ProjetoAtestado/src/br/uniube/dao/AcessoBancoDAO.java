@@ -6,12 +6,12 @@ import java.sql.*;
  * 
  */
 public class AcessoBancoDAO {
-	private final String DRIVER = "com.mysql.jdbc.Driver";
+	private final String DRIVER = "com.mysql.cj.jdbc.Driver";
 	private final String DATABASE_NAME = "projeto_atestado";
 	private final String HOSTNAME = "localhost";
 	private final String PORTA = "3306";
 	private final String USER = "root";
-	private final String PASSWORD = "root";
+	private final String PASSWORD = "admin123";
 	private Connection conexao;
 
 	public Connection getConexao() {

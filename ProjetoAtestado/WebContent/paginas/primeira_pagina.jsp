@@ -49,8 +49,8 @@
 			<%
 				if (objUsuario.getEstilo_usuario().equals("medico_pendente")) {
 			%>
-			<li><a href="ajuda_medico.jsp">Ajuda</a></li>
 			<li><a href="../consultarCidade">Cadastro de médico</a></li>
+			<li><a href="ajuda_medico.jsp">Ajuda</a></li>
 			
 			<%
 				}
@@ -59,10 +59,10 @@
 			<%
 				if (objUsuario.getEstilo_usuario().equals("medico")) {
 			%>
-			<li><a href="ajuda_medico.jsp">Ajuda</a></li>
 			<li><a href="../consultarAtestados">Solicitações</a></li>
 			<li><a href="../consultaUsuarioConfirmado">Central</a></li>
 			<li><a href="../consultarInfoMedico">Informações de médico</a></li>
+			<li><a href="ajuda_medico.jsp">Ajuda</a></li>
 
 			<%
 				}
@@ -107,8 +107,7 @@
 						<%
 							if (objUsuario.getEstilo_usuario().equals("paciente")) {
 						%>
-						<p>Acesse o menu na esquerda para conseguir um atestado
-							respondendo ao questionário, obter mais informações sobre as
+						<p>Acesse o menu na esquerda para conseguir um atestado, obter mais informações sobre as
 							funcionalidades, gerenciar seu perfil, conhecer melhor o projeto
 							ou realizar a mudança da senha.</p>
 
