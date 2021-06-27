@@ -297,8 +297,13 @@ input[type=text]:placeholder,input[type=search] {
 }
 .fadeIn.eigth {
   -webkit-animation-delay: 1.8s;
-  -moz-animation-delay: 1.6s;
+  -moz-animation-delay: 1.8s;
   animation-delay: 1.8s;
+}
+.fadeIn.nine {
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  animation-delay: 2s;
 }
 
 /* Simple CSS3 Fade-in Animation */

@@ -59,6 +59,7 @@
 			<%
 				if (objUsuario.getEstilo_usuario().equals("medico")) {
 			%>
+			<li><a href="inserir_atestado.jsp">Inserir atestado</a></li>
 			<li><a href="../consultarAtestados">Solicitações</a></li>
 			<li><a href="../consultaUsuarioConfirmado">Central</a></li>
 			<li><a href="../consultarInfoMedico">Informações de médico</a></li>
